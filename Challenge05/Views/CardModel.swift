@@ -22,7 +22,7 @@ class CardModel: Identifiable, ObservableObject {
 }
 
 let cardValues: [String] = [
-    "💙", "❤️", "💛", "🧡", "💜", "💚", "🤎", "🤍"
+    "🎸", "🥁", "🎷", "📯", "🪕", "🎻", "🎹", "🪗"
 ]
 
 func createCardList() -> [CardModel] {

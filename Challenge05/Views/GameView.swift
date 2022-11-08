@@ -36,7 +36,7 @@ struct GameView: View {
                 }
                 VStack {
                     Text("Match these cards to win: ")
-                        .font(.system(size: 30))
+                        .font(.system(size: 28))
                         .padding()
                     LazyVGrid(columns: sixColumnGrid, spacing: 5) {
                         ForEach(cardValues, id: \.self) { cardValue in
@@ -48,6 +48,7 @@ struct GameView: View {
                     }
                 }
             }
+            .padding()
         }
     }
 }
