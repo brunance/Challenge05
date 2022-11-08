@@ -11,6 +11,8 @@
 		4F92C5E429192DDD002FA763 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F92C5E329192DDD002FA763 /* HistoryView.swift */; };
 		4F92C5E629192DDE002FA763 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F92C5E529192DDE002FA763 /* Assets.xcassets */; };
 		4F92C5E929192DDE002FA763 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F92C5E829192DDE002FA763 /* Preview Assets.xcassets */; };
+		8BC16099291A9C0900A73AD6 /* CardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC16098291A9C0900A73AD6 /* CardModel.swift */; };
+		8BC1609B291A9DA700A73AD6 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC1609A291A9DA700A73AD6 /* CardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		4F92C5E329192DDD002FA763 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
 		4F92C5E529192DDE002FA763 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4F92C5E829192DDE002FA763 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		8BC16098291A9C0900A73AD6 /* CardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CardModel.swift; path = Challenge05/Views/CardModel.swift; sourceTree = SOURCE_ROOT; };
+		8BC1609A291A9DA700A73AD6 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				4F92C5E329192DDD002FA763 /* HistoryView.swift */,
+				8BC1609A291A9DA700A73AD6 /* CardView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -87,6 +92,7 @@
 		9C41385D2919416200AB8F60 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				8BC16098291A9C0900A73AD6 /* CardModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -183,6 +189,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F92C5E429192DDD002FA763 /* HistoryView.swift in Sources */,
+				8BC16099291A9C0900A73AD6 /* CardModel.swift in Sources */,
+				8BC1609B291A9DA700A73AD6 /* CardView.swift in Sources */,
 				4F92C5E229192DDD002FA763 /* Challenge05App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

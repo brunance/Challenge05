@@ -1,5 +1,5 @@
 //
-//  Card.swift
+//  CardModel.swift
 //  Challenge05
 //
 //  Created by Anna Alicia Milani on 08/11/22.
@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-class Card: Identifiable, ObservableObject {
+class CardModel: Identifiable, ObservableObject {
     var id = UUID()
     
     @Published var isFaceUp = false
@@ -28,15 +28,15 @@ let cardValues:[String] = [
     "🟢", "🟠", "🔴"
 ]
 
-func createCardList() -> [Card] {
-    var cardList = [Card]()
+func createCardList() -> [CardModel] {
+    var cardList = [CardModel]()
     
     for cardValue in cardValues {
-        cardList.append(Card(text: cardValue))
-        cardList.append(Card(text: cardValue))
+        cardList.append(CardModel(text: cardValue))
+        cardList.append(CardModel(text: cardValue))
     }
     
     return cardList
 }
 
-let faceDownCard = Card(text: "?")
+let faceDownCard = CardModel(text: "?")
