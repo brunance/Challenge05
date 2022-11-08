@@ -1,13 +1,15 @@
 //
-//  ContentView.swift
+//  sheetview.swift
 //  Challenge05
 //
-//  Created by Bruno França do Prado on 07/11/22.
+//  Created by Ruan Eleutério  on 08/11/22.
 //
+
+import Foundation
 
 import SwiftUI
 
-struct HistoryView: View {
+struct HistoryPlayView: View {
     let columns = [
         GridItem(.flexible())
     ]
@@ -15,16 +17,16 @@ struct HistoryView: View {
     let history = ["Dona aranha","Os três porquinhos","O cravo e a rosa"]
     var body: some View {
         
-        ScrollView(.horizontal) {
-            LazyHGrid(rows: columns) {
+        ScrollView {
+            LazyVGrid(columns: columns) {
                 ForEach(0...history.count - 1, id: \.self) { item  in
                     Button{
-                        
+                    
                     }label: {
                         Text(history[item])
                     }
                     .foregroundColor(.white)
-                    .frame(width: 200, height: 1600)
+                    .frame(width: 334, height: 150)
                     .background(Color(.black))
                     
                 }
@@ -32,8 +34,8 @@ struct HistoryView: View {
         }
     }
 }
-struct HistoryView_Previews: PreviewProvider {
+struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        HistoryView()
+        HistoryPlayView()
     }
 }
