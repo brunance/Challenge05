@@ -6,36 +6,69 @@
 //
 
 import Foundation
-
 import SwiftUI
 
-struct HistoryPlayView: View {
-    let columns = [
-        GridItem(.flexible())
-    ]
+struct SheetView: View {
+    @ObservedObject var hvm: HistoryViewModel = HistoryViewModel()
+    @Environment(\.dismiss) var dismiss
     
-    let history = ["Dona aranha","Os três porquinhos","O cravo e a rosa"]
+    
+    
     var body: some View {
-        
-        ScrollView {
-            LazyVGrid(columns: columns) {
-                ForEach(0...history.count - 1, id: \.self) { item  in
-                    Button{
+        ZStack{
+            Color(.lightGray)
+            VStack{
+                if(hvm.historyCount == "A Dona aranha"){
+                    Text(hvm.historyCount)
+                        .bold()
+                        .lineLimit(1)
+                        .font(.system(size: 40))
+                        .font(.largeTitle)
+                        .foregroundColor(.black)
                     
-                    }label: {
-                        Text(history[item])
-                    }
-                    .foregroundColor(.white)
-                    .frame(width: 334, height: 150)
-                    .background(Color(.black))
+                    Text("aaaaaaaaaaaaaaaaaaaaaaaaaa")
+                        .font(.system(size: 40))
                     
                 }
+                
+                if(hvm.historyCount == "Os três porquinhos"){
+                    Text(hvm.historyCount)
+                        .bold()
+                        .lineLimit(1)
+                        .font(.system(size: 40))
+                        .font(.largeTitle)
+                        .foregroundColor(.black)
+                    
+                    
+                    Text("bbbbbbbbbbbbbbbbbbbbbb")
+                        .font(.system(size: 40))
+                        .padding()
+                    
+                }
+                
+                if(hvm.historyCount == "O cravo e a rosa"){
+                    Text(hvm.historyCount)
+                        .bold()
+                        .lineLimit(1)
+                        .font(.system(size: 40))
+                        .foregroundColor(.black)
+                    
+                    Text("bbbbbbbbbbbbbbb")
+                        .font(.system(size: 40))
+                        .font(.title)
+                        .padding()
+                    
+                }
+                
+                
             }
         }
+        .ignoresSafeArea()
     }
 }
-struct ContentView_Previews: PreviewProvider {
+
+struct SheetView_Previews: PreviewProvider {
     static var previews: some View {
-        HistoryPlayView()
+        SheetView()
     }
 }

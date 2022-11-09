@@ -6,3 +6,11 @@
 //
 
 import Foundation
+import SwiftUI
+
+class HistoryViewModel:ObservableObject{
+    
+   
+    @Published var historyCount = ""
+    
+}
