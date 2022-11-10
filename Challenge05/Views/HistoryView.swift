@@ -23,7 +23,7 @@ struct HistoryView: View {
             Color("BackgroundColor1").ignoresSafeArea()
             VStack {
                 TabView {
-                    ForEach(0...history.count - 1, id: \.self) { item  in
+                    ForEach(0...history.count - 1, id: \.self) { item in
                         ZStack {
                             Color("BackgroundColor1")
 

@@ -11,19 +11,30 @@ struct CountDownView: View {
     @State var countDownTimer = 5
     @State var timerRunning = true
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
-    
+
     var body: some View {
-        VStack {
-            Text("\(countDownTimer)")
-                .onReceive(timer) { _ in
-                    if countDownTimer > 0 && timerRunning {
-                        countDownTimer -= 1
-                    } else {
-                        timerRunning = false
-                    }
+        ZStack {
+            Color("BackgroundColor1").ignoresSafeArea()
+            Image("BarataPadrao")
+                .resizable()
+            VStack {
+                ZStack {
+                    Image(systemName: "circle.fill")
+                        .font(.system(size: 200))
+                        .foregroundColor(Color("TextColorNames"))
+
+                    Text("\(countDownTimer)")
+                        .onReceive(timer) { _ in
+                            if countDownTimer > 0 && timerRunning {
+                                countDownTimer -= 1
+                            } else {
+                                timerRunning = false
+                            }
+                        }
+                        .font(.custom("RubikBubbles-Regular", size: 100))
+                        .foregroundColor(Color("BackgroundColor1"))
                 }
-                .font(.system(size: 80, weight: .bold))
-                .opacity(0.80)
+            }
         }
     }
 }
