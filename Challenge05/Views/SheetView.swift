@@ -16,7 +16,7 @@ struct SheetView: View {
     
     var body: some View {
         ZStack{
-            Color("Primaria3")
+            Color("Primaria3").ignoresSafeArea()
             VStack{
                 if(hvm.historyCount == "a dona Aranha"){
                     VStack{

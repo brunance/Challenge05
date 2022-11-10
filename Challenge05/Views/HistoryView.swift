@@ -22,7 +22,7 @@ struct HistoryView: View {
     private let backgroundImage = ["Aranha","Borboleta","Barata"]
     var body: some View {
         ZStack{
-            Color("BackgroundColor1")
+            Color("BackgroundColor1").ignoresSafeArea()
             VStack{
                 
                 TabView{
@@ -280,6 +280,7 @@ struct HistoryView: View {
             
             
         }
+        
         .ignoresSafeArea()
     }
 }
