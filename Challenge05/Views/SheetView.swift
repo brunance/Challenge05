@@ -9,55 +9,318 @@ import Foundation
 import SwiftUI
 
 struct SheetView: View {
-    @ObservedObject var hvm: HistoryViewModel = HistoryViewModel()
+    @ObservedObject var hvm: HistoryViewModel = HistoryViewModel.shared
     @Environment(\.dismiss) var dismiss
     
     
     
     var body: some View {
         ZStack{
-            Color(.lightGray)
+            Color("Primaria3").ignoresSafeArea()
             VStack{
-                if(hvm.historyCount == "A Dona aranha"){
-                    Text(hvm.historyCount)
-                        .bold()
-                        .lineLimit(1)
-                        .font(.system(size: 40))
-                        .font(.largeTitle)
-                        .foregroundColor(.black)
-                    
-                    Text("aaaaaaaaaaaaaaaaaaaaaaaaaa")
-                        .font(.system(size: 40))
-                    
+                if(hvm.historyCount == "a dona Aranha"){
+                    VStack{
+                        Image("AranhaModal")
+                            .padding(.init(top: 0, leading: 130.63, bottom: 4, trailing: 130.21))
+                        Text("a dona")
+                            .font(.custom("RubikBubbles-Regular", size: 32))
+                            .foregroundColor(Color("TextColorNames2"))
+                            .bold()
+                        
+                        Text("Aranha")
+                            .font(.custom("RubikBubbles-Regular", size: 48))
+                            .foregroundColor(Color("TextColorNames2"))
+                            .bold()
+                        
+                        Text("30s | Música, Instrumental")
+                            .font(.system(size: 12))
+                            .foregroundColor(Color("TextColorNames"))
+                            .padding(.init(top: 0, leading: 103, bottom: 50, trailing: 101))
+                        
+                        
+                        Text("A previsão de hoje é de chuva forte, ajude a teimosa dona Aranha a subir pela parede. Nesta dinâmica musical de jogo da memória você deve combinar os pares para desbloquear novos sons e quem sabe a música inteira.")
+                            .multilineTextAlignment(.leading)
+                            .lineLimit(nil)
+                            .font(.system(size: 16))
+                            .foregroundColor(Color("TextColorNames"))
+                            .padding(.init(top: 0, leading: 16, bottom: 0, trailing: 16))
+                        
+                        Text("INSTRUMENTOS DISPNÍVEIS")
+                            .font(.custom("RubikBubbles-Regular", size: 16))
+                            .foregroundColor(Color("TextColorNames2"))
+                            .bold()
+                            .padding(.init(top: 50, leading: 16, bottom: 0, trailing: 16))
+                        
+                        HStack{
+                            VStack{
+                                Image(systemName: "circle.fill")
+                                    .font(.system(size: 40))
+                                    .foregroundColor(.white)
+                                Text("Violão")
+                                    .font(.system(size: 12))
+                                    .foregroundColor(Color("TextColorNames"))
+                            }
+                            
+                            
+                            VStack{
+                                Image(systemName: "circle.fill")
+                                    .font(.system(size: 40))
+                                    .foregroundColor(.white)
+                                Text("Bateria")
+                                    .font(.system(size: 12))
+                                    .foregroundColor(Color("TextColorNames"))
+                                    .padding(.init(top: 0, leading: -20, bottom: 0, trailing: -20))
+                            }
+                            .padding(.init(top: 0, leading:10, bottom: 0, trailing: 10))
+                            VStack{
+                                Image(systemName: "circle.fill")
+                                    .font(.system(size: 40))
+                                    .foregroundColor(.white)
+                                Text("Chocalho")
+                                    .font(.system(size: 12))
+                                    .foregroundColor(Color("TextColorNames"))
+                                    .padding(.init(top: 0, leading: -20, bottom: 0, trailing: -20))
+                            }
+                           
+                          
+                            VStack{
+                                Image(systemName: "circle.fill")
+                                    .font(.system(size: 40))
+                                    .foregroundColor(.white)
+                                Text("Flauta")
+                                    .font(.system(size: 12))
+                                    .foregroundColor(Color("TextColorNames"))
+                            }
+                            .padding(.init(top: 0, leading:10, bottom: 0, trailing: 10))
+                            VStack{
+                                Image(systemName: "circle.fill")
+                                    .font(.system(size: 40))
+                                    .foregroundColor(.white)
+                                Text("Gaita")
+                                    .font(.system(size: 12))
+                                    .foregroundColor(Color("TextColorNames"))
+                            }
+                            
+                            VStack{
+                                Image(systemName: "circle.fill")
+                                    .font(.system(size: 40))
+                                    .foregroundColor(.white)
+                                Text("Ukulele")
+                                    .font(.system(size: 12))
+                                    .foregroundColor(Color("TextColorNames"))
+                            }
+                            .padding(.init(top: 0, leading:10, bottom: 0, trailing: 0))
+                            
+                            
+                        }
+                        .padding(.init(top: 16, leading:16, bottom: 5, trailing: 16))
+                    }
+                    .padding(.init(top: 0, leading: 16, bottom: 70, trailing: 16))
                 }
                 
-                if(hvm.historyCount == "Os três porquinhos"){
-                    Text(hvm.historyCount)
-                        .bold()
-                        .lineLimit(1)
-                        .font(.system(size: 40))
-                        .font(.largeTitle)
-                        .foregroundColor(.black)
-                    
-                    
-                    Text("bbbbbbbbbbbbbbbbbbbbbb")
-                        .font(.system(size: 40))
-                        .padding()
-                    
+                if(hvm.historyCount == "a Borboleta"){
+                    VStack{
+                        Image("BorboletaModal")
+                            .padding(.init(top: 0, leading: 38, bottom: 3.61, trailing: 38.93))
+                        Text("a")
+                            .font(.custom("RubikBubbles-Regular", size: 32))
+                            .foregroundColor(Color("TextColorNames2"))
+                            .bold()
+                        
+                        Text("Borboleta")
+                            .font(.custom("RubikBubbles-Regular", size: 48))
+                            .foregroundColor(Color("TextColorNames2"))
+                            .bold()
+                        
+                        Text("30s | Música, Instrumental")
+                            .font(.system(size: 12))
+                            .foregroundColor(Color("TextColorNames"))
+                            .padding(.init(top: 0, leading: 103, bottom: 50, trailing: 101))
+                        
+                        
+                        Text("Olha a borboleta tá na cozinha! vamos ajudá-la a fazer um chocolate para sua madrinha? Nesta dinâmica musical de jogo da memória você deve combinar os pares para desbloquear novos sons e quem sabe a música inteira.")
+                            .multilineTextAlignment(.leading)
+                            .lineLimit(nil)
+                            .font(.system(size: 16))
+                            .foregroundColor(Color("TextColorNames"))
+                            .padding(.init(top: 0, leading: 16, bottom: 0, trailing: 16))
+                        
+                        Text("INSTRUMENTOS DISPNÍVEIS")
+                            .font(.custom("RubikBubbles-Regular", size: 16))
+                            .foregroundColor(Color("TextColorNames2"))
+                            .bold()
+                            .padding(.init(top: 50, leading: 16, bottom: 0, trailing: 16))
+                        
+                        HStack{
+                            VStack{
+                                Image(systemName: "circle.fill")
+                                    .font(.system(size: 40))
+                                    .foregroundColor(.white)
+                                Text("Violão")
+                                    .font(.system(size: 12))
+                                    .foregroundColor(Color("TextColorNames"))
+                            }
+                            
+                            
+                            VStack{
+                                Image(systemName: "circle.fill")
+                                    .font(.system(size: 40))
+                                    .foregroundColor(.white)
+                                Text("Bateria")
+                                    .font(.system(size: 12))
+                                    .foregroundColor(Color("TextColorNames"))
+                                    .padding(.init(top: 0, leading: -20, bottom: 0, trailing: -20))
+                            }
+                           
+                            VStack{
+                                Image(systemName: "circle.fill")
+                                    .font(.system(size: 40))
+                                    .foregroundColor(.white)
+                                Text("Chocalho")
+                                    .font(.system(size: 12))
+                                    .foregroundColor(Color("TextColorNames"))
+                                    .padding(.init(top: 0, leading: -20, bottom: 0, trailing: -20))
+                            }
+                           
+                          
+                            VStack{
+                                Image(systemName: "circle.fill")
+                                    .font(.system(size: 40))
+                                    .foregroundColor(.white)
+                                Text("Flauta")
+                                    .font(.system(size: 12))
+                                    .foregroundColor(Color("TextColorNames"))
+                            }
+                            
+                            VStack{
+                                Image(systemName: "circle.fill")
+                                    .font(.system(size: 40))
+                                    .foregroundColor(.white)
+                                Text("Gaita")
+                                    .font(.system(size: 12))
+                                    .foregroundColor(Color("TextColorNames"))
+                            }
+                            
+                            VStack{
+                                Image(systemName: "circle.fill")
+                                    .font(.system(size: 40))
+                                    .foregroundColor(.white)
+                                Text("Ukulele")
+                                    .font(.system(size: 12))
+                                    .foregroundColor(Color("TextColorNames"))
+                            }
+                           
+                            
+                            
+                        }
+                        .padding(.init(top: 16, leading: 38, bottom: 5, trailing: 38))
+                    }
+                    .padding(.init(top: 0, leading: 16, bottom: 0, trailing: 16))
                 }
                 
-                if(hvm.historyCount == "O cravo e a rosa"){
-                    Text(hvm.historyCount)
-                        .bold()
-                        .lineLimit(1)
-                        .font(.system(size: 40))
-                        .foregroundColor(.black)
-                    
-                    Text("bbbbbbbbbbbbbbb")
-                        .font(.system(size: 40))
-                        .font(.title)
-                        .padding()
-                    
+                if(hvm.historyCount == "a Barata diz que tem"){
+                    VStack{
+                        Image("BarataModal")
+                            .padding(.init(top: 0, leading: 97, bottom: 4, trailing: 96.76))
+                        Text("a")
+                            .font(.custom("RubikBubbles-Regular", size: 32))
+                            .foregroundColor(Color("TextColorNames2"))
+                            .bold()
+                        
+                        Text("Barata")
+                            .font(.custom("RubikBubbles-Regular", size: 48))
+                            .foregroundColor(Color("TextColorNames2"))
+                            .bold()
+                        
+                        Text("diz que tem")
+                            .font(.custom("RubikBubbles-Regular", size: 32))
+                            .foregroundColor(Color("TextColorNames2"))
+                            .bold()
+                        
+                        Text("30s | Música, Instrumental")
+                            .font(.system(size: 12))
+                            .foregroundColor(Color("TextColorNames"))
+                            .padding(.init(top: 0, leading: 103, bottom: 50, trailing: 101))
+                        
+                        
+                        Text("Ajude a desmascarar as mentiras da Barata numa dinâmica musical de jogo da memória onde você deve combinar os pares para desbloquear novos sons e quem sabe a música inteira.")
+                            .multilineTextAlignment(.leading)
+                            .lineLimit(nil)
+                            .font(.system(size: 16))
+                            .foregroundColor(Color("TextColorNames"))
+                            .padding(.init(top: 0, leading: 16, bottom: 0, trailing: 16))
+                        
+                        Text("INSTRUMENTOS DISPNÍVEIS")
+                            .font(.custom("RubikBubbles-Regular", size: 16))
+                            .foregroundColor(Color("TextColorNames2"))
+                            .bold()
+                            .padding(.init(top: 50, leading: 16, bottom: 0, trailing: 16))
+                        
+                        HStack{
+                            VStack{
+                                Image(systemName: "circle.fill")
+                                    .font(.system(size: 40))
+                                    .foregroundColor(.white)
+                                Text("Violão")
+                                    .font(.system(size: 12))
+                                    .foregroundColor(Color("TextColorNames"))
+                            }
+                            
+                            
+                            VStack{
+                                Image(systemName: "circle.fill")
+                                    .font(.system(size: 40))
+                                    .foregroundColor(.white)
+                                Text("Bateria")
+                                    .font(.system(size: 12))
+                                    .foregroundColor(Color("TextColorNames"))
+                                    .padding(.init(top: 0, leading: -20, bottom: 0, trailing: -20))
+                            }
+                            .padding(.init(top: 0, leading:10, bottom: 0, trailing: 10))
+                            VStack{
+                                Image(systemName: "circle.fill")
+                                    .font(.system(size: 40))
+                                    .foregroundColor(.white)
+                                Text("Chocalho")
+                                    .font(.system(size: 12))
+                                    .foregroundColor(Color("TextColorNames"))
+                                    .padding(.init(top: 0, leading: -20, bottom: 0, trailing: -20))
+                            }
+                           
+                          
+                            VStack{
+                                Image(systemName: "circle.fill")
+                                    .font(.system(size: 40))
+                                    .foregroundColor(.white)
+                                Text("Flauta")
+                                    .font(.system(size: 12))
+                                    .foregroundColor(Color("TextColorNames"))
+                            }
+                            .padding(.init(top: 0, leading:10, bottom: 0, trailing: 10))
+                            VStack{
+                                Image(systemName: "circle.fill")
+                                    .font(.system(size: 40))
+                                    .foregroundColor(.white)
+                                Text("Gaita")
+                                    .font(.system(size: 12))
+                                    .foregroundColor(Color("TextColorNames"))
+                            }
+                            
+                            VStack{
+                                Image(systemName: "circle.fill")
+                                    .font(.system(size: 40))
+                                    .foregroundColor(.white)
+                                Text("Ukulele")
+                                    .font(.system(size: 12))
+                                    .foregroundColor(Color("TextColorNames"))
+                            }
+                            .padding(.init(top: 0, leading:10, bottom: 0, trailing: 0))
+                            
+                            
+                        }
+                        .padding(.init(top: 16, leading:16, bottom: 5, trailing: 16))
+                    }
+                    .padding(.init(top: 0, leading: 16, bottom: 70, trailing: 16))
                 }
                 
                 

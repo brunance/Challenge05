@@ -10,7 +10,7 @@ import SwiftUI
 
 class HistoryViewModel:ObservableObject{
     
-   
+    public static var shared: HistoryViewModel = HistoryViewModel()
     @Published var historyCount = ""
     
 }
