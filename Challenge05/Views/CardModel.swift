@@ -13,8 +13,10 @@ class CardModel: Identifiable, ObservableObject {
     @Published var isFaceUp = false
     @Published var isMatched = false
     var text: String
-    init(text: String) {
+    var sound: String?
+    init(text: String, sound: String?) {
         self.text = text
+        self.sound = sound
     }
     func turnOver() {
         self.isFaceUp.toggle()
@@ -22,16 +24,20 @@ class CardModel: Identifiable, ObservableObject {
 }
 
 let cardValues: [String] = [
-    "🎸", "🥁", "🎷", "📯", "🪕", "🎻", "🎹", "🪗"
+    "🎸", "🥁", "🎷", "📯", "🪕", "🎻"
+]
+
+let cardSounds: [String] = [
+    "acerto", "piano_1", "button", "click", "victory", "wrong"
 ]
 
 func createCardList() -> [CardModel] {
     var cardList = [CardModel]()
-    for cardValue in cardValues {
-        cardList.append(CardModel(text: cardValue))
-        cardList.append(CardModel(text: cardValue))
+    for count in 0...cardValues.count - 1 {
+        cardList.append(CardModel(text: cardValues[count], sound: cardSounds[count]))
+        cardList.append(CardModel(text: cardValues[count], sound: cardSounds[count]))
     }
     return cardList
 }
 
-let faceDownCard = CardModel(text: "?")
+let faceDownCard = CardModel(text: "?", sound: nil)

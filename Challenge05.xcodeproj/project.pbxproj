@@ -14,6 +14,14 @@
 		8BC16099291A9C0900A73AD6 /* CardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC16098291A9C0900A73AD6 /* CardModel.swift */; };
 		8BC1609B291A9DA700A73AD6 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC1609A291A9DA700A73AD6 /* CardView.swift */; };
 		8BC1609D291AA44C00A73AD6 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC1609C291AA44C00A73AD6 /* GameView.swift */; };
+		8BD111B1291BF4A300F77DEA /* piano.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8BD111AA291BF4A300F77DEA /* piano.wav */; };
+		8BD111B2291BF4A300F77DEA /* piano_1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8BD111AB291BF4A300F77DEA /* piano_1.wav */; };
+		8BD111B5291BF9A000F77DEA /* AudioModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD111B4291BF9A000F77DEA /* AudioModel.swift */; };
+		8BD111B7291BFF3800F77DEA /* acerto.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8BD111B6291BFF3800F77DEA /* acerto.wav */; };
+		8BD111BA291BFF4800F77DEA /* click.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8BD111B8291BFF4800F77DEA /* click.wav */; };
+		8BD111BB291BFF4800F77DEA /* button.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8BD111B9291BFF4800F77DEA /* button.wav */; };
+		8BD111BE291BFF5A00F77DEA /* victory.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8BD111BC291BFF5A00F77DEA /* victory.wav */; };
+		8BD111BF291BFF5A00F77DEA /* wrong.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8BD111BD291BFF5A00F77DEA /* wrong.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +33,14 @@
 		8BC16098291A9C0900A73AD6 /* CardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CardModel.swift; path = Challenge05/Views/CardModel.swift; sourceTree = SOURCE_ROOT; };
 		8BC1609A291A9DA700A73AD6 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		8BC1609C291AA44C00A73AD6 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		8BD111AA291BF4A300F77DEA /* piano.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = piano.wav; sourceTree = "<group>"; };
+		8BD111AB291BF4A300F77DEA /* piano_1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = piano_1.wav; sourceTree = "<group>"; };
+		8BD111B4291BF9A000F77DEA /* AudioModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AudioModel.swift; path = Challenge05/Views/AudioModel.swift; sourceTree = SOURCE_ROOT; };
+		8BD111B6291BFF3800F77DEA /* acerto.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = acerto.wav; sourceTree = "<group>"; };
+		8BD111B8291BFF4800F77DEA /* click.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = click.wav; sourceTree = "<group>"; };
+		8BD111B9291BFF4800F77DEA /* button.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = button.wav; sourceTree = "<group>"; };
+		8BD111BC291BFF5A00F77DEA /* victory.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = victory.wav; sourceTree = "<group>"; };
+		8BD111BD291BFF5A00F77DEA /* wrong.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = wrong.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +73,7 @@
 		4F92C5E029192DDD002FA763 /* Challenge05 */ = {
 			isa = PBXGroup;
 			children = (
+				8BD111A5291BF48000F77DEA /* Sounds */,
 				9C41385D2919416200AB8F60 /* Models */,
 				9C41385C2919414C00AB8F60 /* Views */,
 				9C41385B2919413B00AB8F60 /* ViewModels */,
@@ -73,6 +90,20 @@
 				4F92C5E829192DDE002FA763 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		8BD111A5291BF48000F77DEA /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				8BD111B6291BFF3800F77DEA /* acerto.wav */,
+				8BD111AB291BF4A300F77DEA /* piano_1.wav */,
+				8BD111B9291BFF4800F77DEA /* button.wav */,
+				8BD111B8291BFF4800F77DEA /* click.wav */,
+				8BD111BC291BFF5A00F77DEA /* victory.wav */,
+				8BD111BD291BFF5A00F77DEA /* wrong.wav */,
+				8BD111AA291BF4A300F77DEA /* piano.wav */,
+			);
+			path = Sounds;
 			sourceTree = "<group>";
 		};
 		9C41385B2919413B00AB8F60 /* ViewModels */ = {
@@ -96,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				8BC16098291A9C0900A73AD6 /* CardModel.swift */,
+				8BD111B4291BF9A000F77DEA /* AudioModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -159,8 +191,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8BD111B2291BF4A300F77DEA /* piano_1.wav in Resources */,
+				8BD111BB291BFF4800F77DEA /* button.wav in Resources */,
+				8BD111B7291BFF3800F77DEA /* acerto.wav in Resources */,
+				8BD111BA291BFF4800F77DEA /* click.wav in Resources */,
+				8BD111BE291BFF5A00F77DEA /* victory.wav in Resources */,
+				8BD111B1291BF4A300F77DEA /* piano.wav in Resources */,
 				4F92C5E929192DDE002FA763 /* Preview Assets.xcassets in Resources */,
 				4F92C5E629192DDE002FA763 /* Assets.xcassets in Resources */,
+				8BD111BF291BFF5A00F77DEA /* wrong.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -193,6 +232,7 @@
 			files = (
 				4F92C5E429192DDD002FA763 /* HistoryView.swift in Sources */,
 				8BC16099291A9C0900A73AD6 /* CardModel.swift in Sources */,
+				8BD111B5291BF9A000F77DEA /* AudioModel.swift in Sources */,
 				8BC1609B291A9DA700A73AD6 /* CardView.swift in Sources */,
 				4F92C5E229192DDD002FA763 /* Challenge05App.swift in Sources */,
 				8BC1609D291AA44C00A73AD6 /* GameView.swift in Sources */,

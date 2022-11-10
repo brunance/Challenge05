@@ -24,6 +24,12 @@ struct CardView: View {
                     RoundedRectangle(cornerRadius: 10)
                         .stroke(Color(red: 0.18, green: 0.32, blue: 0.46), lineWidth: 5)
                 )
+                .onAppear(perform: {
+                    guard let titleOfSound = card.sound else {
+                            return
+                    }
+                    playSound(sound: titleOfSound, type: "wav")
+                })
         } else {
             Text("?")
                 .font(.system(size: 50))
@@ -56,6 +62,10 @@ struct CardView: View {
         if userChoices[0].text == userChoices[1].text {
             matchedCards.append(userChoices[0])
             matchedCards.append(userChoices[1])
+            guard let titleOfSound = userChoices[0].sound else {
+                    return
+            }
+            playSound(sound: titleOfSound, type: "wav")
         }
         userChoices.removeAll()
     }
