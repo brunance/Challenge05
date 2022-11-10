@@ -9,9 +9,11 @@ import SwiftUI
 
 struct CardView: View {
     @ObservedObject var card: CardModel
-    let width: Int
     @Binding var matchedCards: [CardModel]
     @Binding var userChoices: [CardModel]
+
+    let width: Int
+
     var body: some View {
         if card.isFaceUp || matchedCards.contains(where: {$0.id == card.id}) {
             Text(card.text)

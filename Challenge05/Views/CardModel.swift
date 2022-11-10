@@ -14,10 +14,12 @@ class CardModel: Identifiable, ObservableObject {
     @Published var isMatched = false
     var text: String
     var sound: String?
+
     init(text: String, sound: String?) {
         self.text = text
         self.sound = sound
     }
+
     func turnOver() {
         self.isFaceUp.toggle()
     }

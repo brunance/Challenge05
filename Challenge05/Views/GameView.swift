@@ -32,9 +32,10 @@ struct GameView: View {
                     LazyVGrid(columns: fourColumnGrid, spacing: 20) {
                         ForEach(cards) { card in
                             CardView(card: card,
-                                     width: Int(geometry.size.width/4 - 10),
                                      matchedCards: $matchedCards,
-                                     userChoices: $userChoices)
+                                     userChoices: $userChoices,
+                                     width: Int(geometry.size.width/4 - 10)
+                            )
                         }
                     }
                     VStack {

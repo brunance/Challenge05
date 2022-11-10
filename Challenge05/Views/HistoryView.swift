@@ -14,6 +14,7 @@ struct HistoryView: View {
     let columns = [
         GridItem(.flexible())
     ]
+
     private let history = ["a dona Aranha", "a Borboleta", "a Barata diz que tem"]
     private let backgroundImage = ["Aranha", "Borboleta", "Barata"]
 
