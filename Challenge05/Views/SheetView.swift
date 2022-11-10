@@ -18,8 +18,10 @@ struct SheetView: View {
         ZStack{
             Color("Primaria3")
             VStack{
-                if(hvm.historyCount == "A dona Aranha"){
+                if(hvm.historyCount == "a dona Aranha"){
                     VStack{
+                        Image("AranhaModal")
+                            .padding(.init(top: 0, leading: 130.63, bottom: 4, trailing: 130.21))
                         Text("a dona")
                             .font(.custom("RubikBubbles-Regular", size: 32))
                             .foregroundColor(Color("TextColorNames2"))
@@ -33,9 +35,6 @@ struct SheetView: View {
                         Text("30s | Música, Instrumental")
                             .font(.system(size: 12))
                             .foregroundColor(Color("TextColorNames"))
-                        
-                        
-                        
                             .padding(.init(top: 0, leading: 103, bottom: 50, trailing: 101))
                         
                         
@@ -44,6 +43,7 @@ struct SheetView: View {
                             .lineLimit(nil)
                             .font(.system(size: 16))
                             .foregroundColor(Color("TextColorNames"))
+                            .padding(.init(top: 0, leading: 16, bottom: 0, trailing: 16))
                         
                         Text("INSTRUMENTOS DISPNÍVEIS")
                             .font(.custom("RubikBubbles-Regular", size: 16))
@@ -61,6 +61,7 @@ struct SheetView: View {
                                     .foregroundColor(Color("TextColorNames"))
                             }
                             
+                            
                             VStack{
                                 Image(systemName: "circle.fill")
                                     .font(.system(size: 40))
@@ -68,7 +69,9 @@ struct SheetView: View {
                                 Text("Bateria")
                                     .font(.system(size: 12))
                                     .foregroundColor(Color("TextColorNames"))
+                                    .padding(.init(top: 0, leading: -20, bottom: 0, trailing: -20))
                             }
+                            .padding(.init(top: 0, leading:10, bottom: 0, trailing: 10))
                             VStack{
                                 Image(systemName: "circle.fill")
                                     .font(.system(size: 40))
@@ -76,7 +79,10 @@ struct SheetView: View {
                                 Text("Chocalho")
                                     .font(.system(size: 12))
                                     .foregroundColor(Color("TextColorNames"))
+                                    .padding(.init(top: 0, leading: -20, bottom: 0, trailing: -20))
                             }
+                           
+                          
                             VStack{
                                 Image(systemName: "circle.fill")
                                     .font(.system(size: 40))
@@ -85,6 +91,7 @@ struct SheetView: View {
                                     .font(.system(size: 12))
                                     .foregroundColor(Color("TextColorNames"))
                             }
+                            .padding(.init(top: 0, leading:10, bottom: 0, trailing: 10))
                             VStack{
                                 Image(systemName: "circle.fill")
                                     .font(.system(size: 40))
@@ -94,15 +101,27 @@ struct SheetView: View {
                                     .foregroundColor(Color("TextColorNames"))
                             }
                             
+                            VStack{
+                                Image(systemName: "circle.fill")
+                                    .font(.system(size: 40))
+                                    .foregroundColor(.white)
+                                Text("Ukulele")
+                                    .font(.system(size: 12))
+                                    .foregroundColor(Color("TextColorNames"))
+                            }
+                            .padding(.init(top: 0, leading:10, bottom: 0, trailing: 0))
+                            
                             
                         }
-                        .padding(.init(top: 16, leading: 38, bottom: 0, trailing: 38))
+                        .padding(.init(top: 16, leading:16, bottom: 5, trailing: 16))
                     }
-                    .padding(.init(top: 333, leading: 16, bottom: 50, trailing: 16))
+                    .padding(.init(top: 0, leading: 16, bottom: 70, trailing: 16))
                 }
                 
                 if(hvm.historyCount == "a Borboleta"){
                     VStack{
+                        Image("BorboletaModal")
+                            .padding(.init(top: 0, leading: 38, bottom: 3.61, trailing: 38.93))
                         Text("a")
                             .font(.custom("RubikBubbles-Regular", size: 32))
                             .foregroundColor(Color("TextColorNames2"))
@@ -124,6 +143,7 @@ struct SheetView: View {
                             .lineLimit(nil)
                             .font(.system(size: 16))
                             .foregroundColor(Color("TextColorNames"))
+                            .padding(.init(top: 0, leading: 16, bottom: 0, trailing: 16))
                         
                         Text("INSTRUMENTOS DISPNÍVEIS")
                             .font(.custom("RubikBubbles-Regular", size: 16))
@@ -141,6 +161,7 @@ struct SheetView: View {
                                     .foregroundColor(Color("TextColorNames"))
                             }
                             
+                            
                             VStack{
                                 Image(systemName: "circle.fill")
                                     .font(.system(size: 40))
@@ -148,7 +169,9 @@ struct SheetView: View {
                                 Text("Bateria")
                                     .font(.system(size: 12))
                                     .foregroundColor(Color("TextColorNames"))
+                                    .padding(.init(top: 0, leading: -20, bottom: 0, trailing: -20))
                             }
+                           
                             VStack{
                                 Image(systemName: "circle.fill")
                                     .font(.system(size: 40))
@@ -156,7 +179,10 @@ struct SheetView: View {
                                 Text("Chocalho")
                                     .font(.system(size: 12))
                                     .foregroundColor(Color("TextColorNames"))
+                                    .padding(.init(top: 0, leading: -20, bottom: 0, trailing: -20))
                             }
+                           
+                          
                             VStack{
                                 Image(systemName: "circle.fill")
                                     .font(.system(size: 40))
@@ -165,6 +191,7 @@ struct SheetView: View {
                                     .font(.system(size: 12))
                                     .foregroundColor(Color("TextColorNames"))
                             }
+                            
                             VStack{
                                 Image(systemName: "circle.fill")
                                     .font(.system(size: 40))
@@ -174,17 +201,27 @@ struct SheetView: View {
                                     .foregroundColor(Color("TextColorNames"))
                             }
                             
+                            VStack{
+                                Image(systemName: "circle.fill")
+                                    .font(.system(size: 40))
+                                    .foregroundColor(.white)
+                                Text("Ukulele")
+                                    .font(.system(size: 12))
+                                    .foregroundColor(Color("TextColorNames"))
+                            }
+                           
                             
                             
                         }
-                        .padding(.init(top: 16, leading: 38, bottom: 0, trailing: 38))
+                        .padding(.init(top: 16, leading: 38, bottom: 5, trailing: 38))
                     }
-                    .padding(.init(top: 333, leading: 16, bottom: 50, trailing: 16))
-                    
+                    .padding(.init(top: 0, leading: 16, bottom: 0, trailing: 16))
                 }
                 
                 if(hvm.historyCount == "a Barata diz que tem"){
                     VStack{
+                        Image("BarataModal")
+                            .padding(.init(top: 0, leading: 97, bottom: 4, trailing: 96.76))
                         Text("a")
                             .font(.custom("RubikBubbles-Regular", size: 32))
                             .foregroundColor(Color("TextColorNames2"))
@@ -203,10 +240,7 @@ struct SheetView: View {
                         Text("30s | Música, Instrumental")
                             .font(.system(size: 12))
                             .foregroundColor(Color("TextColorNames"))
-                        
-                        
-                        
-                            .padding(.init(top: 50, leading: 103, bottom: 0, trailing: 101))
+                            .padding(.init(top: 0, leading: 103, bottom: 50, trailing: 101))
                         
                         
                         Text("Ajude a desmascarar as mentiras da Barata numa dinâmica musical de jogo da memória onde você deve combinar os pares para desbloquear novos sons e quem sabe a música inteira.")
@@ -214,12 +248,13 @@ struct SheetView: View {
                             .lineLimit(nil)
                             .font(.system(size: 16))
                             .foregroundColor(Color("TextColorNames"))
+                            .padding(.init(top: 0, leading: 16, bottom: 0, trailing: 16))
                         
                         Text("INSTRUMENTOS DISPNÍVEIS")
                             .font(.custom("RubikBubbles-Regular", size: 16))
                             .foregroundColor(Color("TextColorNames2"))
                             .bold()
-                            .padding(.init(top: 16, leading: 16, bottom: 0, trailing: 16))
+                            .padding(.init(top: 50, leading: 16, bottom: 0, trailing: 16))
                         
                         HStack{
                             VStack{
@@ -231,6 +266,7 @@ struct SheetView: View {
                                     .foregroundColor(Color("TextColorNames"))
                             }
                             
+                            
                             VStack{
                                 Image(systemName: "circle.fill")
                                     .font(.system(size: 40))
@@ -238,7 +274,9 @@ struct SheetView: View {
                                 Text("Bateria")
                                     .font(.system(size: 12))
                                     .foregroundColor(Color("TextColorNames"))
+                                    .padding(.init(top: 0, leading: -20, bottom: 0, trailing: -20))
                             }
+                            .padding(.init(top: 0, leading:10, bottom: 0, trailing: 10))
                             VStack{
                                 Image(systemName: "circle.fill")
                                     .font(.system(size: 40))
@@ -246,7 +284,10 @@ struct SheetView: View {
                                 Text("Chocalho")
                                     .font(.system(size: 12))
                                     .foregroundColor(Color("TextColorNames"))
+                                    .padding(.init(top: 0, leading: -20, bottom: 0, trailing: -20))
                             }
+                           
+                          
                             VStack{
                                 Image(systemName: "circle.fill")
                                     .font(.system(size: 40))
@@ -255,6 +296,7 @@ struct SheetView: View {
                                     .font(.system(size: 12))
                                     .foregroundColor(Color("TextColorNames"))
                             }
+                            .padding(.init(top: 0, leading:10, bottom: 0, trailing: 10))
                             VStack{
                                 Image(systemName: "circle.fill")
                                     .font(.system(size: 40))
@@ -264,12 +306,21 @@ struct SheetView: View {
                                     .foregroundColor(Color("TextColorNames"))
                             }
                             
+                            VStack{
+                                Image(systemName: "circle.fill")
+                                    .font(.system(size: 40))
+                                    .foregroundColor(.white)
+                                Text("Ukulele")
+                                    .font(.system(size: 12))
+                                    .foregroundColor(Color("TextColorNames"))
+                            }
+                            .padding(.init(top: 0, leading:10, bottom: 0, trailing: 0))
+                            
                             
                         }
-                        .padding(.init(top: 16, leading: 38, bottom: 0, trailing: 38))
+                        .padding(.init(top: 16, leading:16, bottom: 5, trailing: 16))
                     }
-                    .padding(.init(top: 333, leading: 16, bottom: 50, trailing: 16))
-                    
+                    .padding(.init(top: 0, leading: 16, bottom: 70, trailing: 16))
                 }
                 
                 

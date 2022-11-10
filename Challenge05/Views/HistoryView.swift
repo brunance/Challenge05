@@ -17,8 +17,8 @@ struct HistoryView: View {
         GridItem(.flexible())
     ]
     
-    private let history = ["A dona Aranha","a Borboleta","a Barata diz que tem"]
-    private let historyTitle = ["A D. spider","Os três porquinhos","O cravo e a rosa"]
+    private let history = ["a dona Aranha","a Borboleta","a Barata diz que tem"]
+  
     private let backgroundImage = ["Aranha","Borboleta","Barata"]
     var body: some View {
         ZStack{
@@ -30,7 +30,7 @@ struct HistoryView: View {
                     ForEach(0...history.count - 1, id: \.self) { item  in
                         ZStack{
                             Color("BackgroundColor1")
-                            if(history[item] == "A dona Aranha"){
+                            if(history[item] == "a dona Aranha"){
                                 
                                 Image("\(backgroundImage[item])Padrao")
                                     .resizable()
