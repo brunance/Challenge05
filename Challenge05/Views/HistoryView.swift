@@ -14,6 +14,7 @@ struct HistoryView: View {
     let columns = [
         GridItem(.flexible())
     ]
+
     private let history = ["a dona Aranha", "a Borboleta", "a Barata diz que tem"]
     private let backgroundImage = ["Aranha", "Borboleta", "Barata"]
 
@@ -22,7 +23,7 @@ struct HistoryView: View {
             Color("BackgroundColor1").ignoresSafeArea()
             VStack {
                 TabView {
-                    ForEach(0...history.count - 1, id: \.self) { item  in
+                    ForEach(0...history.count - 1, id: \.self) { item in
                         ZStack {
                             Color("BackgroundColor1")
 
