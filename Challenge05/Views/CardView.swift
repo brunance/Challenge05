@@ -33,16 +33,12 @@ struct CardView: View {
                     playSound(sound: titleOfSound, type: "wav")
                 })
         } else {
-            Text("?")
+            Text("")
                 .font(.system(size: 50))
                 .padding()
                 .frame(width: CGFloat(width), height: CGFloat(width))
-                .background(Color(red: 0.68, green: 0.83, blue: 0.96))
+                .background(Color("Card"))
                 .cornerRadius(10)
-                .overlay(
-                    RoundedRectangle(cornerRadius: 10)
-                        .stroke(Color(red: 0.18, green: 0.32, blue: 0.46), lineWidth: 5)
-                )
                 .onTapGesture {
                     if userChoices.count == 0 {
                         card.turnOver()

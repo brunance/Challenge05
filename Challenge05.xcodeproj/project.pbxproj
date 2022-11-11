@@ -13,6 +13,7 @@
 		4F92C5E929192DDE002FA763 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F92C5E829192DDE002FA763 /* Preview Assets.xcassets */; };
 		8BB2D771291D376B007F8043 /* CountDownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB2D770291D376B007F8043 /* CountDownView.swift */; };
 		8BB2D773291DFD35007F8043 /* countdown.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8BB2D772291DFD35007F8043 /* countdown.wav */; };
+		8BB2D775291E093D007F8043 /* OrchestraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB2D774291E093D007F8043 /* OrchestraView.swift */; };
 		8BC16099291A9C0900A73AD6 /* CardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC16098291A9C0900A73AD6 /* CardModel.swift */; };
 		8BC1609B291A9DA700A73AD6 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC1609A291A9DA700A73AD6 /* CardView.swift */; };
 		8BC1609D291AA44C00A73AD6 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC1609C291AA44C00A73AD6 /* GameView.swift */; };
@@ -37,6 +38,7 @@
 		4F92C5E829192DDE002FA763 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8BB2D770291D376B007F8043 /* CountDownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountDownView.swift; sourceTree = "<group>"; };
 		8BB2D772291DFD35007F8043 /* countdown.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = countdown.wav; sourceTree = "<group>"; };
+		8BB2D774291E093D007F8043 /* OrchestraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrchestraView.swift; sourceTree = "<group>"; };
 		8BC16098291A9C0900A73AD6 /* CardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CardModel.swift; path = Challenge05/Views/CardModel.swift; sourceTree = SOURCE_ROOT; };
 		8BC1609A291A9DA700A73AD6 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		8BC1609C291AA44C00A73AD6 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 				8BC1609A291A9DA700A73AD6 /* CardView.swift */,
 				8BC1609C291AA44C00A73AD6 /* GameView.swift */,
 				8BB2D770291D376B007F8043 /* CountDownView.swift */,
+				8BB2D774291E093D007F8043 /* OrchestraView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 				9CA52FE7291A1DD60030C96B /* SheetView.swift in Sources */,
 				8BC16099291A9C0900A73AD6 /* CardModel.swift in Sources */,
 				8BD111B5291BF9A000F77DEA /* AudioModel.swift in Sources */,
+				8BB2D775291E093D007F8043 /* OrchestraView.swift in Sources */,
 				8BC1609B291A9DA700A73AD6 /* CardView.swift in Sources */,
 				4F92C5E229192DDD002FA763 /* Challenge05App.swift in Sources */,
 				9CDB40BD291B4B940077D0EF /* HistoryViewModel.swift in Sources */,
