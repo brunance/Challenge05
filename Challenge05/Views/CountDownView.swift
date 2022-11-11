@@ -8,45 +8,53 @@
 import SwiftUI
 
 struct CountDownView: View {
+    @State private var isShowingDetailView = false
     @State var countDownTimer = 5
     @State var timerRunning = true
     @State var scale: CGFloat = 1
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
 
     var body: some View {
-        ZStack {
-            Color("BackgroundColor1").ignoresSafeArea()
-            Image("BarataPadrao")
-                .resizable()
-            VStack {
-                ZStack {
-                    Image(systemName: "circle.fill")
-                        .font(.system(size: 200))
-                        .foregroundColor(Color("TextColorNames"))
-                        .scaleEffect(scale)
-                        .opacity(Double(2 - scale))
-                        .onAppear {
-                            let baseAnimation = Animation.easeInOut(duration: 0.9)
-                            let repeated = baseAnimation.repeatForever(autoreverses: false)
-                            withAnimation(repeated) {
-                                scale += 1
+        NavigationView(){
+        
+            ZStack {
+                Color("BackgroundColor1").ignoresSafeArea()
+                Image("BarataPadrao")
+                    .resizable()
+                VStack {
+                    ZStack {
+                        Image(systemName: "circle.fill")
+                            .font(.system(size: 200))
+                            .foregroundColor(Color("TextColorNames"))
+                            .scaleEffect(scale)
+                            .opacity(Double(2 - scale))
+                            .onAppear {
+                                let baseAnimation = Animation.easeInOut(duration: 0.9)
+                                let repeated = baseAnimation.repeatForever(autoreverses: false)
+                                withAnimation(repeated) {
+                                    scale += 1
+                                }
                             }
-                        }
-
-                    Text("\(countDownTimer)")
-                        .onReceive(timer) { _ in
-                            if countDownTimer > 0 && timerRunning {
-                                playSound(sound: "countdown", type: "wav")
-                                countDownTimer -= 1
-                            } else {
-                                timerRunning = false
+                        Text("\(countDownTimer)")
+                            .onReceive(timer) { _ in
+                                if countDownTimer > 0 && timerRunning {
+                                    playSound(sound: "countdown", type: "wav")
+                                    countDownTimer -= 1
+                                } else {
+                                    isShowingDetailView = true
+                                    timerRunning = false
+                                }
                             }
-                        }
-                        .font(.custom("RubikBubbles-Regular", size: 100))
-                        .foregroundColor(Color("BackgroundColor1"))
-                        .frame(width: 200, height: 200)
-                        .background(Color("TextColorNames"))
-                        .clipShape(Circle())
+                            .font(.custom("RubikBubbles-Regular", size: 100))
+                            .foregroundColor(Color("BackgroundColor1"))
+                            .frame(width: 200, height: 200)
+                            .background(Color("TextColorNames"))
+                            .clipShape(Circle())
+                        
+                        NavigationLink(destination: OrchestraView(),isActive: $isShowingDetailView){}
+                            .isDetailLink(false)
+                            
+                    }
                 }
             }
         }
