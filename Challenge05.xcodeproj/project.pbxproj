@@ -11,6 +11,7 @@
 		4F92C5E429192DDD002FA763 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F92C5E329192DDD002FA763 /* HistoryView.swift */; };
 		4F92C5E629192DDE002FA763 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F92C5E529192DDE002FA763 /* Assets.xcassets */; };
 		4F92C5E929192DDE002FA763 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F92C5E829192DDE002FA763 /* Preview Assets.xcassets */; };
+		8B90C807292274E400AC0F11 /* HistoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B90C806292274E400AC0F11 /* HistoryModel.swift */; };
 		8BB2D771291D376B007F8043 /* CountDownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB2D770291D376B007F8043 /* CountDownView.swift */; };
 		8BB2D773291DFD35007F8043 /* countdown.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8BB2D772291DFD35007F8043 /* countdown.wav */; };
 		8BB2D775291E093D007F8043 /* OrchestraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB2D774291E093D007F8043 /* OrchestraView.swift */; };
@@ -36,6 +37,7 @@
 		4F92C5E329192DDD002FA763 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
 		4F92C5E529192DDE002FA763 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4F92C5E829192DDE002FA763 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		8B90C806292274E400AC0F11 /* HistoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HistoryModel.swift; path = Challenge05/Views/HistoryModel.swift; sourceTree = SOURCE_ROOT; };
 		8BB2D770291D376B007F8043 /* CountDownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountDownView.swift; sourceTree = "<group>"; };
 		8BB2D772291DFD35007F8043 /* countdown.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = countdown.wav; sourceTree = "<group>"; };
 		8BB2D774291E093D007F8043 /* OrchestraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrchestraView.swift; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 			children = (
 				8BC16098291A9C0900A73AD6 /* CardModel.swift */,
 				8BD111B4291BF9A000F77DEA /* AudioModel.swift */,
+				8B90C806292274E400AC0F11 /* HistoryModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 				9CA52FE7291A1DD60030C96B /* SheetView.swift in Sources */,
 				8BC16099291A9C0900A73AD6 /* CardModel.swift in Sources */,
 				8BD111B5291BF9A000F77DEA /* AudioModel.swift in Sources */,
+				8B90C807292274E400AC0F11 /* HistoryModel.swift in Sources */,
 				8BB2D775291E093D007F8043 /* OrchestraView.swift in Sources */,
 				8BC1609B291A9DA700A73AD6 /* CardView.swift in Sources */,
 				4F92C5E229192DDD002FA763 /* Challenge05App.swift in Sources */,
