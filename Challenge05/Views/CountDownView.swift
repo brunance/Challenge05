@@ -15,17 +15,17 @@ struct CountDownView: View {
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
 
     var body: some View {
-        NavigationView(){
-        
+        NavigationView() {
+
             ZStack {
-                Color("BackgroundColor1").ignoresSafeArea()
+                Color("Primaria1").ignoresSafeArea()
                 Image("BarataPadrao")
                     .resizable()
                 VStack {
                     ZStack {
                         Image(systemName: "circle.fill")
                             .font(.system(size: 200))
-                            .foregroundColor(Color("TextColorNames"))
+                            .foregroundColor(Color("CircleCount"))
                             .scaleEffect(scale)
                             .opacity(Double(2 - scale))
                             .onAppear {
@@ -41,19 +41,18 @@ struct CountDownView: View {
                                     playSound(sound: "countdown", type: "wav")
                                     countDownTimer -= 1
                                 } else {
-                                    isShowingDetailView = true
+//                                    isShowingDetailView = true
                                     timerRunning = false
                                 }
                             }
                             .font(.custom("RubikBubbles-Regular", size: 100))
-                            .foregroundColor(Color("BackgroundColor1"))
+                            .foregroundColor(Color("CombinarText"))
                             .frame(width: 200, height: 200)
-                            .background(Color("TextColorNames"))
+                            .background(Color("CircleCount"))
                             .clipShape(Circle())
-                        
-                        NavigationLink(destination: OrchestraView(),isActive: $isShowingDetailView){}
+
+                        NavigationLink(destination: OrchestraView(), isActive: $isShowingDetailView) {}
                             .isDetailLink(false)
-                            
                     }
                 }
             }

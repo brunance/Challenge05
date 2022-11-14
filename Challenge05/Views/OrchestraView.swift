@@ -29,7 +29,7 @@ struct OrchestraView: View {
                 HStack {
                     Text("a Barata diz que tem")
                         .font(.custom("RubikBubbles-Regular", size: 24))
-                        .foregroundColor(Color("Primaria6"))
+                        .foregroundColor(Color("Primaria1"))
                         .bold()
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .padding(.init(top: 0, leading: 20, bottom: 0, trailing: 0))
@@ -38,7 +38,7 @@ struct OrchestraView: View {
                     }, label: {
                         Image(systemName: "hand.thumbsup.circle")
                             .font(.system(size: 35))
-                            .foregroundColor(Color("Primaria6"))
+                            .foregroundColor(Color("Primaria1"))
                             .padding(.init(top: 0, leading: 0, bottom: 0, trailing: 20))
                     })
                 }
@@ -63,7 +63,7 @@ struct OrchestraView: View {
                     Button(action: {self.startLoading()}, label: {
                         Image(systemName: "play.circle.fill")
                             .font(.system(size: 83))
-                            .foregroundColor(Color("Primaria6"))
+                            .foregroundColor(Color("Primaria1"))
                     })
                     Text("Tocar")
                         .font(.system(size: 12))

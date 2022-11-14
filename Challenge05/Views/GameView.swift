@@ -27,7 +27,7 @@ struct GameView: View {
         } else {
             GeometryReader { geometry in
                 ZStack {
-                    Color("BackgroundColor1").ignoresSafeArea()
+                    Color("Primaria1").ignoresSafeArea()
                     Image("AranhaPadrao")
                         .resizable()
                     VStack {
@@ -35,65 +35,57 @@ struct GameView: View {
                         VStack {
                             Text("a dona")
                                 .font(.custom("RubikBubbles-Regular", size: 32))
-                                .foregroundColor(Color("TextColorNames"))
+                                .foregroundColor(Color("TitleHistory"))
                             Text("Aranha")
                                 .font(.custom("RubikBubbles-Regular", size: 48))
-                                .foregroundColor(Color("TextColorNames"))
+                                .foregroundColor(Color("TitleHistory"))
                         }
 
-                        HStack {
-                            VStack {
-                                Image(systemName: "circle.fill")
-                                    .font(.system(size: 40))
-                                    .foregroundColor(Color("Card"))
-                                Text("Violão")
-                                    .font(.system(size: 12))
-                                    .foregroundColor(Color("TextColorNames"))
+                        Text("Combine os sons para desbloquear uma melodia")
+                            .font(.system(size: 16))
+                            .foregroundColor(Color("TitleHistory"))
+                        
+                        VStack {
+                            
+                            Text("0/6")
+                                .font(.system(size: 16))
+                                .foregroundColor(Color("TitleHistory"))
+                            
+                            HStack {
+                                VStack {
+                                    Image("Pandeiro")
+                                        .font(.system(size: 40))
+                                        .foregroundColor(.white)
+                                }
+                                VStack {
+                                    Image("Chocalho")
+                                        .font(.system(size: 40))
+                                        .foregroundColor(.white)
+                                }
+                                .padding(.init(top: 0, leading: 10, bottom: 0, trailing: 10))
+                                VStack {
+                                    Image("Flauta")
+                                        .font(.system(size: 40))
+                                        .foregroundColor(.white)
+                                }
+                                VStack {
+                                    Image("Saxofone")
+                                        .font(.system(size: 40))
+                                        .foregroundColor(.white)
+                                }
+                                VStack {
+                                    Image("Violao")
+                                        .font(.system(size: 40))
+                                    .foregroundColor(.white)                            }
+                                VStack {
+                                    Image("Piano")
+                                        .font(.system(size: 40))
+                                        .foregroundColor(.white)
+                                }
+                                .padding(.init(top: 0, leading: 10, bottom: 0, trailing: 0))
                             }
-                            VStack {
-                                Image(systemName: "circle.fill")
-                                    .font(.system(size: 40))
-                                    .foregroundColor(Color("Card"))
-                                Text("Bateria")
-                                    .font(.system(size: 12))
-                                    .foregroundColor(Color("TextColorNames"))
-                                    .padding(.init(top: 0, leading: -20, bottom: 0, trailing: -20))
-                            }
-                            VStack {
-                                Image(systemName: "circle.fill")
-                                    .font(.system(size: 40))
-                                    .foregroundColor(Color("Card"))
-                                Text("Chocalho")
-                                    .font(.system(size: 12))
-                                    .foregroundColor(Color("TextColorNames"))
-                                    .padding(.init(top: 0, leading: -20, bottom: 0, trailing: -20))
-                            }
-                            VStack {
-                                Image(systemName: "circle.fill")
-                                    .font(.system(size: 40))
-                                    .foregroundColor(Color("Card"))
-                                Text("Flauta")
-                                    .font(.system(size: 12))
-                                    .foregroundColor(Color("TextColorNames"))
-                            }
-                            VStack {
-                                Image(systemName: "circle.fill")
-                                    .font(.system(size: 40))
-                                    .foregroundColor(Color("Card"))
-                                Text("Gaita")
-                                    .font(.system(size: 12))
-                                    .foregroundColor(Color("TextColorNames"))
-                            }
-                            VStack {
-                                Image(systemName: "circle.fill")
-                                    .font(.system(size: 40))
-                                    .foregroundColor(Color("Card"))
-                                Text("Ukulele")
-                                    .font(.system(size: 12))
-                                    .foregroundColor(Color("TextColorNames"))
-                            }
-                        }.padding(.init(top: 1, leading: 0, bottom: 20, trailing: 0))
-
+                            .padding(.init(top: 16, leading: 0, bottom: 5, trailing: 0))
+                        }
                         LazyVGrid(columns: threeColumnGrid, spacing: 10) {
                             ForEach(cards) { card in
                                 CardView(card: card,

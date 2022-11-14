@@ -20,12 +20,12 @@ struct HistoryView: View {
 
     var body: some View {
         ZStack {
-            Color("BackgroundColor1").ignoresSafeArea()
+            Color("Primaria1").ignoresSafeArea()
             VStack {
                 TabView {
                     ForEach(0...history.count - 1, id: \.self) { item in
                         ZStack {
-                            Color("BackgroundColor1")
+                            Color("Primaria1")
 
                             if history[item] == "a dona Aranha" {
                                 Image("\(backgroundImage[item])Padrao")
@@ -41,7 +41,7 @@ struct HistoryView: View {
                                 }, label: {
                                     Image(systemName: "questionmark.circle.fill")
                                         .font(.system(size: 43))
-                                        .foregroundColor(Color("BackgroundColor1"))
+                                        .foregroundColor(Color("BackQuestion"))
                                         .padding(.init(top: 77, leading: 331, bottom: 724, trailing: 16))
                                 })
                                 .sheet(isPresented: $showingSheet) {
@@ -50,24 +50,23 @@ struct HistoryView: View {
 
                                 Image(systemName: "questionmark.circle")
                                     .font(.system(size: 43))
-                                // swiftlint:disable:next line_length
-                                    .foregroundStyle(Color("TextColorNames"), Color("TextColorNames"), Color("BackgroundColor1"))
+                                    .foregroundStyle(Color("LightQuestion"))
                                     .padding(.init(top: 77, leading: 331, bottom: 724, trailing: 16))
 
                                 VStack {
                                     Text("a dona")
                                         .font(.custom("RubikBubbles-Regular", size: 32))
-                                        .foregroundColor(Color("TextColorNames"))
+                                        .foregroundColor(Color("TitleHistory"))
                                     Text("Aranha")
                                         .font(.custom("RubikBubbles-Regular", size: 48))
-                                        .foregroundColor(Color("TextColorNames"))
+                                        .foregroundColor(Color("TitleHistory"))
                                 }
                                 .padding(.init(top: 477, leading: 102, bottom: 280, trailing: 102))
 
                                 VStack {
                                     Text("30s | Música, Instrumental")
                                         .font(.system(size: 12))
-                                        .foregroundColor(Color("TextColorNames"))
+                                        .foregroundColor(Color("TitleHistory"))
                                 }
                                 .padding(.init(top: 568, leading: 121, bottom: 258, trailing: 119))
 
@@ -81,10 +80,10 @@ struct HistoryView: View {
                                                 .font(.system(size: 16))
                                                 .bold()
                                         }
-                                        .foregroundColor(Color("BackgroundColor1"))
+                                        .foregroundColor(Color("CombinarText"))
                                     })
                                     .frame(width: 296, height: 40)
-                                    .background(Color(.white))
+                                    .background(Color("TitleHistory"))
                                     .cornerRadius(8)
                                     .ignoresSafeArea()
                                 }
@@ -107,7 +106,7 @@ struct HistoryView: View {
                                 }, label: {
                                     Image(systemName: "questionmark.circle.fill")
                                         .font(.system(size: 43))
-                                        .foregroundColor(Color("BackgroundColor1"))
+                                        .foregroundColor(Color("BackQuestion"))
                                         .padding(.init(top: 77, leading: 331, bottom: 724, trailing: 16))
                                 })
                                 .sheet(isPresented: $showingSheet) {
@@ -115,22 +114,22 @@ struct HistoryView: View {
                                 }
                                 Image(systemName: "questionmark.circle")
                                     .font(.system(size: 43))
-                                    .foregroundColor(Color("TextColorNames"))
+                                    .foregroundColor(Color("LightQuestion"))
                                     .padding(.init(top: 77, leading: 331, bottom: 724, trailing: 16))
                                 VStack {
                                     Text("a")
                                         .font(.custom("RubikBubbles-Regular", size: 32))
-                                        .foregroundColor(Color("TextColorNames"))
+                                        .foregroundColor(Color("TitleHistory"))
                                     Text("Borboleta")
                                         .font(.custom("RubikBubbles-Regular", size: 48))
-                                        .foregroundColor(Color("TextColorNames"))
+                                        .foregroundColor(Color("TitleHistory"))
                                 }
                                 .padding(.init(top: 477, leading: 67, bottom: 280, trailing: 68))
 
                                 VStack {
                                     Text("30s | Música, Instrumental")
                                         .font(.system(size: 12))
-                                        .foregroundColor(Color("TextColorNames"))
+                                        .foregroundColor(Color("TitleHistory"))
                                 }
                                 .padding(.init(top: 568, leading: 121, bottom: 258, trailing: 119))
 
@@ -145,10 +144,10 @@ struct HistoryView: View {
                                                 .font(.system(size: 16))
                                                 .bold()
                                         }
-                                        .foregroundColor(Color("BackgroundColor1"))
+                                        .foregroundColor(Color("CombinarText"))
                                     })
                                     .frame(width: 296, height: 40)
-                                    .background(Color(.white))
+                                    .background(Color("TitleHistory"))
                                     .cornerRadius(8)
                                     .ignoresSafeArea()
                                 }
@@ -169,7 +168,7 @@ struct HistoryView: View {
                                 }, label: {
                                     Image(systemName: "questionmark.circle.fill")
                                         .font(.system(size: 43))
-                                        .foregroundColor(Color("BackgroundColor1"))
+                                        .foregroundColor(Color("BackQuestion"))
                                         .padding(.init(top: 77, leading: 331, bottom: 724, trailing: 16))
                                 })
                                 .sheet(isPresented: $showingSheet) {
@@ -177,19 +176,19 @@ struct HistoryView: View {
                                 }
                                 Image(systemName: "questionmark.circle")
                                     .font(.system(size: 43))
-                                    .foregroundColor(Color("TextColorNames"))
+                                    .foregroundColor(Color("LightQuestion"))
                                     .padding(.init(top: 77, leading: 331, bottom: 724, trailing: 16))
 
                                 VStack {
                                     Text("a")
                                         .font(.custom("RubikBubbles-Regular", size: 32))
-                                        .foregroundColor(Color("TextColorNames"))
+                                        .foregroundColor(Color("TitleHistory"))
                                     Text("Barata")
                                         .font(.custom("RubikBubbles-Regular", size: 48))
-                                        .foregroundColor(Color("TextColorNames"))
+                                        .foregroundColor(Color("TitleHistory"))
                                     Text("diz que tem")
                                         .font(.custom("RubikBubbles-Regular", size: 32))
-                                        .foregroundColor(Color("TextColorNames"))
+                                        .foregroundColor(Color("TitleHistory"))
 
                                 }
                                 .padding(.init(top: 477, leading: 99, bottom: 246, trailing: 98))
@@ -197,7 +196,7 @@ struct HistoryView: View {
                                 VStack {
                                     Text("30s | Música, Instrumental")
                                         .font(.system(size: 12))
-                                        .foregroundColor(Color("TextColorNames"))
+                                        .foregroundColor(Color("TitleHistory"))
                                 }
                                 .padding(.init(top: 602, leading: 124, bottom: 224, trailing: 116))
 
@@ -211,10 +210,10 @@ struct HistoryView: View {
                                                 .font(.system(size: 16))
                                                 .bold()
                                         }
-                                        .foregroundColor(Color("BackgroundColor1"))
+                                        .foregroundColor(Color("CombinarText"))
                                     })
                                     .frame(width: 296, height: 40)
-                                    .background(Color(.white))
+                                    .background(Color("TitleHistory"))
                                     .cornerRadius(8)
                                     .ignoresSafeArea()
                                 }
