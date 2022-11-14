@@ -10,7 +10,6 @@ import SwiftUI
 struct HistoryView: View {
     @State private var showingSheet = false
     @State private var showingCountDown = false
-    @ObservedObject var hvm: HistoryViewModel = HistoryViewModel.shared
 
     @State var history = createHistoryList()
 
@@ -37,7 +36,6 @@ struct HistoryView: View {
                                     .padding(.init(top: -7, leading: 0, bottom: 0, trailing: 0))
 
                                 Button(action: {
-                                    hvm.historyCount = item.name
                                     showingSheet.toggle()
                                 }, label: {
                                     Image(systemName: "questionmark.circle.fill")
@@ -46,8 +44,7 @@ struct HistoryView: View {
                                         .padding(.init(top: 77, leading: 331, bottom: 724, trailing: 16))
                                 })
                                 .sheet(isPresented: $showingSheet) {
-                                    SheetView()
-                                   
+                                    SheetView(history: item)
                                 }
 
                                 Image(systemName: "questionmark.circle")
@@ -58,9 +55,9 @@ struct HistoryView: View {
                                     ForEach(0...item.titleList.count - 1, id: \.self) { num in
 
                                         Text(item.titleList[num])
+                                            // swiftlint:disable:next line_length
                                             .font(.custom("RubikBubbles-Regular", size: CGFloat(item.sizeTitleList[num])))
                                             .foregroundColor(Color("TitleHistory"))
-                                            
                                     }
 
                                 }
