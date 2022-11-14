@@ -26,7 +26,7 @@ class CardModel: Identifiable, ObservableObject {
 }
 
 let cardValues: [String] = [
-    "🎸", "🥁", "🎷", "📯", "🪕", "🎻"
+    "Chocalho", "Flauta", "Pandeiro", "Piano", "Saxofone", "Violao"
 ]
 
 let cardSounds: [String] = [

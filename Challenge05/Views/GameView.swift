@@ -9,8 +9,8 @@ import SwiftUI
 
 struct GameView: View {
     private var threeColumnGrid = [GridItem(.flexible()),
-                                  GridItem(.flexible()),
-                                  GridItem(.flexible())]
+                                   GridItem(.flexible()),
+                                   GridItem(.flexible())]
 
     private var sixColumnGrid = [GridItem(.flexible()),
                                  GridItem(.flexible()),
@@ -31,7 +31,6 @@ struct GameView: View {
                     Image("AranhaPadrao")
                         .resizable()
                     VStack {
-
                         VStack {
                             Text("a dona")
                                 .font(.custom("RubikBubbles-Regular", size: 32))
@@ -42,53 +41,56 @@ struct GameView: View {
                         }
 
                         Text("Combine os sons para desbloquear uma melodia")
+//                            .frame(maxWidth: .infinity, alignment: .center)
                             .font(.system(size: 16))
+//                            .fontWeight(.bold)
                             .foregroundColor(Color("TitleHistory"))
 
-                       VStack {
-
                             Text("0/6")
+                                .frame(maxWidth: .infinity, alignment: .trailing)
                                 .font(.system(size: 16))
                                 .foregroundColor(Color("TitleHistory"))
-                           ZStack {
-                               RoundedRectangle(cornerRadius: 20, style: .continuous)
-                                   .foregroundColor(Color("TitleHistory"))
+
+                        VStack {
+                            ZStack {
+                                RoundedRectangle(cornerRadius: 20, style: .continuous)
+                                    .foregroundColor(Color("TitleHistory"))
                                     .frame(width: 350, height: 60)
-                               HStack {
-                                   VStack {
-                                       Image("Pandeiro")
-                                           .font(.system(size: 40))
-                                           .foregroundColor(.white)
-                                   }
-                                   VStack {
-                                       Image("Chocalho")
-                                           .font(.system(size: 40))
-                                           .foregroundColor(.white)
-                                   }
-                                   .padding(.init(top: 0, leading: 10, bottom: 0, trailing: 10))
-                                   VStack {
-                                       Image("Flauta")
-                                           .font(.system(size: 40))
-                                           .foregroundColor(.white)
-                                   }
-                                   VStack {
-                                       Image("Saxofone")
-                                           .font(.system(size: 40))
-                                           .foregroundColor(.white)
-                                   }
-                                   VStack {
-                                       Image("Violao")
-                                           .font(.system(size: 40))
-                                       .foregroundColor(.white)                            }
-                                   VStack {
-                                       Image("Piano")
-                                           .font(.system(size: 40))
-                                           .foregroundColor(.white)
-                                   }
-                                   .padding(.init(top: 0, leading: 10, bottom: 0, trailing: 0))
-                               }
-                               .padding(.init(top: 5, leading: 0, bottom: 5, trailing: 0))
-                           }
+                                HStack {
+                                    VStack {
+                                        Image("Pandeiro")
+                                            .font(.system(size: 40))
+                                            .foregroundColor(.white)
+                                    }
+                                    VStack {
+                                        Image("Chocalho")
+                                            .font(.system(size: 40))
+                                            .foregroundColor(.white)
+                                    }
+                                    .padding(.init(top: 0, leading: 10, bottom: 0, trailing: 10))
+                                    VStack {
+                                        Image("Flauta")
+                                            .font(.system(size: 40))
+                                            .foregroundColor(.white)
+                                    }
+                                    VStack {
+                                        Image("Saxofone")
+                                            .font(.system(size: 40))
+                                            .foregroundColor(.white)
+                                    }
+                                    VStack {
+                                        Image("Violao")
+                                            .font(.system(size: 40))
+                                        .foregroundColor(.white)                            }
+                                    VStack {
+                                        Image("Piano")
+                                            .font(.system(size: 40))
+                                            .foregroundColor(.white)
+                                    }
+                                    .padding(.init(top: 0, leading: 10, bottom: 0, trailing: 0))
+                                }
+                                .padding(.init(top: 5, leading: 0, bottom: 5, trailing: 0))
+                            }
 
                         }
                         LazyVGrid(columns: threeColumnGrid, spacing: 10) {
@@ -100,19 +102,19 @@ struct GameView: View {
                                 )
                             }
                         }
-//                        VStack {
-//                            Text("Match these cards to win: ")
-//                                .font(.system(size: 28))
-//                                .padding()
-//                            LazyVGrid(columns: sixColumnGrid, spacing: 5) {
-//                                ForEach(cardValues, id: \.self) { cardValue in
-//                                    if !matchedCards.contains(where: {$0.text == cardValue}) {
-//                                        Text(cardValue)
-//                                            .font(.system(size: 50))
-//                                    }
-//                                }
-//                            }
-//                        }
+                        //                        VStack {
+                        //                            Text("Match these cards to win: ")
+                        //                                .font(.system(size: 28))
+                        //                                .padding()
+                        //                            LazyVGrid(columns: sixColumnGrid, spacing: 5) {
+                        //                                ForEach(cardValues, id: \.self) { cardValue in
+                        //                                    if !matchedCards.contains(where: {$0.text == cardValue}) {
+                        //                                        Text(cardValue)
+                        //                                            .font(.system(size: 50))
+                        //                                    }
+                        //                                }
+                        //                            }
+                        //                        }
                     }
                     .padding()
                 }
