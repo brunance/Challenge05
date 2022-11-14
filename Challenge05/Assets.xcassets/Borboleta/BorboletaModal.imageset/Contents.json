@@ -1,6 +1,16 @@
 {
   "images" : [
     {
+      "filename" : "madrinha (1).svg",
+      "idiom" : "universal"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
       "filename" : "madrinha.svg",
       "idiom" : "universal"
     }

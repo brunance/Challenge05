@@ -1,6 +1,16 @@
 {
   "images" : [
     {
+      "filename" : "Aranha+Teia 1.svg",
+      "idiom" : "universal"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
       "filename" : "Aranha+Teia.svg",
       "idiom" : "universal"
     }
