@@ -16,7 +16,7 @@ struct SheetView: View {
         ZStack {
             Color("BackSheet").ignoresSafeArea()
             VStack {
-                if hvm.historyCount == "a dona Aranha" {
+                if hvm.historyCount == "Aranha" {
                     VStack {
                         Image("AranhaModal")
                             .padding(.init(top: 0, leading: 130.63, bottom: 4, trailing: 130.21))
@@ -102,7 +102,7 @@ struct SheetView: View {
                     }
                     .padding(.init(top: 0, leading: 16, bottom: 70, trailing: 16))
                 }
-                if hvm.historyCount == "a Borboleta" {
+                if hvm.historyCount == "Borboleta" {
                     VStack {
                         Image("BorboletaModal")
                             .padding(.init(top: 0, leading: 38, bottom: 3.61, trailing: 38.93))
@@ -189,7 +189,7 @@ struct SheetView: View {
                     .padding(.init(top: 0, leading: 16, bottom: 0, trailing: 16))
                 }
 
-                if hvm.historyCount == "a Barata diz que tem" {
+                if hvm.historyCount == "Barata" {
                     VStack {
                         Image("BarataModal")
                             .padding(.init(top: 0, leading: 97, bottom: 4, trailing: 96.76))

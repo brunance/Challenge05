@@ -44,13 +44,13 @@ struct GameView: View {
                         Text("Combine os sons para desbloquear uma melodia")
                             .font(.system(size: 16))
                             .foregroundColor(Color("TitleHistory"))
-                        
+
                         VStack {
-                            
+
                             Text("0/6")
                                 .font(.system(size: 16))
                                 .foregroundColor(Color("TitleHistory"))
-                            
+
                             HStack {
                                 VStack {
                                     Image("Pandeiro")

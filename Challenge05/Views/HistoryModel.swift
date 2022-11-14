@@ -8,12 +8,13 @@
 import Foundation
 import SwiftUI
 
-class HistoryModel: Identifiable, ObservableObject {
+struct HistoryModel: Identifiable, Hashable {
+    var id = UUID()
     var name: String
     var titleList: [String]
-    var sizeTitleList: [Int]
+    var sizeTitleList: [Float]
 
-    init(name: String, titleList: [String], sizeTitleList: [Int]) {
+    init(name: String, titleList: [String], sizeTitleList: [Float]) {
         self.name = name
         self.titleList = titleList
         self.sizeTitleList = sizeTitleList
@@ -23,7 +24,7 @@ class HistoryModel: Identifiable, ObservableObject {
 func createHistoryList() -> [HistoryModel] {
     var historyList = [HistoryModel]()
 
-    historyList.append(HistoryModel(name: "Barata", titleList: ["a dona", "Aranha"], sizeTitleList: [32, 48]))
+    historyList.append(HistoryModel(name: "Aranha", titleList: ["a dona", "Aranha"], sizeTitleList: [32, 48]))
 
     historyList.append(HistoryModel(name: "Borboleta", titleList: ["a", "Borboleta"], sizeTitleList: [32, 48]))
 
