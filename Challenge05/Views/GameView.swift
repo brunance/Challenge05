@@ -44,47 +44,52 @@ struct GameView: View {
                         Text("Combine os sons para desbloquear uma melodia")
                             .font(.system(size: 16))
                             .foregroundColor(Color("TitleHistory"))
-                        
-                        VStack {
-                            
+
+                       VStack {
+
                             Text("0/6")
                                 .font(.system(size: 16))
                                 .foregroundColor(Color("TitleHistory"))
-                            
-                            HStack {
-                                VStack {
-                                    Image("Pandeiro")
-                                        .font(.system(size: 40))
-                                        .foregroundColor(.white)
-                                }
-                                VStack {
-                                    Image("Chocalho")
-                                        .font(.system(size: 40))
-                                        .foregroundColor(.white)
-                                }
-                                .padding(.init(top: 0, leading: 10, bottom: 0, trailing: 10))
-                                VStack {
-                                    Image("Flauta")
-                                        .font(.system(size: 40))
-                                        .foregroundColor(.white)
-                                }
-                                VStack {
-                                    Image("Saxofone")
-                                        .font(.system(size: 40))
-                                        .foregroundColor(.white)
-                                }
-                                VStack {
-                                    Image("Violao")
-                                        .font(.system(size: 40))
-                                    .foregroundColor(.white)                            }
-                                VStack {
-                                    Image("Piano")
-                                        .font(.system(size: 40))
-                                        .foregroundColor(.white)
-                                }
-                                .padding(.init(top: 0, leading: 10, bottom: 0, trailing: 0))
-                            }
-                            .padding(.init(top: 16, leading: 0, bottom: 5, trailing: 0))
+                           ZStack {
+                               RoundedRectangle(cornerRadius: 20, style: .continuous)
+                                   .foregroundColor(Color("TitleHistory"))
+                                    .frame(width: 350, height: 60)
+                               HStack {
+                                   VStack {
+                                       Image("Pandeiro")
+                                           .font(.system(size: 40))
+                                           .foregroundColor(.white)
+                                   }
+                                   VStack {
+                                       Image("Chocalho")
+                                           .font(.system(size: 40))
+                                           .foregroundColor(.white)
+                                   }
+                                   .padding(.init(top: 0, leading: 10, bottom: 0, trailing: 10))
+                                   VStack {
+                                       Image("Flauta")
+                                           .font(.system(size: 40))
+                                           .foregroundColor(.white)
+                                   }
+                                   VStack {
+                                       Image("Saxofone")
+                                           .font(.system(size: 40))
+                                           .foregroundColor(.white)
+                                   }
+                                   VStack {
+                                       Image("Violao")
+                                           .font(.system(size: 40))
+                                       .foregroundColor(.white)                            }
+                                   VStack {
+                                       Image("Piano")
+                                           .font(.system(size: 40))
+                                           .foregroundColor(.white)
+                                   }
+                                   .padding(.init(top: 0, leading: 10, bottom: 0, trailing: 0))
+                               }
+                               .padding(.init(top: 5, leading: 0, bottom: 5, trailing: 0))
+                           }
+
                         }
                         LazyVGrid(columns: threeColumnGrid, spacing: 10) {
                             ForEach(cards) { card in
