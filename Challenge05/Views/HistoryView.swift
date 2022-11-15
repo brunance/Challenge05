@@ -10,20 +10,19 @@ import SwiftUI
 struct HistoryView: View {
     @State private var showingSheet = false
     @State private var showingCountDown = false
-
-    @State var history = createHistoryList()
-
+    var historyCount = createHistoryList()
+    @ObservedObject var hvm: HistoryViewModel = HistoryViewModel()
     let columns = [
         GridItem(.flexible())
     ]
 
     var body: some View {
-        NavigationView() {
+        NavigationView(){
             ZStack {
                 Color("Primaria1").ignoresSafeArea()
                 VStack {
                     TabView {
-                        ForEach(history, id: \.self) { item in
+                        ForEach(historyCount, id: \.self) { item in
                             ZStack {
                                 Color("Primaria1")
                                 Image("\(item.name)Padrao")
@@ -34,23 +33,27 @@ struct HistoryView: View {
                                 Image("\(item.name)Moldura")
                                     .resizable()
                                     .padding(.init(top: -7, leading: 0, bottom: 0, trailing: 0))
-
-                                Button(action: {
-                                    showingSheet.toggle()
-                                }, label: {
-                                    Image(systemName: "questionmark.circle.fill")
-                                        .font(.system(size: 43))
-                                        .foregroundColor(Color("BackQuestion"))
-                                        .padding(.init(top: 77, leading: 331, bottom: 724, trailing: 16))
-                                })
-                                .sheet(isPresented: $showingSheet) {
-                                    SheetView(history: item)
+                                ZStack{
+                                    Button(action: {
+                                        showingSheet.toggle()
+                                    }, label: {
+                                        
+                                        ZStack{
+                                            Image(systemName: "questionmark.circle.fill")
+                                                .font(.system(size: 43))
+                                                .foregroundColor(Color("BackQuestion"))
+                                            
+                                            Image(systemName: "questionmark.circle")
+                                                .font(.system(size: 43))
+                                                .foregroundStyle(Color("LightQuestion"))
+                                        }
+                                    })
+                                    .sheet(isPresented: $showingSheet) {
+                                        SheetView(historyCount: item)
+                                    }
                                 }
-
-                                Image(systemName: "questionmark.circle")
-                                    .font(.system(size: 43))
-                                    .foregroundStyle(Color("LightQuestion"))
-                                    .padding(.init(top: 77, leading: 331, bottom: 724, trailing: 16))
+                                .padding(.init(top: 77, leading: 331, bottom: 724, trailing: 16))
+                                
                                 VStack {
                                     ForEach(0...item.titleList.count - 1, id: \.self) { num in
 
@@ -68,6 +71,8 @@ struct HistoryView: View {
                                         .foregroundColor(Color("TitleHistory"))
                                 }
                                 .padding(.init(top: 568, leading: 121, bottom: 258, trailing: 119))
+                                
+                                
                                 VStack {
                                     Button(action: {
                                         showingCountDown.toggle()
@@ -89,8 +94,8 @@ struct HistoryView: View {
                                 }
                                 .padding(.init(top: 673, leading: 47, bottom: 131, trailing: 47))
 
-                                NavigationLink(destination: CountDownView(), isActive: $showingCountDown) {}
-                                    .isDetailLink(false)
+//                                NavigationLink(destination: CountDownView(), isActive: $showingCountDown) {}
+//                                    .isDetailLink(false)
                             }
                         }
                     }
