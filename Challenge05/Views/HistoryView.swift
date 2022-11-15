@@ -10,19 +10,20 @@ import SwiftUI
 struct HistoryView: View {
     @State private var showingSheet = false
     @State private var showingCountDown = false
-    var historyCount = createHistoryList()
-    @ObservedObject var hvm: HistoryViewModel = HistoryViewModel()
+
+    @ObservedObject var hvm: HistoryViewModel = HistoryViewModel.shared
+
     let columns = [
         GridItem(.flexible())
     ]
 
     var body: some View {
-        NavigationView(){
+        NavigationView() {
             ZStack {
                 Color("Primaria1").ignoresSafeArea()
                 VStack {
-                    TabView {
-                        ForEach(historyCount, id: \.self) { item in
+                    TabView() {
+                        ForEach(historyList, id: \.self) { item in
                             ZStack {
                                 Color("Primaria1")
                                 Image("\(item.name)Padrao")
@@ -33,27 +34,29 @@ struct HistoryView: View {
                                 Image("\(item.name)Moldura")
                                     .resizable()
                                     .padding(.init(top: -7, leading: 0, bottom: 0, trailing: 0))
-                                ZStack{
+                                ZStack {
                                     Button(action: {
                                         showingSheet.toggle()
+                                        hvm.historyCount = item.id
+                                        print(item.id)
                                     }, label: {
-                                        
-                                        ZStack{
+
+                                        ZStack {
                                             Image(systemName: "questionmark.circle.fill")
                                                 .font(.system(size: 43))
                                                 .foregroundColor(Color("BackQuestion"))
-                                            
+
                                             Image(systemName: "questionmark.circle")
                                                 .font(.system(size: 43))
                                                 .foregroundStyle(Color("LightQuestion"))
                                         }
                                     })
                                     .sheet(isPresented: $showingSheet) {
-                                        SheetView(historyCount: item)
+                                        SheetView()
                                     }
                                 }
                                 .padding(.init(top: 77, leading: 331, bottom: 724, trailing: 16))
-                                
+
                                 VStack {
                                     ForEach(0...item.titleList.count - 1, id: \.self) { num in
 
@@ -71,8 +74,6 @@ struct HistoryView: View {
                                         .foregroundColor(Color("TitleHistory"))
                                 }
                                 .padding(.init(top: 568, leading: 121, bottom: 258, trailing: 119))
-                                
-                                
                                 VStack {
                                     Button(action: {
                                         showingCountDown.toggle()

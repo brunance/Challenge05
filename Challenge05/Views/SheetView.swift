@@ -10,21 +10,22 @@ import SwiftUI
 
 struct SheetView: View {
     @Environment(\.dismiss) var dismiss
-    @ObservedObject var hvm: HistoryViewModel = HistoryViewModel()
-    var historyCount: HistoryModel
+    @ObservedObject var hvm: HistoryViewModel = HistoryViewModel.shared
 
     var body: some View {
+        let currentHistory = historyList[hvm.historyCount]
+
         ZStack {
             Color("BackSheet").ignoresSafeArea()
             VStack {
                 VStack {
-                    Image("\(historyCount.name)Modal")
+                    Image("\(currentHistory.name)Modal")
                         .padding(.init(top: 0, leading: 130.63, bottom: 4, trailing: 130.21))
 
                     VStack {
-                        ForEach(0...historyCount.titleList.count - 1, id: \.self) { num in
-                            Text(historyCount.titleList[num])
-                                .font(.custom("RubikBubbles-Regular", size: CGFloat(historyCount.sizeTitleList[num])))
+                        ForEach(0...currentHistory.titleList.count - 1, id: \.self) { num in
+                            Text(currentHistory.titleList[num])
+                                .font(.custom("RubikBubbles-Regular", size: CGFloat(currentHistory.sizeTitleList[num])))
                                 .foregroundColor(Color("TitleSheet"))
                                 .bold()
                         }
@@ -35,7 +36,7 @@ struct SheetView: View {
                         .foregroundColor(Color("TitleHistory"))
                         .padding(.init(top: 0, leading: 103, bottom: 50, trailing: 101))
 
-                    Text(historyCount.description)
+                    Text(currentHistory.description)
                         .multilineTextAlignment(.leading)
                         .lineLimit(nil)
                         .font(.system(size: 16))

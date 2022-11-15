@@ -9,8 +9,7 @@ import Foundation
 import SwiftUI
 
 class HistoryViewModel: ObservableObject {
-
     public static var shared: HistoryViewModel = HistoryViewModel()
-    
-    @Published var historyCount:HistoryModel = HistoryModel(name: "", titleList: [""], sizeTitleList: [0], description: "")
+
+    @Published var historyCount: Int = 0
 }
