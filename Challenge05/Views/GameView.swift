@@ -21,6 +21,7 @@ struct GameView: View {
     @State var cards = createCardList().shuffled()
     @State var matchedCards = [CardModel]()
     @State var userChoices = [CardModel]()
+    @State private var showAlert = false
     var body: some View {
         if matchedCards.count == cards.count {
             HistoryView()
@@ -32,6 +33,21 @@ struct GameView: View {
                         .resizable()
                     VStack {
                         VStack {
+                            Button("Sair aqui") {
+                                    showAlert = true
+                                }
+                                .alert(isPresented: $showAlert) {
+                                    Alert(
+                                        title: Text("Tem certeza de que quer sair?"),
+                                        message: Text("A sessão de música não será salva."),
+                                        primaryButton: .default(
+                                            Text("Continuar")
+                                        ),
+                                        secondaryButton: .destructive(
+                                            Text("Sair")
+                                        )
+                                    )
+                                }
                             Text("a dona")
                                 .font(.custom("RubikBubbles-Regular", size: 32))
                                 .foregroundColor(Color("TitleHistory"))
