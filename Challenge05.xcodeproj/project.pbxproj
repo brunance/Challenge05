@@ -21,6 +21,7 @@
 		4FDEB6C2292517E500324B24 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FDEB6C1292517E500324B24 /* ContentView.swift */; };
 		4FDEB6C4292517E600324B24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FDEB6C3292517E600324B24 /* Assets.xcassets */; };
 		4FDEB6C7292517E600324B24 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FDEB6C6292517E600324B24 /* Preview Assets.xcassets */; };
+		4FDEB6CC2925277A00324B24 /* InstrumentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FDEB6CB2925277A00324B24 /* InstrumentsView.swift */; };
 		8B90C807292274E400AC0F11 /* HistoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B90C806292274E400AC0F11 /* HistoryModel.swift */; };
 		8BB2D771291D376B007F8043 /* CountDownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB2D770291D376B007F8043 /* CountDownView.swift */; };
 		8BB2D775291E093D007F8043 /* OrchestraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB2D774291E093D007F8043 /* OrchestraView.swift */; };
@@ -50,6 +51,7 @@
 		4FDEB6C1292517E500324B24 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4FDEB6C3292517E600324B24 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4FDEB6C6292517E600324B24 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4FDEB6CB2925277A00324B24 /* InstrumentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstrumentsView.swift; sourceTree = "<group>"; };
 		8B90C806292274E400AC0F11 /* HistoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HistoryModel.swift; path = Challenge05/Views/HistoryModel.swift; sourceTree = SOURCE_ROOT; };
 		8BB2D770291D376B007F8043 /* CountDownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountDownView.swift; sourceTree = "<group>"; };
 		8BB2D774291E093D007F8043 /* OrchestraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrchestraView.swift; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 			children = (
 				4FDEB6BF292517E500324B24 /* OrkhestraWatchApp.swift */,
 				4FDEB6C1292517E500324B24 /* ContentView.swift */,
+				4FDEB6CB2925277A00324B24 /* InstrumentsView.swift */,
 				4FDEB6C3292517E600324B24 /* Assets.xcassets */,
 				4FDEB6C5292517E600324B24 /* Preview Content */,
 			);
@@ -341,6 +344,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4FDEB6C2292517E500324B24 /* ContentView.swift in Sources */,
+				4FDEB6CC2925277A00324B24 /* InstrumentsView.swift in Sources */,
 				4FDEB6C0292517E500324B24 /* OrkhestraWatchApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
