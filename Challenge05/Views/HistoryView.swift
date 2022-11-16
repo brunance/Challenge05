@@ -38,7 +38,6 @@ struct HistoryView: View {
                                     Button(action: {
                                         showingSheet.toggle()
                                         hvm.historyCount = item.id
-                                        print(item.id)
                                     }, label: {
 
                                         ZStack {
@@ -77,6 +76,7 @@ struct HistoryView: View {
                                 VStack {
                                     Button(action: {
                                         showingCountDown.toggle()
+                                        hvm.historyCount = item.id
                                     }, label: {
                                         HStack {
                                             Image(systemName: "play.fill")
@@ -95,8 +95,8 @@ struct HistoryView: View {
                                 }
                                 .padding(.init(top: 673, leading: 47, bottom: 131, trailing: 47))
 
-//                                NavigationLink(destination: CountDownView(), isActive: $showingCountDown) {}
-//                                    .isDetailLink(false)
+                                NavigationLink(destination: GameView(), isActive: $showingCountDown) {}
+                                    .isDetailLink(false)
                             }
                         }
                     }

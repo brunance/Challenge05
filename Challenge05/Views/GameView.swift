@@ -18,18 +18,24 @@ struct GameView: View {
                                  GridItem(.flexible()),
                                  GridItem(.flexible()),
                                  GridItem(.flexible())]
+
+    @ObservedObject var hvm: HistoryViewModel = HistoryViewModel.shared
+
     @State var cards = createCardList().shuffled()
     @State var matchedCards = [CardModel]()
     @State var userChoices = [CardModel]()
     @State private var showAlert = false
     var body: some View {
+
+        let currentHistory = historyList[hvm.historyCount]
+
         if matchedCards.count == cards.count {
             HistoryView()
         } else {
             GeometryReader { geometry in
                 ZStack {
                     Color("Primaria1").ignoresSafeArea()
-                    Image("AranhaPadrao")
+                    Image("\(currentHistory.name)Padrao")
                         .resizable()
                     VStack {
                         VStack {
@@ -48,12 +54,14 @@ struct GameView: View {
                                         )
                                     )
                                 }
-                            Text("a dona")
-                                .font(.custom("RubikBubbles-Regular", size: 32))
-                                .foregroundColor(Color("TitleHistory"))
-                            Text("Aranha")
-                                .font(.custom("RubikBubbles-Regular", size: 48))
-                                .foregroundColor(Color("TitleHistory"))
+                            
+                            VStack {
+                                ForEach(0...currentHistory.titleList.count - 1, id: \.self) { num in
+                                    Text(currentHistory.titleList[num])
+                                        .font(.custom("RubikBubbles-Regular", size: CGFloat(currentHistory.sizeTitleList[num])))
+                                        .foregroundColor(Color("TitleHistory"))
+                                }
+                            }
                         }
 
                         Text("Combine os sons para desbloquear uma melodia")
@@ -97,7 +105,8 @@ struct GameView: View {
                                     VStack {
                                         Image("Violao")
                                             .font(.system(size: 40))
-                                        .foregroundColor(.white)                            }
+                                        .foregroundColor(.white)
+                                    }
                                     VStack {
                                         Image("Piano")
                                             .font(.system(size: 40))
