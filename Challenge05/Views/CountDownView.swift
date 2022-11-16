@@ -14,12 +14,16 @@ struct CountDownView: View {
     @State var scale: CGFloat = 1
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
 
-    var body: some View {
-        NavigationView() {
+    @ObservedObject var hvm: HistoryViewModel = HistoryViewModel.shared
 
+    var body: some View {
+
+        let currentHistory = historyList[hvm.historyCount]
+
+        NavigationView {
             ZStack {
                 Color("Primaria1").ignoresSafeArea()
-                Image("BarataPadrao")
+                Image("\(currentHistory.name)Padrao")
                     .resizable()
                 VStack {
                     ZStack {

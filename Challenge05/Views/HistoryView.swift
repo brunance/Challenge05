@@ -18,11 +18,12 @@ struct HistoryView: View {
     ]
 
     var body: some View {
-        NavigationView() {
+        NavigationView {
             ZStack {
                 Color("Primaria1").ignoresSafeArea()
+
                 VStack {
-                    TabView() {
+                    TabView {
                         ForEach(historyList, id: \.self) { item in
                             ZStack {
                                 Color("Primaria1")
@@ -95,8 +96,7 @@ struct HistoryView: View {
                                 }
                                 .padding(.init(top: 673, leading: 47, bottom: 131, trailing: 47))
 
-                                NavigationLink(destination: GameView(), isActive: $showingCountDown) {}
-                                    .isDetailLink(false)
+                                NavigationLink(destination: CountDownView().navigationBarBackButtonHidden(true), isActive: $showingCountDown) {}
                             }
                         }
                     }

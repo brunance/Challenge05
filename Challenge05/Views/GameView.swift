@@ -58,6 +58,7 @@ struct GameView: View {
                             VStack {
                                 ForEach(0...currentHistory.titleList.count - 1, id: \.self) { num in
                                     Text(currentHistory.titleList[num])
+                                        // swiftlint:disable:next line_length
                                         .font(.custom("RubikBubbles-Regular", size: CGFloat(currentHistory.sizeTitleList[num])))
                                         .foregroundColor(Color("TitleHistory"))
                                 }
