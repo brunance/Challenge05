@@ -26,11 +26,11 @@ class CardModel: Identifiable, ObservableObject {
 }
 
 let cardValues: [String] = [
-    "🎸", "🥁", "🎷", "📯", "🪕", "🎻"
+    "Chocalho", "Flauta", "Pandeiro", "Piano", "Saxofone", "Violao"
 ]
 
 let cardSounds: [String] = [
-    "acerto", "piano_1", "button", "click", "victory", "wrong"
+    "Chocalho", "Flauta", "Pandeiro", "Piano", "Sax", "Violão"
 ]
 
 func createCardList() -> [CardModel] {

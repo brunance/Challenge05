@@ -16,11 +16,14 @@ struct CardView: View {
 
     var body: some View {
         if card.isFaceUp || matchedCards.contains(where: {$0.id == card.id}) {
-            Text(card.text)
+            Image(card.text)
                 .font(.system(size: 50))
                 .padding()
-                .frame(width: CGFloat(width), height: CGFloat(width))
-                .background(Color(red: 0.68, green: 0.83, blue: 0.96))
+                .frame(width: 111, height: 95)
+//                .foregroundColor(Color("TitleHistory"))
+//                .background("AranhaGameCard")
+                .background(Color("TitleHistory"))
+                .background(Image("AranhaGameCard"))
                 .cornerRadius(10)
                 .overlay(
                     RoundedRectangle(cornerRadius: 10)
@@ -30,15 +33,17 @@ struct CardView: View {
                     guard let titleOfSound = card.sound else {
                             return
                     }
-                    playSound(sound: titleOfSound, type: "wav")
+                    playSound(sound: titleOfSound, type: "mp3")
                 })
         } else {
-            Text("")
-                .font(.system(size: 50))
-                .padding()
-                .frame(width: CGFloat(width), height: CGFloat(width))
-                .background(Color("Card"))
-                .cornerRadius(10)
+//            Text("")
+//                .font(.system(size: 50))
+//                .padding()
+//                .frame(width: CGFloat(width), height: CGFloat(width))
+//                .background(Color("Card"))
+//                .cornerRadius(10)
+
+            Image("Carta")
                 .onTapGesture {
                     if userChoices.count == 0 {
                         card.turnOver()
