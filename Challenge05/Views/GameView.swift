@@ -30,7 +30,7 @@ struct GameView: View {
         let currentHistory = historyList[hvm.historyCount]
 
         if matchedCards.count == cards.count {
-            HistoryView()
+            CountDownView()
         } else {
             GeometryReader { geometry in
                 ZStack {
@@ -40,21 +40,21 @@ struct GameView: View {
                     VStack {
                         VStack {
                             Button("Sair aqui") {
-                                    showAlert = true
-                                }
-                                .alert(isPresented: $showAlert) {
-                                    Alert(
-                                        title: Text("Tem certeza de que quer sair?"),
-                                        message: Text("A sessão de música não será salva."),
-                                        primaryButton: .default(
-                                            Text("Continuar")
-                                        ),
-                                        secondaryButton: .destructive(
-                                            Text("Sair")
-                                        )
+                                showAlert = true
+                            }
+                            .alert(isPresented: $showAlert) {
+                                Alert(
+                                    title: Text("Tem certeza de que quer sair?"),
+                                    message: Text("A sessão de música não será salva."),
+                                    primaryButton: .default(
+                                        Text("Continuar")
+                                    ),
+                                    secondaryButton: .destructive(
+                                        Text("Sair")
                                     )
-                                }
-                            
+                                )
+                            }
+
                             VStack {
                                 ForEach(0...currentHistory.titleList.count - 1, id: \.self) { num in
                                     Text(currentHistory.titleList[num])
@@ -65,15 +65,15 @@ struct GameView: View {
                         }
 
                         Text("Combine os sons para desbloquear uma melodia")
-//                            .frame(maxWidth: .infinity, alignment: .center)
+                        //                            .frame(maxWidth: .infinity, alignment: .center)
                             .font(.system(size: 16))
-//                            .fontWeight(.bold)
+                        //                            .fontWeight(.bold)
                             .foregroundColor(Color("TitleHistory"))
 
-                            Text("0/6")
-                                .frame(maxWidth: .infinity, alignment: .trailing)
-                                .font(.system(size: 16))
-                                .foregroundColor(Color("TitleHistory"))
+                        Text("0/6")
+                            .frame(maxWidth: .infinity, alignment: .trailing)
+                            .font(.system(size: 16))
+                            .foregroundColor(Color("TitleHistory"))
 
                         VStack {
                             ZStack {
@@ -105,7 +105,7 @@ struct GameView: View {
                                     VStack {
                                         Image("Violao")
                                             .font(.system(size: 40))
-                                        .foregroundColor(.white)
+                                            .foregroundColor(.white)
                                     }
                                     VStack {
                                         Image("Piano")

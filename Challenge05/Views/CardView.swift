@@ -33,7 +33,7 @@ struct CardView: View {
                     guard let titleOfSound = card.sound else {
                             return
                     }
-                    playSound(sound: titleOfSound, type: "wav")
+                    playSound(sound: titleOfSound, type: "mp3")
                 })
         } else {
 //            Text("")
