@@ -77,7 +77,7 @@ struct GameView: View {
 
                         VStack {
                             ZStack {
-                                RoundedRectangle(cornerRadius: 20, style: .continuous)
+                                RoundedRectangle(cornerRadius: 8, style: .continuous)
                                     .foregroundColor(Color("TitleHistory"))
                                     .frame(width: 350, height: 60)
                                 HStack {
