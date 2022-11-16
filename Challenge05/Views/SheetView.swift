@@ -49,60 +49,85 @@ struct SheetView: View {
                         .bold()
                         .padding(.init(top: 50, leading: 16, bottom: 0, trailing: 16))
 
-                    HStack {
-                        VStack {
-                            Image("Pandeiro")
-                                .font(.system(size: 40))
-                                .foregroundColor(.white)
-                            Text("Pandeiro")
-                                .font(.system(size: 12))
-                                .foregroundColor(Color("CombinarText"))
+                    VStack {
+                        ZStack {
+                            RoundedRectangle(cornerRadius: 8, style: .continuous)
+                                .foregroundColor(Color("TitleHistory"))
+                                .frame(width: 360, height: 60)
+
+                            HStack {
+                                VStack {
+                                    Image("Pandeiro")
+//                                        .font(.system(size: 40))
+                                        .frame(width: 30, height: 30)
+                                        .foregroundColor(.white)
+                                    Text("Pandeiro")
+                                        .font(.system(size: 12))
+                                        .foregroundColor(Color("CombinarText"))
+                                        .bold()
+                                }
+
+                                VStack {
+                                    Image("Chocalho")
+//                                        .font(.system(size: 40))
+                                        .frame(width: 30, height: 30)
+                                        .foregroundColor(.white)
+                                    Text("Chocalho")
+                                        .font(.system(size: 12))
+                                        .foregroundColor(Color("CombinarText"))
+                                        .padding(.init(top: 0, leading: -20, bottom: 0, trailing: -20))
+                                        .bold()
+                                }
+                                .padding(.init(top: 0, leading: 10, bottom: 0, trailing: 10))
+
+                                VStack {
+                                    Image("Flauta")
+//                                        .font(.system(size: 40))
+                                        .frame(width: 30, height: 30)
+                                        .foregroundColor(.white)
+                                    Text("Flauta")
+                                        .font(.system(size: 12))
+                                        .foregroundColor(Color("CombinarText"))
+                                        .bold()
+                                }
+
+                                VStack {
+                                    Image("Saxofone")
+//                                        .font(.system(size: 40))
+                                        .frame(width: 30, height: 30)
+                                        .foregroundColor(.white)
+                                    Text("Saxofone")
+                                        .font(.system(size: 12))
+                                        .foregroundColor(Color("CombinarText"))
+                                        .bold()
+                                }
+
+                                VStack {
+                                    Image("Violao")
+//                                        .font(.system(size: 40))
+                                        .frame(width: 30, height: 30)
+                                        .foregroundColor(.white)
+                                    Text("Violão")
+                                        .font(.system(size: 12))
+                                        .foregroundColor(Color("CombinarText"))
+                                        .bold()
+                                }
+
+                                VStack {
+                                    Image("Piano")
+//                                        .font(.system(size: 40))
+                                        .frame(width: 30, height: 30)
+                                        .foregroundColor(.white)
+                                    Text("Piano")
+                                        .font(.system(size: 12))
+                                        .foregroundColor(Color("CombinarText"))
+                                        .bold()
+                                }
+                                .padding(.init(top: 0, leading: 10, bottom: 0, trailing: 0))
+                            }
+                            .padding(.init(top: 16, leading: 0, bottom: 5, trailing: 0))
                         }
-                        VStack {
-                            Image("Chocalho")
-                                .font(.system(size: 40))
-                                .foregroundColor(.white)
-                            Text("Chocalho")
-                                .font(.system(size: 12))
-                                .foregroundColor(Color("CombinarText"))
-                                .padding(.init(top: 0, leading: -20, bottom: 0, trailing: -20))
-                        }
-                        .padding(.init(top: 0, leading: 10, bottom: 0, trailing: 10))
-                        VStack {
-                            Image("Flauta")
-                                .font(.system(size: 40))
-                                .foregroundColor(.white)
-                            Text("Flauta")
-                                .font(.system(size: 12))
-                                .foregroundColor(Color("CombinarText"))
-                        }
-                        VStack {
-                            Image("Saxofone")
-                                .font(.system(size: 40))
-                                .foregroundColor(.white)
-                            Text("Saxofone")
-                                .font(.system(size: 12))
-                                .foregroundColor(Color("CombinarText"))
-                        }
-                        VStack {
-                            Image("Violao")
-                                .font(.system(size: 40))
-                                .foregroundColor(.white)
-                            Text("Violão")
-                                .font(.system(size: 12))
-                                .foregroundColor(Color("CombinarText"))
-                        }
-                        VStack {
-                            Image("Piano")
-                                .font(.system(size: 40))
-                                .foregroundColor(.white)
-                            Text("Piano")
-                                .font(.system(size: 12))
-                                .foregroundColor(Color("CombinarText"))
-                        }
-                        .padding(.init(top: 0, leading: 10, bottom: 0, trailing: 0))
                     }
-                    .padding(.init(top: 16, leading: 0, bottom: 5, trailing: 0))
                 }
                 .padding(.init(top: 0, leading: 16, bottom: 70, trailing: 16))
             }
