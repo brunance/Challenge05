@@ -17,6 +17,10 @@
 		4FDEB6B6292513EA00324B24 /* Flauta.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4FDEB6B0292513EA00324B24 /* Flauta.mp3 */; };
 		4FDEB6B7292513EA00324B24 /* Sax.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4FDEB6B1292513EA00324B24 /* Sax.mp3 */; };
 		4FDEB6B8292513EA00324B24 /* Violão.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4FDEB6B2292513EA00324B24 /* Violão.mp3 */; };
+		4FDEB6C0292517E500324B24 /* orkhestraWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FDEB6BF292517E500324B24 /* orkhestraWatchApp.swift */; };
+		4FDEB6C2292517E500324B24 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FDEB6C1292517E500324B24 /* ContentView.swift */; };
+		4FDEB6C4292517E600324B24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FDEB6C3292517E600324B24 /* Assets.xcassets */; };
+		4FDEB6C7292517E600324B24 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FDEB6C6292517E600324B24 /* Preview Assets.xcassets */; };
 		8B90C807292274E400AC0F11 /* HistoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B90C806292274E400AC0F11 /* HistoryModel.swift */; };
 		8BB2D771291D376B007F8043 /* CountDownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB2D770291D376B007F8043 /* CountDownView.swift */; };
 		8BB2D775291E093D007F8043 /* OrchestraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB2D774291E093D007F8043 /* OrchestraView.swift */; };
@@ -41,6 +45,11 @@
 		4FDEB6B0292513EA00324B24 /* Flauta.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Flauta.mp3; sourceTree = "<group>"; };
 		4FDEB6B1292513EA00324B24 /* Sax.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Sax.mp3; sourceTree = "<group>"; };
 		4FDEB6B2292513EA00324B24 /* Violão.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Violão.mp3"; sourceTree = "<group>"; };
+		4FDEB6BD292517E500324B24 /* orkhestraWatch Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "orkhestraWatch Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4FDEB6BF292517E500324B24 /* orkhestraWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = orkhestraWatchApp.swift; sourceTree = "<group>"; };
+		4FDEB6C1292517E500324B24 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		4FDEB6C3292517E600324B24 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4FDEB6C6292517E600324B24 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8B90C806292274E400AC0F11 /* HistoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HistoryModel.swift; path = Challenge05/Views/HistoryModel.swift; sourceTree = SOURCE_ROOT; };
 		8BB2D770291D376B007F8043 /* CountDownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountDownView.swift; sourceTree = "<group>"; };
 		8BB2D774291E093D007F8043 /* OrchestraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrchestraView.swift; sourceTree = "<group>"; };
@@ -62,6 +71,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4FDEB6BA292517E500324B24 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -69,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				4F92C5E029192DDD002FA763 /* Challenge05 */,
+				4FDEB6BE292517E500324B24 /* orkhestraWatch Watch App */,
 				4F92C5DF29192DDD002FA763 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -77,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				4F92C5DE29192DDD002FA763 /* Challenge05.app */,
+				4FDEB6BD292517E500324B24 /* orkhestraWatch Watch App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -101,6 +119,25 @@
 			isa = PBXGroup;
 			children = (
 				4F92C5E829192DDE002FA763 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		4FDEB6BE292517E500324B24 /* orkhestraWatch Watch App */ = {
+			isa = PBXGroup;
+			children = (
+				4FDEB6BF292517E500324B24 /* orkhestraWatchApp.swift */,
+				4FDEB6C1292517E500324B24 /* ContentView.swift */,
+				4FDEB6C3292517E600324B24 /* Assets.xcassets */,
+				4FDEB6C5292517E600324B24 /* Preview Content */,
+			);
+			path = "orkhestraWatch Watch App";
+			sourceTree = "<group>";
+		};
+		4FDEB6C5292517E600324B24 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				4FDEB6C6292517E600324B24 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -178,6 +215,23 @@
 			productReference = 4F92C5DE29192DDD002FA763 /* Challenge05.app */;
 			productType = "com.apple.product-type.application";
 		};
+		4FDEB6BC292517E500324B24 /* orkhestraWatch Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4FDEB6C8292517E600324B24 /* Build configuration list for PBXNativeTarget "orkhestraWatch Watch App" */;
+			buildPhases = (
+				4FDEB6B9292517E500324B24 /* Sources */,
+				4FDEB6BA292517E500324B24 /* Frameworks */,
+				4FDEB6BB292517E500324B24 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "orkhestraWatch Watch App";
+			productName = "orkhestraWatch Watch App";
+			productReference = 4FDEB6BD292517E500324B24 /* orkhestraWatch Watch App.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -189,6 +243,9 @@
 				LastUpgradeCheck = 1410;
 				TargetAttributes = {
 					4F92C5DD29192DDD002FA763 = {
+						CreatedOnToolsVersion = 14.1;
+					};
+					4FDEB6BC292517E500324B24 = {
 						CreatedOnToolsVersion = 14.1;
 					};
 				};
@@ -207,6 +264,7 @@
 			projectRoot = "";
 			targets = (
 				4F92C5DD29192DDD002FA763 /* Challenge05 */,
+				4FDEB6BC292517E500324B24 /* orkhestraWatch Watch App */,
 			);
 		};
 /* End PBXProject section */
@@ -225,6 +283,15 @@
 				4FDEB6B4292513EA00324B24 /* Pandeiro.mp3 in Resources */,
 				4FDEB6B3292513EA00324B24 /* Piano.mp3 in Resources */,
 				4F92C5E629192DDE002FA763 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4FDEB6BB292517E500324B24 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4FDEB6C7292517E600324B24 /* Preview Assets.xcassets in Resources */,
+				4FDEB6C4292517E600324B24 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,6 +333,15 @@
 				4F92C5E229192DDD002FA763 /* Challenge05App.swift in Sources */,
 				9CDB40BD291B4B940077D0EF /* HistoryViewModel.swift in Sources */,
 				8BC1609D291AA44C00A73AD6 /* GameView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4FDEB6B9292517E500324B24 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4FDEB6C2292517E500324B24 /* ContentView.swift in Sources */,
+				4FDEB6C0292517E500324B24 /* orkhestraWatchApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,6 +522,66 @@
 			};
 			name = Release;
 		};
+		4FDEB6C9292517E600324B24 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"orkhestraWatch Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = YP9Q3ST2DG;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = orkhestraWatch;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = .watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 9.1;
+			};
+			name = Debug;
+		};
+		4FDEB6CA292517E600324B24 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"orkhestraWatch Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = YP9Q3ST2DG;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = orkhestraWatch;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = .watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 9.1;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -463,6 +599,15 @@
 			buildConfigurations = (
 				4F92C5ED29192DDE002FA763 /* Debug */,
 				4F92C5EE29192DDE002FA763 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4FDEB6C8292517E600324B24 /* Build configuration list for PBXNativeTarget "orkhestraWatch Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4FDEB6C9292517E600324B24 /* Debug */,
+				4FDEB6CA292517E600324B24 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
