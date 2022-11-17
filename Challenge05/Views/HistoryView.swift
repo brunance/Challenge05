@@ -67,13 +67,13 @@ struct HistoryView: View {
                                     }
 
                                 }
-                                .padding(.init(top: 477, leading: 102, bottom: 280, trailing: 102))
+                                .padding(.init(top: 440, leading: 30, bottom: 200, trailing: 30))
                                 VStack {
                                     Text("30s | Música, Instrumental")
                                         .font(.system(size: 12))
                                         .foregroundColor(Color("TitleHistory"))
                                 }
-                                .padding(.init(top: 568, leading: 121, bottom: 258, trailing: 119))
+                                .padding(.init(top: 640, leading: 121, bottom: 240, trailing: 119))
                                 VStack {
                                     Button(action: {
                                         showingCountDown.toggle()

@@ -1,7 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "MemóriaBorboletaCard.svg",
+      "filename" : "MemóriaBorboletaCardDarkMode.svg",
+      "idiom" : "universal"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "filename" : "MemóriaBorboletaCard 1.svg",
       "idiom" : "universal"
     }
   ],
