@@ -27,6 +27,10 @@ struct GameView: View {
     @State private var showAlert = false
     @State var isGameView = false
     @State private var showingHistoryView = false
+
+    let width: Int = 45
+    let height: Int = 30
+
     var body: some View {
 
         let currentHistory = historyList[hvm.historyCount]
@@ -85,7 +89,7 @@ struct GameView: View {
                                 .foregroundColor(Color("TitleHistory"))
                                 .multilineTextAlignment(.center)
 
-                            Text("0/6")
+                            Text("\(matchedCards.count/2)/\(cardValues.count)")
                                 .frame(maxWidth: .infinity, alignment: .trailing)
                                 .font(.system(size: 16))
                                 .foregroundColor(Color("TitleHistory"))
@@ -98,38 +102,41 @@ struct GameView: View {
                                     HStack {
                                         VStack {
                                             Image("Pandeiro")
-                                                .font(.system(size: 40))
-                                                .foregroundColor(.white)
+                                                .resizable()
+                                                .frame(width: CGFloat(width), height: CGFloat(width))
+                                                .foregroundColor(.red)
                                         }
                                         VStack {
                                             Image("Chocalho")
-                                                .font(.system(size: 40))
+                                                .resizable()
+                                                .frame(width: CGFloat(width), height: CGFloat(width))
                                                 .foregroundColor(.white)
                                         }
-                                        .padding(.init(top: 0, leading: 10, bottom: 0, trailing: 10))
                                         VStack {
                                             Image("Flauta")
-                                                .font(.system(size: 40))
+                                                .resizable()
+                                                .frame(width: CGFloat(width), height: CGFloat(width))
                                                 .foregroundColor(.white)
                                         }
                                         VStack {
                                             Image("Saxofone")
-                                                .font(.system(size: 40))
+                                                .resizable()
+                                                .frame(width: CGFloat(width+10), height: CGFloat(width))
                                                 .foregroundColor(.white)
                                         }
                                         VStack {
                                             Image("Violao")
-                                                .font(.system(size: 40))
+                                                .resizable()
+                                                .frame(width: CGFloat(width), height: CGFloat(width))
                                                 .foregroundColor(.white)
                                         }
                                         VStack {
                                             Image("Piano")
-                                                .font(.system(size: 40))
+                                                .resizable()
+                                                .frame(width: CGFloat(width), height: CGFloat(width))
                                                 .foregroundColor(.white)
                                         }
-                                        .padding(.init(top: 0, leading: 10, bottom: 0, trailing: 0))
                                     }
-                                    .padding(.init(top: 5, leading: 0, bottom: 5, trailing: 0))
                                 }
 
                             }
@@ -143,19 +150,19 @@ struct GameView: View {
                                     )
                                 }
                             }
-                            //                        VStack {
-                            //                            Text("Match these cards to win: ")
-                            //                                .font(.system(size: 28))
-                            //                                .padding()
-                            //                            LazyVGrid(columns: sixColumnGrid, spacing: 5) {
-                            //                                ForEach(cardValues, id: \.self) { cardValue in
-                            //                                    if !matchedCards.contains(where: {$0.text == cardValue}) {
-                            //                                        Text(cardValue)
-                            //                                            .font(.system(size: 50))
-                            //                                    }
-                            //                                }
-                            //                            }
-                            //                        }
+//                            VStack {
+//                                Text("Match these cards to win: ")
+//                                    .font(.system(size: 16))
+//                                    .padding()
+//                                LazyVGrid(columns: sixColumnGrid, spacing: 5) {
+//                                    ForEach(cardValues, id: \.self) { cardValue in
+//                                        if !matchedCards.contains(where: {$0.text == cardValue}) {
+//                                            Image(cardValue)
+//                                                .font(.system(size: 50))
+//                                        }
+//                                    }
+//                                }
+//                            }
                         }
                         .padding()
                     }
