@@ -30,7 +30,7 @@ let historyList: [HistoryModel] = [
     HistoryModel(id: 0, name: "Aranha", titleList: ["a dona", "Aranha"], sizeTitleList: [32, 48], description: "A previsão de hoje é de chuva forte, ajude a teimosa dona Aranha a subir pela parede. Nesta dinâmica musical de jogo da memória você deve combinar os pares para desbloquear novos sons e quem sabe a música inteira."),
 
     // swiftlint:disable:next line_length
-    HistoryModel(id: 1, name: "Borboleta", titleList: ["a", "Borboleta"], sizeTitleList: [32, 48], description: "Olha a borboleta tá na cozinha! vamos ajudá-la a fazer um chocolate para sua madrinha? Nesta dinâmica musical de jogo da memória você deve combinar os pares para desbloquear novos sons e quem sabe a música inteira."),
+    HistoryModel(id: 1, name: "Borboleta", titleList: ["a", "Borboleta"], sizeTitleList: [32, 48], description: "Olha a borboleta tá na cozinha! Vamos ajudá-la a fazer um chocolate para sua madrinha? Nesta dinâmica musical de jogo da memória você deve combinar os pares para desbloquear novos sons e quem sabe a música inteira."),
 
     // swiftlint:disable:next line_length
     HistoryModel(id: 2, name: "Barata", titleList: ["a", "Barata", "diz que tem"], sizeTitleList: [32, 48, 32], description: "Ajude a desmascarar as mentiras da Barata numa dinâmica musical de jogo da memória onde você deve combinar os pares para desbloquear novos sons e quem sabe a música inteira.")
