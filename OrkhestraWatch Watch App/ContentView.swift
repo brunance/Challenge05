@@ -1,6 +1,6 @@
 //
 //  ContentView.swift
-//  orkhestraWatch Watch App
+//  OrkhestraWatch Watch App
 //
 //  Created by Bruno França do Prado on 16/11/22.
 //
@@ -9,18 +9,39 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        NavigationView {
+            VStack {
+                Text("Minhas Histórias")
+                    .fontWeight(.bold)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                NavigationLink(destination: InstrumentsView()) {
+                    HStack{
+                        Text("🕷️")
+                        Text("a Dona Aranha")
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                    }
+                }
+                NavigationLink(destination: InstrumentsView()) {
+                    HStack{
+                        Text("🦋")
+                        Text("a Borboleta")
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                    }
+                }
+                NavigationLink(destination: InstrumentsView()) {
+                    HStack{
+                        Text("🪳")
+                        Text("a Barata")
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                    }
+                }
+            }
+            .padding()
         }
-        .padding()
     }
 }
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}
+//struct ContentView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ContentView()
+//    }
+//}
