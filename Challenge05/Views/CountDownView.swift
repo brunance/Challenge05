@@ -12,6 +12,7 @@ struct CountDownView: View {
     @State var countDownTimer = 5
     @State var timerRunning = true
     @State var scale: CGFloat = 1
+    @Binding var isGameView: Bool
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
 
     @ObservedObject var hvm: HistoryViewModel = HistoryViewModel.shared
@@ -41,11 +42,11 @@ struct CountDownView: View {
                             }
                         Text("\(countDownTimer)")
                             .onReceive(timer) { _ in
-                                if countDownTimer > 0 && timerRunning {
+                                if countDownTimer > 1 && timerRunning {
                                     playSound(sound: "countdown", type: "wav")
                                     countDownTimer -= 1
                                 } else {
-//                                    isShowingDetailView = true
+                                    isShowingDetailView = true
                                     timerRunning = false
                                 }
                             }
@@ -55,17 +56,17 @@ struct CountDownView: View {
                             .background(Color("CircleCount"))
                             .clipShape(Circle())
 
-                        NavigationLink(destination: OrchestraView(), isActive: $isShowingDetailView) {}
-                            .isDetailLink(false)
+                        if isGameView {
+                            NavigationLink(destination: GameView().navigationBarBackButtonHidden(true), isActive: $isShowingDetailView) {}
+                                .isDetailLink(false)
+                        } else {
+                            NavigationLink(destination: OrchestraView().navigationBarBackButtonHidden(true), isActive: $isShowingDetailView) {}
+                                .isDetailLink(false)
+                        }
                     }
                 }
             }
+            .ignoresSafeArea()
         }
-    }
-}
-
-struct CountdownView_Previews: PreviewProvider {
-    static var previews: some View {
-        CountDownView()
     }
 }

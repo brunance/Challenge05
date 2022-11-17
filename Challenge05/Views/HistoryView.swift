@@ -10,7 +10,7 @@ import SwiftUI
 struct HistoryView: View {
     @State private var showingSheet = false
     @State private var showingCountDown = false
-
+    @State var isGameView = true
     @ObservedObject var hvm: HistoryViewModel = HistoryViewModel.shared
 
     let columns = [
@@ -96,12 +96,11 @@ struct HistoryView: View {
                                 }
                                 .padding(.init(top: 673, leading: 47, bottom: 131, trailing: 47))
 
-                                NavigationLink(destination: CountDownView().navigationBarBackButtonHidden(true), isActive: $showingCountDown) {}
+                                NavigationLink(destination: CountDownView(isGameView: $isGameView).navigationBarBackButtonHidden(true), isActive: $showingCountDown) {}
                             }
                         }
                     }
                     .tabViewStyle(.page(indexDisplayMode: .always))
-                    .ignoresSafeArea()
                     .ignoresSafeArea()
                 }
             }

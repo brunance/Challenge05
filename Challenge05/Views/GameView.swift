@@ -25,12 +25,13 @@ struct GameView: View {
     @State var matchedCards = [CardModel]()
     @State var userChoices = [CardModel]()
     @State private var showAlert = false
+    @State var isGameView = false
     var body: some View {
 
         let currentHistory = historyList[hvm.historyCount]
 
         if matchedCards.count == cards.count {
-            CountDownView()
+            CountDownView(isGameView: $isGameView)
         } else {
             GeometryReader { geometry in
                 ZStack {
@@ -144,6 +145,7 @@ struct GameView: View {
                     }
                     .padding()
                 }
+                .ignoresSafeArea()
             }
         }
     }

@@ -71,6 +71,7 @@ struct OrchestraView: View {
                 }
             }
         }
+        .ignoresSafeArea()
     }
 
     func startLoading() {
