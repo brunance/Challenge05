@@ -28,8 +28,8 @@ struct GameView: View {
     @State var isGameView = false
     @State private var showingHistoryView = false
 
-    let width: Int = 45
-    let height: Int = 30
+    let width: Int = 50
+    let height: Int = 50
 
     var body: some View {
 
@@ -103,37 +103,37 @@ struct GameView: View {
                                         VStack {
                                             Image("Pandeiro")
                                                 .resizable()
-                                                .frame(width: CGFloat(width), height: CGFloat(width))
+                                                .frame(width: CGFloat(width), height: CGFloat(height))
                                                 .foregroundColor(.red)
                                         }
                                         VStack {
                                             Image("Chocalho")
                                                 .resizable()
-                                                .frame(width: CGFloat(width), height: CGFloat(width))
-                                                .foregroundColor(.white)
-                                        }
-                                        VStack {
-                                            Image("Flauta")
-                                                .resizable()
-                                                .frame(width: CGFloat(width), height: CGFloat(width))
+                                                .frame(width: CGFloat(width), height: CGFloat(height))
                                                 .foregroundColor(.white)
                                         }
                                         VStack {
                                             Image("Saxofone")
                                                 .resizable()
-                                                .frame(width: CGFloat(width+10), height: CGFloat(width))
+                                                .frame(width: CGFloat(width), height: CGFloat(height))
                                                 .foregroundColor(.white)
                                         }
                                         VStack {
                                             Image("Violao")
                                                 .resizable()
-                                                .frame(width: CGFloat(width), height: CGFloat(width))
+                                                .frame(width: CGFloat(width), height: CGFloat(height))
                                                 .foregroundColor(.white)
                                         }
                                         VStack {
                                             Image("Piano")
                                                 .resizable()
-                                                .frame(width: CGFloat(width), height: CGFloat(width))
+                                                .frame(width: CGFloat(width), height: CGFloat(height))
+                                                .foregroundColor(.white)
+                                        }
+                                        VStack {
+                                            Image("Flauta")
+                                                .resizable()
+                                                .frame(width: CGFloat(width), height: CGFloat(height))
                                                 .foregroundColor(.white)
                                         }
                                     }
