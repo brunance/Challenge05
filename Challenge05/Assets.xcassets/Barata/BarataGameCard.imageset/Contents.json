@@ -1,7 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "MemóriaBarataCard.svg",
+      "filename" : "MemóriaBarataCardDarkMode.svg",
+      "idiom" : "universal"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "filename" : "MemóriaBarataCard 1.svg",
       "idiom" : "universal"
     }
   ],

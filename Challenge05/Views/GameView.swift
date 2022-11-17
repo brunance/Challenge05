@@ -67,9 +67,9 @@ struct GameView: View {
                         }
 
                         Text("Combine os sons para desbloquear uma melodia")
-                        //                            .frame(maxWidth: .infinity, alignment: .center)
                             .font(.system(size: 16))
-                        //                            .fontWeight(.bold)
+                            .frame(maxWidth: .infinity, alignment: .top)
+                            .bold()
                             .foregroundColor(Color("TitleHistory"))
 
                         Text("0/6")
@@ -120,12 +120,13 @@ struct GameView: View {
                             }
 
                         }
+                        .padding(.init(top: 0, leading: 0, bottom: 20, trailing: 0))
+                        
                         LazyVGrid(columns: threeColumnGrid, spacing: 10) {
                             ForEach(cards) { card in
                                 CardView(card: card,
                                          matchedCards: $matchedCards,
-                                         userChoices: $userChoices,
-                                         width: Int(geometry.size.width/4 + 10)
+                                         userChoices: $userChoices
                                 )
                             }
                         }

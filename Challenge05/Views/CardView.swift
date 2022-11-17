@@ -12,38 +12,39 @@ struct CardView: View {
     @Binding var matchedCards: [CardModel]
     @Binding var userChoices: [CardModel]
 
-    let width: Int
+    let width: Int = 100
+    let height: Int = 90
 
     var body: some View {
         if card.isFaceUp || matchedCards.contains(where: {$0.id == card.id}) {
-            Image(card.text)
-                .font(.system(size: 50))
-                .padding()
-                .frame(width: 111, height: 95)
-//                .foregroundColor(Color("TitleHistory"))
-//                .background("AranhaGameCard")
-                .background(Color("TitleHistory"))
-                .background(Image("AranhaGameCard"))
-                .cornerRadius(10)
-                .overlay(
-                    RoundedRectangle(cornerRadius: 10)
-                        .stroke(Color(red: 0.18, green: 0.32, blue: 0.46), lineWidth: 5)
-                )
-                .onAppear(perform: {
-                    guard let titleOfSound = card.sound else {
-                            return
-                    }
-                    playSound(sound: titleOfSound, type: "mp3")
-                })
+            
+            ZStack {
+                Rectangle()
+                    .frame(width: CGFloat(width), height: CGFloat(width))
+                    .foregroundColor(Color("TitleHistory"))
+                    .cornerRadius(10)
+                Image("BarataGameCard")
+                    .resizable()
+                    .frame(width: CGFloat(width), height: CGFloat(width))
+                    .cornerRadius(10)
+                Image(card.text)
+                    .resizable()
+                    .frame(width: CGFloat(width)/1.5, height: CGFloat(width)/1.5)
+                    .background(Color("TitleHistory"))
+                    .cornerRadius(10)
+                    .onAppear(perform: {
+                        guard let titleOfSound = card.sound else {
+                                return
+                        }
+                        playSound(sound: titleOfSound, type: "mp3")
+                    })
+            }
+            
         } else {
-//            Text("")
-//                .font(.system(size: 50))
-//                .padding()
-//                .frame(width: CGFloat(width), height: CGFloat(width))
-//                .background(Color("Card"))
-//                .cornerRadius(10)
-
             Image("Carta")
+                .resizable()
+//                .font(.system(size: 50))
+                .frame(width: CGFloat(width), height: CGFloat(width))
                 .onTapGesture {
                     if userChoices.count == 0 {
                         card.turnOver()
