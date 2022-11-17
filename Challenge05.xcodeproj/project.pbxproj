@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F4D8E07292675500081403E /* A DONA ARANHA.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4F4D8E04292675500081403E /* A DONA ARANHA.mp3 */; };
+		4F4D8E08292675500081403E /* BORBOLETINHA.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4F4D8E05292675500081403E /* BORBOLETINHA.mp3 */; };
+		4F4D8E09292675500081403E /* A BARATA DIZ QUE TEM.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4F4D8E06292675500081403E /* A BARATA DIZ QUE TEM.mp3 */; };
 		4F92C5E229192DDD002FA763 /* Challenge05App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F92C5E129192DDD002FA763 /* Challenge05App.swift */; };
 		4F92C5E429192DDD002FA763 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F92C5E329192DDD002FA763 /* HistoryView.swift */; };
 		4F92C5E629192DDE002FA763 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F92C5E529192DDE002FA763 /* Assets.xcassets */; };
@@ -21,6 +24,7 @@
 		4FDEB6C2292517E500324B24 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FDEB6C1292517E500324B24 /* ContentView.swift */; };
 		4FDEB6C4292517E600324B24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FDEB6C3292517E600324B24 /* Assets.xcassets */; };
 		4FDEB6C7292517E600324B24 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FDEB6C6292517E600324B24 /* Preview Assets.xcassets */; };
+		4FDEB6CC2925277A00324B24 /* InstrumentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FDEB6CB2925277A00324B24 /* InstrumentsView.swift */; };
 		8B90C807292274E400AC0F11 /* HistoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B90C806292274E400AC0F11 /* HistoryModel.swift */; };
 		8BB2D771291D376B007F8043 /* CountDownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB2D770291D376B007F8043 /* CountDownView.swift */; };
 		8BB2D775291E093D007F8043 /* OrchestraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB2D774291E093D007F8043 /* OrchestraView.swift */; };
@@ -34,6 +38,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4F4D8E04292675500081403E /* A DONA ARANHA.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "A DONA ARANHA.mp3"; sourceTree = "<group>"; };
+		4F4D8E05292675500081403E /* BORBOLETINHA.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = BORBOLETINHA.mp3; sourceTree = "<group>"; };
+		4F4D8E06292675500081403E /* A BARATA DIZ QUE TEM.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "A BARATA DIZ QUE TEM.mp3"; sourceTree = "<group>"; };
 		4F92C5DE29192DDD002FA763 /* Challenge05.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Challenge05.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F92C5E129192DDD002FA763 /* Challenge05App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge05App.swift; sourceTree = "<group>"; };
 		4F92C5E329192DDD002FA763 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
@@ -50,6 +57,7 @@
 		4FDEB6C1292517E500324B24 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4FDEB6C3292517E600324B24 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4FDEB6C6292517E600324B24 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4FDEB6CB2925277A00324B24 /* InstrumentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstrumentsView.swift; sourceTree = "<group>"; };
 		8B90C806292274E400AC0F11 /* HistoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HistoryModel.swift; path = Challenge05/Views/HistoryModel.swift; sourceTree = SOURCE_ROOT; };
 		8BB2D770291D376B007F8043 /* CountDownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountDownView.swift; sourceTree = "<group>"; };
 		8BB2D774291E093D007F8043 /* OrchestraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrchestraView.swift; sourceTree = "<group>"; };
@@ -81,6 +89,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4F4D8E0A292675580081403E /* Music */ = {
+			isa = PBXGroup;
+			children = (
+				4F4D8E06292675500081403E /* A BARATA DIZ QUE TEM.mp3 */,
+				4F4D8E04292675500081403E /* A DONA ARANHA.mp3 */,
+				4F4D8E05292675500081403E /* BORBOLETINHA.mp3 */,
+			);
+			path = Music;
+			sourceTree = "<group>";
+		};
 		4F92C5D529192DDD002FA763 = {
 			isa = PBXGroup;
 			children = (
@@ -104,6 +122,7 @@
 			children = (
 				9C53490D291BE96A00899721 /* Info.plist */,
 				9C534907291BE4C500899721 /* Fonts */,
+				4F4D8E0A292675580081403E /* Music */,
 				8BD111A5291BF48000F77DEA /* Sounds */,
 				9C41385D2919416200AB8F60 /* Models */,
 				9C41385C2919414C00AB8F60 /* Views */,
@@ -128,6 +147,7 @@
 			children = (
 				4FDEB6BF292517E500324B24 /* OrkhestraWatchApp.swift */,
 				4FDEB6C1292517E500324B24 /* ContentView.swift */,
+				4FDEB6CB2925277A00324B24 /* InstrumentsView.swift */,
 				4FDEB6C3292517E600324B24 /* Assets.xcassets */,
 				4FDEB6C5292517E600324B24 /* Preview Content */,
 			);
@@ -275,14 +295,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F92C5E929192DDE002FA763 /* Preview Assets.xcassets in Resources */,
+				4F4D8E07292675500081403E /* A DONA ARANHA.mp3 in Resources */,
 				4FDEB6B7292513EA00324B24 /* Sax.mp3 in Resources */,
 				4FDEB6B5292513EA00324B24 /* Chocalho.mp3 in Resources */,
 				9C53490A291BE61500899721 /* RubikBubbles-Regular.ttf in Resources */,
 				4FDEB6B8292513EA00324B24 /* Violão.mp3 in Resources */,
+				4F4D8E09292675500081403E /* A BARATA DIZ QUE TEM.mp3 in Resources */,
 				4FDEB6B6292513EA00324B24 /* Flauta.mp3 in Resources */,
 				4FDEB6B4292513EA00324B24 /* Pandeiro.mp3 in Resources */,
 				4FDEB6B3292513EA00324B24 /* Piano.mp3 in Resources */,
 				4F92C5E629192DDE002FA763 /* Assets.xcassets in Resources */,
+				4F4D8E08292675500081403E /* BORBOLETINHA.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +364,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4FDEB6C2292517E500324B24 /* ContentView.swift in Sources */,
+				4FDEB6CC2925277A00324B24 /* InstrumentsView.swift in Sources */,
 				4FDEB6C0292517E500324B24 /* OrkhestraWatchApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
