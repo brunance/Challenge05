@@ -17,7 +17,7 @@ struct CardView: View {
 
     var body: some View {
         if card.isFaceUp || matchedCards.contains(where: {$0.id == card.id}) {
-            
+
             ZStack {
                 Rectangle()
                     .frame(width: CGFloat(width), height: CGFloat(width))
@@ -33,17 +33,16 @@ struct CardView: View {
                     .background(Color("TitleHistory"))
                     .cornerRadius(10)
                     .onAppear(perform: {
-                        guard let titleOfSound = card.sound else {
-                                return
-                        }
-                        playSound(sound: titleOfSound, type: "mp3")
+                        playSoundOfCard(card: card)
                     })
+                    .onTapGesture {
+                        playSoundOfCard(card: card)
+                    }
             }
-            
+
         } else {
             Image("Carta")
                 .resizable()
-//                .font(.system(size: 50))
                 .frame(width: CGFloat(width), height: CGFloat(width))
                 .onTapGesture {
                     if userChoices.count == 0 {
@@ -72,5 +71,12 @@ struct CardView: View {
             playSound(sound: titleOfSound, type: "wav")
         }
         userChoices.removeAll()
+    }
+
+    func playSoundOfCard(card: CardModel) {
+        guard let titleOfSound = card.sound else {
+                return
+        }
+        playSound(sound: titleOfSound, type: "mp3")
     }
 }
