@@ -71,11 +71,12 @@ struct OrchestraView: View {
                 }
             }
         }
+        .ignoresSafeArea()
     }
 
     func startLoading() {
         _ = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { timer in
-            withAnimation() {
+            withAnimation {
                 self.currentProgress += 1
                 if self.currentProgress >= 100 {
                     timer.invalidate()
