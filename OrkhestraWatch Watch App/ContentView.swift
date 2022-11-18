@@ -14,6 +14,9 @@ struct ContentView: View {
                 Text("Minhas Histórias")
                     .fontWeight(.bold)
                     .frame(maxWidth: .infinity, alignment: .leading)
+                    .onTapGesture {
+                        playSound(sound: "Piano", type: "mp3")
+                    }
                 NavigationLink(destination: InstrumentsView()) {
                     HStack{
                         Text("🕷️")
