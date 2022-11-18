@@ -14,6 +14,7 @@ func playSound(sound: String, type: String) {
         do {
             audioPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: path))
             audioPlayer?.play()
+            audioPlayer?.currentTime = 0
         } catch {
             print("ERROR")
         }
@@ -24,6 +25,7 @@ func stopSound(sound: String, type: String) {
     if let path = Bundle.main.path(forResource: sound, ofType: type) {
         do {
             audioPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: path))
+                
             audioPlayer?.stop()
         } catch {
             print("ERROR")

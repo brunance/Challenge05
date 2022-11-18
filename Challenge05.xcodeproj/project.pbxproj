@@ -39,6 +39,7 @@
 		9C271CC02927E84900EFB73F /* Sax.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9C271CBA2927E84900EFB73F /* Sax.mp3 */; };
 		9C271CC12927E84900EFB73F /* Piano.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9C271CBB2927E84900EFB73F /* Piano.mp3 */; };
 		9C271CC22927E84900EFB73F /* Violão.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9C271CBC2927E84900EFB73F /* Violão.mp3 */; };
+		9C271CC4292806F600EFB73F /* teste.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9C271CC3292806F600EFB73F /* teste.mp3 */; };
 		9C53490A291BE61500899721 /* RubikBubbles-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9C534909291BE61500899721 /* RubikBubbles-Regular.ttf */; };
 		9CA52FE7291A1DD60030C96B /* SheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA52FE6291A1DD60030C96B /* SheetView.swift */; };
 		9CDB40BD291B4B940077D0EF /* HistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDB40BC291B4B940077D0EF /* HistoryViewModel.swift */; };
@@ -79,6 +80,7 @@
 		9C271CBA2927E84900EFB73F /* Sax.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Sax.mp3; path = Challenge05/Music/Sounds/Sax.mp3; sourceTree = SOURCE_ROOT; };
 		9C271CBB2927E84900EFB73F /* Piano.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Piano.mp3; path = Challenge05/Music/Sounds/Piano.mp3; sourceTree = SOURCE_ROOT; };
 		9C271CBC2927E84900EFB73F /* Violão.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Violão.mp3"; path = "Challenge05/Music/Sounds/Violão.mp3"; sourceTree = SOURCE_ROOT; };
+		9C271CC3292806F600EFB73F /* teste.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = teste.mp3; sourceTree = "<group>"; };
 		9C534909291BE61500899721 /* RubikBubbles-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RubikBubbles-Regular.ttf"; sourceTree = "<group>"; };
 		9C53490D291BE96A00899721 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		9CA52FE6291A1DD60030C96B /* SheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetView.swift; sourceTree = "<group>"; };
@@ -197,6 +199,7 @@
 				9C271CB82927E84900EFB73F /* Chocalho.mp3 */,
 				9C271CB92927E84900EFB73F /* Flauta.mp3 */,
 				9C271CB72927E84900EFB73F /* Pandeiro.mp3 */,
+				9C271CC3292806F600EFB73F /* teste.mp3 */,
 				9C271CBB2927E84900EFB73F /* Piano.mp3 */,
 				9C271CBA2927E84900EFB73F /* Sax.mp3 */,
 				9C271CBC2927E84900EFB73F /* Violão.mp3 */,
@@ -350,6 +353,7 @@
 				9C271CC12927E84900EFB73F /* Piano.mp3 in Resources */,
 				9C271CC22927E84900EFB73F /* Violão.mp3 in Resources */,
 				9C271CBE2927E84900EFB73F /* Chocalho.mp3 in Resources */,
+				9C271CC4292806F600EFB73F /* teste.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -601,7 +605,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ruannwatchkit;
+				PRODUCT_BUNDLE_IDENTIFIER = .com.ruan.developer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -631,7 +635,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ruannwatchkit;
+				PRODUCT_BUNDLE_IDENTIFIER = .com.ruan.developer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;

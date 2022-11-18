@@ -11,6 +11,7 @@ import CoreMotion
 struct ContentView: View {
     let motionManager = CMMotionManager()
     let queue = OperationQueue()
+    @State private var hasTimeElapsed = false
     @State var estado = false
     @State private var pitch = Double.zero
     @State private var yaw = Double.zero
@@ -57,15 +58,16 @@ struct ContentView: View {
                 }
                 let attitude: CMAttitude = data.attitude
                 
-                if(attitude.roll >= 0 && attitude.roll <= 0.2){
+                if(attitude.pitch >= 0 && attitude.pitch <= 0.2){
                     estado = true
                 }
                     
-                if(attitude.roll == 0 && estado == false){
+                if(attitude.pitch >= 1 && estado == true){
+
                     playSound(sound: "Piano", type: "mp3")
- 
+                    estado.toggle()
                 }
-                
+                  
                 print("pitch: \(attitude.pitch)")
                 print("yaw: \(attitude.yaw)")
                 print("roll: \(attitude.roll)")
@@ -78,8 +80,10 @@ struct ContentView: View {
             }
         }
     }
+    
         
 }
+
 //struct ContentView_Previews: PreviewProvider {
 //    static var previews: some View {
 //        ContentView()
