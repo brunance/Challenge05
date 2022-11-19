@@ -6,6 +6,7 @@
 //
 
 import AVFoundation
+import SwiftUI
 
 var audioPlayer: AVAudioPlayer?
 
@@ -18,6 +19,7 @@ func playSound(sound: String, type: String) {
             print("ERROR")
         }
     }
+
 }
 
 func stopSound(sound: String, type: String) {

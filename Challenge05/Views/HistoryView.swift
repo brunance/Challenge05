@@ -6,22 +6,31 @@
 //
 import Foundation
 import SwiftUI
+import CoreMotion
 
 struct HistoryView: View {
+    let motionManager = CMMotionManager()
+    let queue = OperationQueue()
+    @State private var hasTimeElapsed = false
+    @State var estado = false
+    @State private var pitch = Double.zero
+    @State private var yaw = Double.zero
+    @State private var roll = Double.zero
     @State private var showingSheet = false
     @State private var showingCountDown = false
+    @State var teste = false
     @State var isGameView = true
     @ObservedObject var hvm: HistoryViewModel = HistoryViewModel.shared
-
+    
     let columns = [
         GridItem(.flexible())
     ]
-
+    
     var body: some View {
         NavigationView {
             ZStack {
                 Color("Primaria1").ignoresSafeArea()
-
+                
                 VStack {
                     TabView {
                         ForEach(historyList, id: \.self) { item in
@@ -40,12 +49,12 @@ struct HistoryView: View {
                                         showingSheet.toggle()
                                         hvm.historyCount = item.id
                                     }, label: {
-
+                                        
                                         ZStack {
                                             Image(systemName: "questionmark.circle.fill")
                                                 .font(.system(size: 43))
                                                 .foregroundColor(Color("BackQuestion"))
-
+                                            
                                             Image(systemName: "questionmark.circle")
                                                 .font(.system(size: 43))
                                                 .foregroundStyle(Color("LightQuestion"))
@@ -56,16 +65,15 @@ struct HistoryView: View {
                                     }
                                 }
                                 .padding(.init(top: 77, leading: 331, bottom: 724, trailing: 16))
-
+                                
                                 VStack {
                                     ForEach(0...item.titleList.count - 1, id: \.self) { num in
-
                                         Text(item.titleList[num])
-                                            // swiftlint:disable:next line_length
+                                        // swiftlint:disable:next line_length
                                             .font(.custom("RubikBubbles-Regular", size: CGFloat(item.sizeTitleList[num])))
                                             .foregroundColor(Color("TitleHistory"))
                                     }
-
+                                    
                                 }
                                 .padding(.init(top: 440, leading: 30, bottom: 200, trailing: 30))
                                 VStack {
@@ -95,13 +103,45 @@ struct HistoryView: View {
                                     .ignoresSafeArea()
                                 }
                                 .padding(.init(top: 673, leading: 47, bottom: 131, trailing: 47))
-
+                                
                                 NavigationLink(destination: CountDownView(isGameView: $isGameView).navigationBarBackButtonHidden(true), isActive: $showingCountDown) {}
                             }
                         }
                     }
                     .tabViewStyle(.page(indexDisplayMode: .always))
                     .ignoresSafeArea()
+                }
+            }.onAppear {
+                self.motionManager.startDeviceMotionUpdates(to: self.queue) { (data: CMDeviceMotion?, error: Error?) in
+                    guard let data = data else {
+                        print("Error: \(error!)")
+                        return
+                    }
+                    let attitude: CMAttitude = data.attitude
+                    
+                    if(attitude.pitch >= 0 && attitude.pitch <= 0.2){
+                        estado = true
+                        
+                    }
+                    
+                    if (attitude.pitch >= 1 && estado == true) {
+                        estado = false
+                        playSound(sound: "Piano", type: "mp3")
+                      
+                    }
+                    
+                    print("pitch: \(attitude.pitch)")
+                    print("yaw: \(attitude.yaw)")
+                    print("roll: \(attitude.roll)")
+                    
+                    if (estado == false) {
+                        
+                        DispatchQueue.main.async {
+                            self.pitch = attitude.pitch
+                            self.yaw = attitude.yaw
+                            self.roll = attitude.roll
+                        }
+                    }
                 }
             }
         }

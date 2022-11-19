@@ -61,13 +61,13 @@ struct ContentView: View {
                 if(attitude.pitch >= 0 && attitude.pitch <= 0.2){
                     estado = true
                 }
-                    
+                
                 if(attitude.pitch >= 1 && estado == true){
 
                     playSound(sound: "Piano", type: "mp3")
                     estado.toggle()
                 }
-                  
+                
                 print("pitch: \(attitude.pitch)")
                 print("yaw: \(attitude.yaw)")
                 print("roll: \(attitude.roll)")
@@ -80,8 +80,6 @@ struct ContentView: View {
             }
         }
     }
-    
-        
 }
 
 //struct ContentView_Previews: PreviewProvider {

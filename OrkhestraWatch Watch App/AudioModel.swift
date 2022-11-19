@@ -14,7 +14,6 @@ func playSound(sound: String, type: String) {
         do {
             audioPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: path))
             audioPlayer?.play()
-            audioPlayer?.currentTime = 0
         } catch {
             print("ERROR")
         }
