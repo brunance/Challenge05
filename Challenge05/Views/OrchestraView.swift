@@ -8,21 +8,25 @@
 import SwiftUI
 
 struct OrchestraView: View {
-
-    @State var currentProgress: CGFloat = 0.0
     @ObservedObject var hvm: HistoryViewModel = HistoryViewModel.shared
     @State private var showingHistory = false
-
+    @State private var value: Double = 0.0
+    @State private var isEditing: Bool = false
+    @EnvironmentObject var audioManager: AudioManager
+    
+    let timer = Timer
+        .publish(every: 0.5, on: .main, in: .common)
+        .autoconnect()
+    
     var body: some View {
-
-        let currentHistory = historyList[hvm.historyCount]
-
+        let currentHistory = historyList[hvm.historyId]
+        
         NavigationView {
             ZStack {
                 Color("CombinarText").ignoresSafeArea()
                 Image("\(currentHistory.name)Padrao")
                     .resizable()
-
+                
                 VStack(spacing: 20) {
                     ZStack {
                         Button(action: {
@@ -36,8 +40,7 @@ struct OrchestraView: View {
                             }
                             .frame(maxWidth: .infinity, alignment: .leading)
                         })
-                        .padding()
-
+                        
                         Text("Orkhéstra")
                             .fontWeight(.bold)
                             .font(.system(size: 16))
@@ -47,51 +50,58 @@ struct OrchestraView: View {
                         .frame(width: 358, height: 334)
                         .background(Color("BackImageOrchestra"))
                         .clipShape(RoundedRectangle(cornerRadius: 8, style: .continuous))
-
-                    HStack {
-                        Text(currentHistory.title)
-                            .font(.custom("RubikBubbles-Regular", size: 24))
-                            .foregroundColor(Color("TitleHistory"))
-                            .bold()
-                            .frame(maxWidth: .infinity, alignment: .leading)
-                            .padding(.init(top: 0, leading: 20, bottom: 0, trailing: 0))
-                    }
-
-                    ZStack(alignment: .leading) {
-                        RoundedRectangle(cornerRadius: 20, style: .continuous)
-                            .frame(width: 350, height: 10)
-                            .foregroundColor(Color.black.opacity(0.1))
-
-                        RoundedRectangle(cornerRadius: 20, style: .continuous)
-                            .frame(width: currentProgress * 3.5, height: 10)
-                            .foregroundColor(Color("Destaque1"))
-                    }
-
-                    VStack {
-                        Button(action: {self.startLoading()}, label: {
-                            Image(systemName: "play.circle.fill")
-                                .font(.system(size: 83))
-                                .foregroundColor(Color("PlayButton"))
-                        })
-                        Text("Tocar")
-                            .font(.system(size: 12))
-                            .foregroundColor(Color("TitleOrchestra"))
+                    
+                    Text(currentHistory.title)
+                        .font(.custom("RubikBubbles-Regular", size: 24))
+                        .foregroundColor(Color("TitleHistory"))
+                        .bold()
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                    
+                    if let player = audioManager.player {
+                        VStack(spacing: 5) {
+                            Slider(value: $value, in: 0...player.duration) { editing in
+                                
+                                isEditing = editing
+                                
+                                if !editing {
+                                    player.currentTime = value
+                                }
+                            }
+                            .accentColor(.white)
+                            HStack {
+                                Text(DateComponentsFormatter.positional.string(from: player.currentTime) ?? "0:00")
+                                
+                                Spacer()
+                                
+                                Text(DateComponentsFormatter.positional.string(from: player.duration) ?? "0:00")
+                                
+                            }
+                            .foregroundColor(.white)
+                        }
+                        VStack {
+                            Button(action: {
+                                audioManager.pauseSound()
+                            }, label: {
+                                Image(systemName: player.isPlaying ? "pause.circle.fill" : "play.circle.fill")
+                                    .font(.system(size: 75))
+                                    .foregroundColor(Color("PlayButton"))
+                            })
+                            Text("Tocar")
+                                .font(.system(size: 12))
+                                .foregroundColor(Color("TitleOrchestra"))
+                        }
                     }
                 }
-
+                .padding(20)
                 NavigationLink(destination: HistoryView().navigationBarBackButtonHidden(true), isActive: $showingHistory) {}
             }
             .ignoresSafeArea()
-        }
-    }
-
-    func startLoading() {
-        _ = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { timer in
-            withAnimation {
-                self.currentProgress += 1
-                if self.currentProgress >= 100 {
-                    timer.invalidate()
-                }
+            .onAppear {
+                audioManager.playSound(sound: currentHistory.name)
+            }
+            .onReceive(timer) { _ in
+                guard let player = audioManager.player, !isEditing else { return }
+                value = player.currentTime
             }
         }
     }

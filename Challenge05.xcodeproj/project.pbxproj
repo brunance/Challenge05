@@ -8,10 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		4F270A322927B254006F0EC7 /* ChallengeWatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F270A312927B254006F0EC7 /* ChallengeWatchView.swift */; };
-		4F4D8E07292675500081403E /* A DONA ARANHA.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4F4D8E04292675500081403E /* A DONA ARANHA.mp3 */; };
-		4F4D8E08292675500081403E /* BORBOLETINHA.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4F4D8E05292675500081403E /* BORBOLETINHA.mp3 */; };
-		4F4D8E09292675500081403E /* A BARATA DIZ QUE TEM.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4F4D8E06292675500081403E /* A BARATA DIZ QUE TEM.mp3 */; };
-		4F92C5E229192DDD002FA763 /* Challenge05App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F92C5E129192DDD002FA763 /* Challenge05App.swift */; };
+		4F4D8E07292675500081403E /* Aranha.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4F4D8E04292675500081403E /* Aranha.mp3 */; };
+		4F4D8E08292675500081403E /* Borboleta.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4F4D8E05292675500081403E /* Borboleta.mp3 */; };
+		4F4D8E09292675500081403E /* Barata.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4F4D8E06292675500081403E /* Barata.mp3 */; };
+		4F92C5E229192DDD002FA763 /* OrkhestraApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F92C5E129192DDD002FA763 /* OrkhestraApp.swift */; };
 		4F92C5E429192DDD002FA763 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F92C5E329192DDD002FA763 /* HistoryView.swift */; };
 		4F92C5E629192DDE002FA763 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F92C5E529192DDE002FA763 /* Assets.xcassets */; };
 		4F92C5E929192DDE002FA763 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F92C5E829192DDE002FA763 /* Preview Assets.xcassets */; };
@@ -31,12 +31,13 @@
 		8BA409AF2927FCDC000FF0F0 /* HistoryModelWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA409AE2927FCDC000FF0F0 /* HistoryModelWatchApp.swift */; };
 		8BA409B22928047D000FF0F0 /* HistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA409B12928047D000FF0F0 /* HistoryViewModel.swift */; };
 		8BA409B42929D2B3000FF0F0 /* InstrumentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA409B32929D2B3000FF0F0 /* InstrumentModel.swift */; };
+		8BA409B6292A99BC000FF0F0 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA409B5292A99BC000FF0F0 /* Extensions.swift */; };
 		8BB2D771291D376B007F8043 /* CountDownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB2D770291D376B007F8043 /* CountDownView.swift */; };
 		8BB2D775291E093D007F8043 /* OrchestraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB2D774291E093D007F8043 /* OrchestraView.swift */; };
 		8BC16099291A9C0900A73AD6 /* CardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC16098291A9C0900A73AD6 /* CardModel.swift */; };
 		8BC1609B291A9DA700A73AD6 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC1609A291A9DA700A73AD6 /* CardView.swift */; };
 		8BC1609D291AA44C00A73AD6 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC1609C291AA44C00A73AD6 /* GameView.swift */; };
-		8BD111B5291BF9A000F77DEA /* AudioModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD111B4291BF9A000F77DEA /* AudioModel.swift */; };
+		8BD111B5291BF9A000F77DEA /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD111B4291BF9A000F77DEA /* AudioManager.swift */; };
 		9C53490A291BE61500899721 /* RubikBubbles-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9C534909291BE61500899721 /* RubikBubbles-Regular.ttf */; };
 		9CA52FE7291A1DD60030C96B /* SheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA52FE6291A1DD60030C96B /* SheetView.swift */; };
 		9CDB40BD291B4B940077D0EF /* HistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDB40BC291B4B940077D0EF /* HistoryViewModel.swift */; };
@@ -44,11 +45,11 @@
 
 /* Begin PBXFileReference section */
 		4F270A312927B254006F0EC7 /* ChallengeWatchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeWatchView.swift; sourceTree = "<group>"; };
-		4F4D8E04292675500081403E /* A DONA ARANHA.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "A DONA ARANHA.mp3"; sourceTree = "<group>"; };
-		4F4D8E05292675500081403E /* BORBOLETINHA.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = BORBOLETINHA.mp3; sourceTree = "<group>"; };
-		4F4D8E06292675500081403E /* A BARATA DIZ QUE TEM.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "A BARATA DIZ QUE TEM.mp3"; sourceTree = "<group>"; };
+		4F4D8E04292675500081403E /* Aranha.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Aranha.mp3; sourceTree = "<group>"; };
+		4F4D8E05292675500081403E /* Borboleta.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Borboleta.mp3; sourceTree = "<group>"; };
+		4F4D8E06292675500081403E /* Barata.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Barata.mp3; sourceTree = "<group>"; };
 		4F92C5DE29192DDD002FA763 /* Challenge05.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Challenge05.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		4F92C5E129192DDD002FA763 /* Challenge05App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge05App.swift; sourceTree = "<group>"; };
+		4F92C5E129192DDD002FA763 /* OrkhestraApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrkhestraApp.swift; sourceTree = "<group>"; };
 		4F92C5E329192DDD002FA763 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
 		4F92C5E529192DDE002FA763 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4F92C5E829192DDE002FA763 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -69,12 +70,13 @@
 		8BA409AE2927FCDC000FF0F0 /* HistoryModelWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryModelWatchApp.swift; sourceTree = "<group>"; };
 		8BA409B12928047D000FF0F0 /* HistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewModel.swift; sourceTree = "<group>"; };
 		8BA409B32929D2B3000FF0F0 /* InstrumentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstrumentModel.swift; sourceTree = "<group>"; };
+		8BA409B5292A99BC000FF0F0 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		8BB2D770291D376B007F8043 /* CountDownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountDownView.swift; sourceTree = "<group>"; };
 		8BB2D774291E093D007F8043 /* OrchestraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrchestraView.swift; sourceTree = "<group>"; };
 		8BC16098291A9C0900A73AD6 /* CardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CardModel.swift; path = Challenge05/Views/CardModel.swift; sourceTree = SOURCE_ROOT; };
 		8BC1609A291A9DA700A73AD6 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		8BC1609C291AA44C00A73AD6 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
-		8BD111B4291BF9A000F77DEA /* AudioModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AudioModel.swift; path = Challenge05/Views/AudioModel.swift; sourceTree = SOURCE_ROOT; };
+		8BD111B4291BF9A000F77DEA /* AudioManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AudioManager.swift; path = Challenge05/Views/AudioManager.swift; sourceTree = SOURCE_ROOT; };
 		9C534909291BE61500899721 /* RubikBubbles-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RubikBubbles-Regular.ttf"; sourceTree = "<group>"; };
 		9C53490D291BE96A00899721 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		9CA52FE6291A1DD60030C96B /* SheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetView.swift; sourceTree = "<group>"; };
@@ -102,9 +104,9 @@
 		4F4D8E0A292675580081403E /* Music */ = {
 			isa = PBXGroup;
 			children = (
-				4F4D8E06292675500081403E /* A BARATA DIZ QUE TEM.mp3 */,
-				4F4D8E04292675500081403E /* A DONA ARANHA.mp3 */,
-				4F4D8E05292675500081403E /* BORBOLETINHA.mp3 */,
+				4F4D8E06292675500081403E /* Barata.mp3 */,
+				4F4D8E04292675500081403E /* Aranha.mp3 */,
+				4F4D8E05292675500081403E /* Borboleta.mp3 */,
 			);
 			path = Music;
 			sourceTree = "<group>";
@@ -137,9 +139,10 @@
 				9C41385D2919416200AB8F60 /* Models */,
 				9C41385C2919414C00AB8F60 /* Views */,
 				9C41385B2919413B00AB8F60 /* ViewModels */,
-				4F92C5E129192DDD002FA763 /* Challenge05App.swift */,
+				4F92C5E129192DDD002FA763 /* OrkhestraApp.swift */,
 				4F92C5E529192DDE002FA763 /* Assets.xcassets */,
 				4F92C5E729192DDE002FA763 /* Preview Content */,
+				8BA409B5292A99BC000FF0F0 /* Extensions.swift */,
 			);
 			path = Challenge05;
 			sourceTree = "<group>";
@@ -215,7 +218,7 @@
 			isa = PBXGroup;
 			children = (
 				8BC16098291A9C0900A73AD6 /* CardModel.swift */,
-				8BD111B4291BF9A000F77DEA /* AudioModel.swift */,
+				8BD111B4291BF9A000F77DEA /* AudioManager.swift */,
 				8B90C806292274E400AC0F11 /* HistoryModel.swift */,
 			);
 			path = Models;
@@ -310,17 +313,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F92C5E929192DDE002FA763 /* Preview Assets.xcassets in Resources */,
-				4F4D8E07292675500081403E /* A DONA ARANHA.mp3 in Resources */,
+				4F4D8E07292675500081403E /* Aranha.mp3 in Resources */,
 				4FDEB6B7292513EA00324B24 /* Sax.mp3 in Resources */,
 				4FDEB6B5292513EA00324B24 /* Chocalho.mp3 in Resources */,
 				9C53490A291BE61500899721 /* RubikBubbles-Regular.ttf in Resources */,
 				4FDEB6B8292513EA00324B24 /* Violão.mp3 in Resources */,
-				4F4D8E09292675500081403E /* A BARATA DIZ QUE TEM.mp3 in Resources */,
+				4F4D8E09292675500081403E /* Barata.mp3 in Resources */,
 				4FDEB6B6292513EA00324B24 /* Flauta.mp3 in Resources */,
 				4FDEB6B4292513EA00324B24 /* Pandeiro.mp3 in Resources */,
 				4FDEB6B3292513EA00324B24 /* Piano.mp3 in Resources */,
 				4F92C5E629192DDE002FA763 /* Assets.xcassets in Resources */,
-				4F4D8E08292675500081403E /* BORBOLETINHA.mp3 in Resources */,
+				4F4D8E08292675500081403E /* Borboleta.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -364,11 +367,12 @@
 				4F92C5E429192DDD002FA763 /* HistoryView.swift in Sources */,
 				9CA52FE7291A1DD60030C96B /* SheetView.swift in Sources */,
 				8BC16099291A9C0900A73AD6 /* CardModel.swift in Sources */,
-				8BD111B5291BF9A000F77DEA /* AudioModel.swift in Sources */,
+				8BD111B5291BF9A000F77DEA /* AudioManager.swift in Sources */,
 				8B90C807292274E400AC0F11 /* HistoryModel.swift in Sources */,
 				8BB2D775291E093D007F8043 /* OrchestraView.swift in Sources */,
+				8BA409B6292A99BC000FF0F0 /* Extensions.swift in Sources */,
 				8BC1609B291A9DA700A73AD6 /* CardView.swift in Sources */,
-				4F92C5E229192DDD002FA763 /* Challenge05App.swift in Sources */,
+				4F92C5E229192DDD002FA763 /* OrkhestraApp.swift in Sources */,
 				9CDB40BD291B4B940077D0EF /* HistoryViewModel.swift in Sources */,
 				8BC1609D291AA44C00A73AD6 /* GameView.swift in Sources */,
 			);

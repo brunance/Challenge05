@@ -11,6 +11,7 @@ struct CardView: View {
     @ObservedObject var card: CardModel
     @Binding var matchedCards: [CardModel]
     @Binding var userChoices: [CardModel]
+    @EnvironmentObject var audioManager: AudioManager
 
     let width: Int = 100
     let height: Int = 90
@@ -65,10 +66,7 @@ struct CardView: View {
         if userChoices[0].text == userChoices[1].text {
             matchedCards.append(userChoices[0])
             matchedCards.append(userChoices[1])
-            guard let titleOfSound = userChoices[0].sound else {
-                    return
-            }
-            playSound(sound: titleOfSound, type: "wav")
+            playSoundOfCard(card: userChoices[0])
         }
         userChoices.removeAll()
     }
@@ -77,6 +75,6 @@ struct CardView: View {
         guard let titleOfSound = card.sound else {
                 return
         }
-        playSound(sound: titleOfSound, type: "mp3")
+        audioManager.playSound(sound: titleOfSound)
     }
 }

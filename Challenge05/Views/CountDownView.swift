@@ -19,7 +19,7 @@ struct CountDownView: View {
 
     var body: some View {
 
-        let currentHistory = historyList[hvm.historyCount]
+        let currentHistory = historyList[hvm.historyId]
 
         NavigationView {
             ZStack {
@@ -43,7 +43,7 @@ struct CountDownView: View {
                         Text("\(countDownTimer)")
                             .onReceive(timer) { _ in
                                 if countDownTimer > 1 && timerRunning {
-                                    playSound(sound: "countdown", type: "wav")
+//                                    playSound(sound: "countdown")
                                     countDownTimer -= 1
                                 } else {
                                     isShowingDetailView = true

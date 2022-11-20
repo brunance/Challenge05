@@ -38,7 +38,7 @@ struct HistoryView: View {
                                 ZStack {
                                     Button(action: {
                                         showingSheet.toggle()
-                                        hvm.historyCount = item.id
+                                        hvm.historyId = item.id
                                     }, label: {
 
                                         ZStack {
@@ -77,7 +77,7 @@ struct HistoryView: View {
                                 VStack {
                                     Button(action: {
                                         showingCountDown.toggle()
-                                        hvm.historyCount = item.id
+                                        hvm.historyId = item.id
                                     }, label: {
                                         HStack {
                                             Image(systemName: "play.fill")

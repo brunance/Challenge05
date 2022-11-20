@@ -16,7 +16,7 @@ struct SheetView: View {
     let height: Int = 10
 
     var body: some View {
-        let currentHistory = historyList[hvm.historyCount]
+        let currentHistory = historyList[hvm.historyId]
 
         ZStack {
             Color("BackSheet").ignoresSafeArea()

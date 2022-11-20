@@ -33,7 +33,7 @@ struct GameView: View {
 
     var body: some View {
 
-        let currentHistory = historyList[hvm.historyCount]
+        let currentHistory = historyList[hvm.historyId]
 
         if matchedCards.count == cards.count {
             CountDownView(isGameView: $isGameView)

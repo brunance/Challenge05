@@ -11,5 +11,5 @@ import SwiftUI
 class HistoryViewModel: ObservableObject {
     public static var shared: HistoryViewModel = HistoryViewModel()
 
-    @Published var historyCount: Int = 0
+    @Published var historyId: Int = 0
 }
