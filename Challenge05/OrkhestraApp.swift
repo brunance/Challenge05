@@ -12,7 +12,7 @@ struct OrkhestraApp: App {
     @StateObject var audioManager = AudioManager()
     var body: some Scene {
         WindowGroup {
-            OrchestraView()
+            HistoryView()
                 .environmentObject(audioManager)
         }
     }

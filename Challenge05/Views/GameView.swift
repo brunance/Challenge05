@@ -151,10 +151,10 @@ struct GameView: View {
                         }
                     }
                     .padding()
+                    // swiftlint:disable:next line_length
+                    NavigationLink(destination: HistoryView().navigationBarBackButtonHidden(true), isActive: $showingHistoryView) {}
                 }
                 .ignoresSafeArea()
-                // swiftlint:disable:next line_length
-                NavigationLink(destination: HistoryView().navigationBarBackButtonHidden(true), isActive: $showingHistoryView) {}
             }
         }
     }
