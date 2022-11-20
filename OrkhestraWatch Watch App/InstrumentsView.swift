@@ -7,121 +7,44 @@
 import SwiftUI
 
 struct InstrumentsView: View {
+    
+    @ObservedObject var hvm: HistoryViewModel = HistoryViewModel.shared
+    
     var body: some View {
         NavigationView{
             VStack {
                 List{
-                    VStack(alignment: .center, spacing: 5) {
-                        Image("Chocalho")
-                            .resizable()
-                            .frame(width: 35, height: 35)
-                            .padding(.top, 5)
-                        Text("Chocalho")
-                            .bold()
-                            .padding(.top, 5)
-                            .font(.system(size: 12))
-                        NavigationLink(destination: OrchestrawatchView()){
-                            Text("**ESCOLHER**")
-                                .font(.system(size: 14))
+                    ForEach(instrumentsList, id: \.self) { instrument in
+                        VStack(alignment: .center, spacing: 5) {
+                            Image(instrument.image)
+                                .resizable()
+                                .frame(width: 35, height: 35)
+                                .padding(.top, 5)
+                            Text(instrument.name)
+                                .bold()
+                                .padding(.top, 5)
+                                .font(.system(size: 12))
+                            NavigationLink(destination: ChallengeWatchView()){
+                                Text("**ESCOLHER**")
+                                    .font(.system(size: 14))
+                            }
+                            .foregroundColor(.red).padding(.bottom, 5)
+                            .onTapGesture {
+                                hvm.instrumentId = instrument.id
+                            }
+                            
                         }
-                        .foregroundColor(.red).padding(.bottom, 5)
+                        .frame(maxWidth: .infinity, maxHeight: 80, alignment: .center)
+                        .padding()
+                        
                     }
-                    .frame(maxWidth: .infinity, maxHeight: 80, alignment: .center)
-                    .padding()
-
-                    VStack(alignment: .center, spacing: 5) {
-                        Image("Flauta")
-                            .resizable()
-                            .frame(width: 35, height: 35)
-                            .padding(.top, 5)
-                        Text("Flauta")
-                            .bold()
-                            .padding(.top, 5)
-                            .font(.system(size: 12))
-                        NavigationLink(destination: OrchestrawatchView()){
-                            Text("**ESCOLHER**")
-                                .font(.system(size: 14))
-                        }
-                        .foregroundColor(.red).padding(.bottom, 5)
-                    }
-                    .frame(maxWidth: .infinity, maxHeight: 80, alignment: .center)
-                    .padding()
-
-                    VStack(alignment: .center, spacing: 5) {
-                        Image("Pandeiro")
-                            .resizable()
-                            .frame(width: 35, height: 35)
-                            .padding(.top, 5)
-                        Text("Pandeiro")
-                            .bold()
-                            .padding(.top, 5)
-                            .font(.system(size: 12))
-                        NavigationLink(destination: OrchestrawatchView()){
-                            Text("**ESCOLHER**")
-                                .font(.system(size: 14))
-                        }
-                        .foregroundColor(.red).padding(.bottom, 5)
-                    }
-                    .frame(maxWidth: .infinity, maxHeight: 80, alignment: .center)
-                    .padding()
-
-                    VStack(alignment: .center, spacing: 5) {
-                        Image("Piano")
-                            .resizable()
-                            .frame(width: 35, height: 35)
-                            .padding(.top, 5)
-                        Text("Piano")
-                            .bold()
-                            .padding(.top, 5)
-                            .font(.system(size: 12))
-                        NavigationLink(destination: OrchestrawatchView()){
-                            Text("**ESCOLHER**")
-                                .font(.system(size: 14))
-                        }
-                        .foregroundColor(.red).padding(.bottom, 5)
-                    }
-                    .frame(maxWidth: .infinity, maxHeight: 80, alignment: .center)
-                    .padding()
-
-                    VStack(alignment: .center, spacing: 5) {
-                        Image("Saxofone")
-                            .resizable()
-                            .frame(width: 35, height: 35)
-                            .padding(.top, 5)
-                        Text("Saxofone")
-                            .bold()
-                            .padding(.top, 5)
-                            .font(.system(size: 12))
-                        NavigationLink(destination: OrchestrawatchView()){
-                            Text("**ESCOLHER**")
-                                .font(.system(size: 14))
-                        }
-                        .foregroundColor(.red).padding(.bottom, 5)
-                    }
-                    .frame(maxWidth: .infinity, maxHeight: 80, alignment: .center)
-                    .padding()
-
-                    VStack(alignment: .center, spacing: 5) {
-                        Image("Violao")
-                            .resizable()
-                            .frame(width: 35, height: 35)
-                            .padding(.top, 5)
-                        Text("Violão")
-                            .bold()
-                            .padding(.top, 5)
-                            .font(.system(size: 12))
-                        NavigationLink(destination: OrchestrawatchView()){
-                            Text("**ESCOLHER**")
-                                .font(.system(size: 14))
-                        }
-                        .foregroundColor(.red).padding(.bottom, 5)
-                    }
-                    .frame(maxWidth: .infinity, maxHeight: 80, alignment: .center)
-                    .padding()
+                    .listStyle(CarouselListStyle())
+                    
                 }
-                .listStyle(CarouselListStyle())
+                .padding()
             }
-            .padding()
         }
+        .navigationBarTitle(historyList[hvm.historyId].navTitle)
     }
 }
+
