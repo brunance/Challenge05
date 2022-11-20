@@ -9,6 +9,7 @@ import SwiftUI
 struct InstrumentsView: View {
     
     @ObservedObject var hvm: HistoryViewModel = HistoryViewModel.shared
+    @State private var isShowingDetailView = false
     
     var body: some View {
         NavigationView{
@@ -24,14 +25,18 @@ struct InstrumentsView: View {
                                 .bold()
                                 .padding(.top, 5)
                                 .font(.system(size: 12))
-                            NavigationLink(destination: ChallengeWatchView()){
+                            Button(action: {
+                                hvm.instrumentId = instrument.id
+                                print(instrument.name)
+                                isShowingDetailView = true
+                            }, label: {})
+                            NavigationLink(destination: ChallengeWatchView(), isActive: $isShowingDetailView){
                                 Text("**ESCOLHER**")
                                     .font(.system(size: 14))
+                               
                             }
                             .foregroundColor(.red).padding(.bottom, 5)
-                            .onTapGesture {
-                                hvm.instrumentId = instrument.id
-                            }
+                            
                             
                         }
                         .frame(maxWidth: .infinity, maxHeight: 80, alignment: .center)
