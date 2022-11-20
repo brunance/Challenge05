@@ -11,8 +11,7 @@ import SwiftUI
 struct OrkhestraWatchApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
-//            orkhestraWatch_Watch_AppApp
+            MenuViewWatchApp()
         }
     }
 }
