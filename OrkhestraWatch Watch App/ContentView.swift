@@ -13,6 +13,7 @@ struct ContentView: View {
     let queue = OperationQueue()
     @State private var hasTimeElapsed = false
     @State var estado = false
+    @State var control = true
     @State private var pitch = Double.zero
     @State private var yaw = Double.zero
     @State private var roll = Double.zero
@@ -50,7 +51,6 @@ struct ContentView: View {
             .padding()
             
         }.onAppear {
-            
             self.motionManager.startDeviceMotionUpdates(to: self.queue) { (data: CMDeviceMotion?, error: Error?) in
                 guard let data = data else {
                     print("Error: \(error!)")
@@ -62,22 +62,28 @@ struct ContentView: View {
                     estado = true
                 }
                 
-                if(attitude.pitch >= 1 && estado == true){
-
+                if (attitude.pitch >= 1 && estado == true && control == true) {
+                    estado = false
                     playSound(sound: "Piano", type: "mp3")
-                    estado.toggle()
+                    
                 }
                 
                 print("pitch: \(attitude.pitch)")
                 print("yaw: \(attitude.yaw)")
                 print("roll: \(attitude.roll)")
                 
-                DispatchQueue.main.async {
-                    self.pitch = attitude.pitch
-                    self.yaw = attitude.yaw
-                    self.roll = attitude.roll
+                if (estado == false) {
+                    
+                    DispatchQueue.main.async {
+                        self.pitch = attitude.pitch
+                        self.yaw = attitude.yaw
+                        self.roll = attitude.roll
+                    }
                 }
             }
+        }
+        .onDisappear{
+            control = false
         }
     }
 }

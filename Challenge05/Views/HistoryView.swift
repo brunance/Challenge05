@@ -18,8 +18,8 @@ struct HistoryView: View {
     @State private var roll = Double.zero
     @State private var showingSheet = false
     @State private var showingCountDown = false
-    @State var teste = false
     @State var isGameView = true
+    @State var control = true
     @ObservedObject var hvm: HistoryViewModel = HistoryViewModel.shared
     
     let columns = [
@@ -49,12 +49,10 @@ struct HistoryView: View {
                                         showingSheet.toggle()
                                         hvm.historyCount = item.id
                                     }, label: {
-                                        
                                         ZStack {
                                             Image(systemName: "questionmark.circle.fill")
                                                 .font(.system(size: 43))
                                                 .foregroundColor(Color("BackQuestion"))
-                                            
                                             Image(systemName: "questionmark.circle")
                                                 .font(.system(size: 43))
                                                 .foregroundStyle(Color("LightQuestion"))
@@ -121,13 +119,12 @@ struct HistoryView: View {
                     
                     if(attitude.pitch >= 0 && attitude.pitch <= 0.2){
                         estado = true
-                        
                     }
                     
-                    if (attitude.pitch >= 1 && estado == true) {
+                    if (attitude.pitch >= 1 && estado == true && control == true) {
                         estado = false
                         playSound(sound: "Piano", type: "mp3")
-                      
+                        
                     }
                     
                     print("pitch: \(attitude.pitch)")
@@ -143,6 +140,9 @@ struct HistoryView: View {
                         }
                     }
                 }
+            }
+            .onDisappear{
+                control = false
             }
         }
     }
