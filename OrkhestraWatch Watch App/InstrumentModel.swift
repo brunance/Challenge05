@@ -28,4 +28,3 @@ let instrumentsList: [InstrumentModel] = [
     InstrumentModel(id: 4, name: "Saxofone", image: "Saxofone"),
     InstrumentModel(id: 5, name: "Violão", image: "Violao")
 ]
-

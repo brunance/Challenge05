@@ -23,7 +23,7 @@ struct CountDownView: View {
 
         NavigationView {
             ZStack {
-                Color("Primaria1").ignoresSafeArea()
+                Color("CombinarText").ignoresSafeArea()
                 Image("\(currentHistory.name)Padrao")
                     .resizable()
                 VStack {

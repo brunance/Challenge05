@@ -10,12 +10,12 @@ import SwiftUI
 struct ChallengeWatchView: View {
     @State var progress: Double = 0
     @ObservedObject var hvm: HistoryViewModel = HistoryViewModel.shared
-    
+
     var body: some View {
         NavigationView {
             VStack {
                 Spacer()
-                
+
                 ZStack {
                     CircularProgressView(progress: progress)
                     Image(instrumentsList[hvm.instrumentId].image)
@@ -23,12 +23,12 @@ struct ChallengeWatchView: View {
                         .frame(width: 55, height: 55)
                 }
                 .frame(width: 100, height: 100)
-                
+
                 Spacer()
-                
+
                 Text("Gire o Pulso")
                     .font(.system(size: 20))
-                
+
                 HStack {
                     Slider(value: $progress, in: 0...1)
                     Button("Reset") {

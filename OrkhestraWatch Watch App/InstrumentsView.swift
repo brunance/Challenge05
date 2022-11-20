@@ -7,13 +7,13 @@
 import SwiftUI
 
 struct InstrumentsView: View {
-    
+
     @ObservedObject var hvm: HistoryViewModel = HistoryViewModel.shared
-    
+
     var body: some View {
-        NavigationView{
+        NavigationView {
             VStack {
-                List{
+                List {
                     ForEach(instrumentsList, id: \.self) { instrument in
                         VStack(alignment: .center, spacing: 5) {
                             Image(instrument.image)
@@ -24,7 +24,7 @@ struct InstrumentsView: View {
                                 .bold()
                                 .padding(.top, 5)
                                 .font(.system(size: 12))
-                            NavigationLink(destination: ChallengeWatchView()){
+                            NavigationLink(destination: ChallengeWatchView()) {
                                 Text("**ESCOLHER**")
                                     .font(.system(size: 14))
                             }
@@ -32,14 +32,11 @@ struct InstrumentsView: View {
                             .onTapGesture {
                                 hvm.instrumentId = instrument.id
                             }
-                            
                         }
                         .frame(maxWidth: .infinity, maxHeight: 80, alignment: .center)
                         .padding()
-                        
                     }
                     .listStyle(CarouselListStyle())
-                    
                 }
                 .padding()
             }
@@ -47,4 +44,3 @@ struct InstrumentsView: View {
         .navigationBarTitle(historyList[hvm.historyId].navTitle)
     }
 }
-
