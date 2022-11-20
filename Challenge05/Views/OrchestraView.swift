@@ -8,79 +8,105 @@
 import SwiftUI
 
 struct OrchestraView: View {
-    @State var currentProgress: CGFloat = 0.0
+    @ObservedObject var hvm: HistoryViewModel = HistoryViewModel.shared
+    @State private var showingHistory = false
+    @State private var value: Double = 0.0
+    @State private var isEditing: Bool = false
+    @EnvironmentObject var audioManager: AudioManager
+
+    let timer = Timer
+        .publish(every: 0.5, on: .main, in: .common)
+        .autoconnect()
+
     var body: some View {
-        ZStack {
-            Color("BackgroundColor1").ignoresSafeArea()
-            Image("BarataPadrao")
-                .resizable()
+        let currentHistory = historyList[hvm.historyId]
 
-            VStack(spacing: 20) {
-                Text("LoreMusic")
-                    .fontWeight(.bold)
-                    .font(.system(size: 16))
-                    .foregroundColor(Color("TextColorNames"))
+        NavigationView {
+            ZStack {
+                Color("CombinarText").ignoresSafeArea()
+                Image("\(currentHistory.name)Padrao")
+                    .resizable()
 
-                Image("BarataOrquestra")
-                    .frame(width: 358, height: 334)
-                    .background(Color("Primaria3"))
-                    .clipShape(RoundedRectangle(cornerRadius: 8, style: .continuous))
+                VStack(spacing: 20) {
+                    ZStack {
+                        Button(action: {
+                            audioManager.stopSound()
+                            showingHistory = true
+                        }, label: {
+                            ZStack {
+                                Image(systemName: "chevron.down.circle.fill")
+                                    .frame(alignment: .trailing)
+                                    .font(.system(size: 37))
+                                    .foregroundStyle(Color("CircleCount"))
+                            }
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                        })
 
-                HStack {
-                    Text("a Barata diz que tem")
+                        Text("Orkhéstra")
+                            .fontWeight(.bold)
+                            .font(.system(size: 16))
+                            .foregroundColor(Color("TitleOrchestra"))
+                    }
+                    Image("\(currentHistory.name)Orquestra")
+                        .frame(width: 358, height: 334)
+                        .background(Color("BackImageOrchestra"))
+                        .clipShape(RoundedRectangle(cornerRadius: 8, style: .continuous))
+
+                    Text(currentHistory.title)
                         .font(.custom("RubikBubbles-Regular", size: 24))
-                        .foregroundColor(Color("Primaria1"))
+                        .foregroundColor(Color("TitleHistory"))
                         .bold()
                         .frame(maxWidth: .infinity, alignment: .leading)
-                        .padding(.init(top: 0, leading: 20, bottom: 0, trailing: 0))
 
-                    Button(action: {
-                    }, label: {
-                        Image(systemName: "hand.thumbsup.circle")
-                            .font(.system(size: 35))
-                            .foregroundColor(Color("Primaria1"))
-                            .padding(.init(top: 0, leading: 0, bottom: 0, trailing: 20))
-                    })
-                }
+                    VStack(spacing: 5) {
+                        Slider(value: $value, in: 0...(audioManager.player?.duration ?? 0)) { editing in
 
-                Text("LoreMusic")
-                    .font(.system(size: 16))
-                    .foregroundColor(Color("TextColorNames"))
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .padding(.init(top: 0, leading: 20, bottom: 0, trailing: 0))
+                            isEditing = editing
 
-                ZStack(alignment: .leading) {
-                    RoundedRectangle(cornerRadius: 20, style: .continuous)
-                        .frame(width: 350, height: 10)
-                        .foregroundColor(Color.black.opacity(0.1))
+                            if !editing {
+                                audioManager.player?.currentTime = value
+                            }
+                        }
+                        .accentColor(Color("Destaque1"))
+                        .tint(Color("Destaque1"))
 
-                    RoundedRectangle(cornerRadius: 20, style: .continuous)
-                        .frame(width: currentProgress * 3.5, height: 10)
-                        .foregroundColor(Color("Destaque1"))
-                }
+                        HStack {
+                            // swiftlint:disable:next line_length
+                            Text(DateComponentsFormatter.positional.string(from: (audioManager.player?.currentTime ?? 0)) ?? "0:00")
 
-                VStack {
-                    Button(action: {self.startLoading()}, label: {
-                        Image(systemName: "play.circle.fill")
-                            .font(.system(size: 83))
-                            .foregroundColor(Color("Primaria1"))
-                    })
-                    Text("Tocar")
+                            Spacer()
+
+                            // swiftlint:disable:next line_length
+                            Text(DateComponentsFormatter.positional.string(from: (audioManager.player?.duration ?? 0)) ?? "0:00")
+                        }
                         .font(.system(size: 12))
-                        .foregroundColor(Color("TextColorNames"))
+                        .foregroundColor(Color("TitleOrchestra"))
+                    }
+                    VStack {
+                        Button(action: {
+                            audioManager.pauseSound()
+                        }, label: {
+                            // swiftlint:disable:next line_length
+                            Image(systemName: (audioManager.player?.isPlaying ?? false) ? "pause.circle.fill" : "play.circle.fill")
+                                .font(.system(size: 75))
+                                .foregroundColor(Color("PlayButton"))
+                        })
+                        Text("Tocar")
+                            .font(.system(size: 12))
+                            .foregroundColor(Color("TitleOrchestra"))
+                    }
                 }
+                .padding(20)
+                // swiftlint:disable:next line_length
+                NavigationLink(destination: HistoryView().navigationBarBackButtonHidden(true), isActive: $showingHistory) {}
             }
-        }
-        .ignoresSafeArea()
-    }
-
-    func startLoading() {
-        _ = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { timer in
-            withAnimation {
-                self.currentProgress += 1
-                if self.currentProgress >= 100 {
-                    timer.invalidate()
-                }
+            .ignoresSafeArea()
+            .onAppear {
+                audioManager.playSound(sound: currentHistory.name)
+            }
+            .onReceive(timer) { _ in
+                guard let player = audioManager.player, !isEditing else { return }
+                value = player.currentTime
             }
         }
     }

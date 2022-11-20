@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CountDownView: View {
     @State private var isShowingDetailView = false
-    @State var countDownTimer = 5
+    @State var countDownTimer = 3
     @State var timerRunning = true
     @State var scale: CGFloat = 1
     @Binding var isGameView: Bool
@@ -19,11 +19,11 @@ struct CountDownView: View {
 
     var body: some View {
 
-        let currentHistory = historyList[hvm.historyCount]
+        let currentHistory = historyList[hvm.historyId]
 
         NavigationView {
             ZStack {
-                Color("Primaria1").ignoresSafeArea()
+                Color("CombinarText").ignoresSafeArea()
                 Image("\(currentHistory.name)Padrao")
                     .resizable()
                 VStack {
@@ -43,7 +43,7 @@ struct CountDownView: View {
                         Text("\(countDownTimer)")
                             .onReceive(timer) { _ in
                                 if countDownTimer > 1 && timerRunning {
-                                    playSound(sound: "countdown", type: "wav")
+//                                    playSound(sound: "countdown")
                                     countDownTimer -= 1
                                 } else {
                                     isShowingDetailView = true
@@ -57,9 +57,11 @@ struct CountDownView: View {
                             .clipShape(Circle())
 
                         if isGameView {
+                            // swiftlint:disable:next line_length
                             NavigationLink(destination: GameView().navigationBarBackButtonHidden(true), isActive: $isShowingDetailView) {}
                                 .isDetailLink(false)
                         } else {
+                            // swiftlint:disable:next line_length
                             NavigationLink(destination: OrchestraView().navigationBarBackButtonHidden(true), isActive: $isShowingDetailView) {}
                                 .isDetailLink(false)
                         }

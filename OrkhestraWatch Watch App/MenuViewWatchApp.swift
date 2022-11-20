@@ -13,7 +13,7 @@ struct MenuViewWatchApp: View {
     var body: some View {
         NavigationStack {
             VStack {
-                
+
                 Text("Minhas Histórias")
                     .padding(.top, 10)
                     .font(.system(size: 16))
@@ -21,7 +21,6 @@ struct MenuViewWatchApp: View {
                     .frame(maxWidth: .infinity, alignment: .leading)
 
                 ForEach(historyList, id: \.self) { history in
-                    
                     NavigationLink(destination: InstrumentsView()) {
                         ZStack {
                             HStack {
@@ -31,7 +30,8 @@ struct MenuViewWatchApp: View {
                                     .font(.system(size: 13))
                             }
                         }
-                    }.simultaneousGesture(TapGesture().onEnded{
+                    }
+                    .simultaneousGesture(TapGesture().onEnded {
                         hvm.historyId = history.id
                     })
                 }

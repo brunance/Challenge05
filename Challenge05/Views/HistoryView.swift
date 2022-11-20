@@ -38,7 +38,7 @@ struct HistoryView: View {
                                 ZStack {
                                     Button(action: {
                                         showingSheet.toggle()
-                                        hvm.historyCount = item.id
+                                        hvm.historyId = item.id
                                     }, label: {
 
                                         ZStack {
@@ -77,15 +77,14 @@ struct HistoryView: View {
                                 VStack {
                                     Button(action: {
                                         showingCountDown.toggle()
-                                        hvm.historyCount = item.id
+                                        hvm.historyId = item.id
                                     }, label: {
                                         HStack {
                                             Image(systemName: "play.fill")
                                                 .padding(.init(top: 8, leading: 85.5, bottom: 8, trailing: 0))
-                                            Text("COMBINAR")
+                                            Text("**COMBINAR**")
                                                 .padding(.init(top: 8, leading: 0, bottom: 8, trailing: 85.5))
                                                 .font(.system(size: 16))
-                                                .bold()
                                         }
                                         .foregroundColor(Color("CombinarText"))
                                     })
@@ -95,13 +94,14 @@ struct HistoryView: View {
                                     .ignoresSafeArea()
                                 }
                                 .padding(.init(top: 673, leading: 47, bottom: 131, trailing: 47))
-
-                                NavigationLink(destination: CountDownView(isGameView: $isGameView).navigationBarBackButtonHidden(true), isActive: $showingCountDown) {}
                             }
                         }
                     }
                     .tabViewStyle(.page(indexDisplayMode: .always))
                     .ignoresSafeArea()
+
+                    // swiftlint:disable:next line_length
+                    NavigationLink(destination: CountDownView(isGameView: $isGameView).navigationBarBackButtonHidden(true), isActive: $showingCountDown) {}
                 }
             }
         }
