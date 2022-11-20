@@ -12,6 +12,7 @@ struct CardView: View {
     @Binding var matchedCards: [CardModel]
     @Binding var userChoices: [CardModel]
     @EnvironmentObject var audioManager: AudioManager
+    @ObservedObject var hvmGame: GameViewModel = GameViewModel.shared
 
     let width: Int = 100
     let height: Int = 90
@@ -46,18 +47,21 @@ struct CardView: View {
                 .resizable()
                 .frame(width: CGFloat(width), height: CGFloat(width))
                 .onTapGesture {
-                    if userChoices.count == 0 {
-                        card.turnOver()
-                        userChoices.append(card)
-                    } else if userChoices.count == 1 {
-                        card.turnOver()
-                        userChoices.append(card)
-                        withAnimation(Animation.linear.delay(1)) {
-                            for thisCard in userChoices {
-                                thisCard.turnOver()
+                    if hvmGame.isClickable {
+                        if userChoices.count == 0 {
+                            card.turnOver()
+                            userChoices.append(card)
+                        } else if userChoices.count == 1 {
+                            hvmGame.isClickable = false
+                            card.turnOver()
+                            userChoices.append(card)
+                            withAnimation(Animation.linear.delay(1)) {
+                                for thisCard in userChoices {
+                                    thisCard.turnOver()
+                                }
                             }
+                            checkForMatch()
                         }
-                        checkForMatch()
                     }
                 }
         }
@@ -69,6 +73,9 @@ struct CardView: View {
             playSoundOfCard(card: userChoices[0])
         }
         userChoices.removeAll()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+            hvmGame.isClickable = true
+        }
     }
 
     func playSoundOfCard(card: CardModel) {
