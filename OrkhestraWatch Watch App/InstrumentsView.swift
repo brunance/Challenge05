@@ -7,78 +7,44 @@
 import SwiftUI
 
 struct InstrumentsView: View {
+    
+    @ObservedObject var hvm: HistoryViewModel = HistoryViewModel.shared
+    
     var body: some View {
-        VStack {
-            List{
-                VStack(alignment: .center, spacing: 5) {
-                    Image("Chocalho").padding(.top, 5)
-                    Text("Chocalho").bold().padding(.top, 5)
-                    Button("**ESCOLHER**") {
-                        print("Begin 1")
+        NavigationView{
+            VStack {
+                List{
+                    ForEach(instrumentsList, id: \.self) { instrument in
+                        VStack(alignment: .center, spacing: 5) {
+                            Image(instrument.image)
+                                .resizable()
+                                .frame(width: 35, height: 35)
+                                .padding(.top, 5)
+                            Text(instrument.name)
+                                .bold()
+                                .padding(.top, 5)
+                                .font(.system(size: 12))
+                            NavigationLink(destination: ChallengeWatchView()){
+                                Text("**ESCOLHER**")
+                                    .font(.system(size: 14))
+                            }
+                            .foregroundColor(.red).padding(.bottom, 5)
+                            .onTapGesture {
+                                hvm.instrumentId = instrument.id
+                            }
+                            
+                        }
+                        .frame(maxWidth: .infinity, maxHeight: 80, alignment: .center)
+                        .padding()
+                        
                     }
-                    .foregroundColor(.red).padding(.bottom, 5)
+                    .listStyle(CarouselListStyle())
+                    
                 }
-                .frame(maxWidth: .infinity, alignment: .center)
                 .padding()
-                
-                VStack(alignment: .center, spacing: 5) {
-                    Image("Flauta").padding(.top, 5)
-                    Text("Flauta").bold().padding(.top, 5)
-                    Button("**ESCOLHER**") {
-                        print("Begin 2")
-                    }
-                    .foregroundColor(.red).padding(.bottom, 5)
-                }
-                .frame(maxWidth: .infinity, alignment: .center)
-                .padding()
-                
-                VStack(alignment: .center, spacing: 5) {
-                    Image("Pandeiro").padding(.top, 5)
-                    Text("Pandeiro").bold().padding(.top, 5)
-                    Button("**ESCOLHER**") {
-                        print("Begin 3")
-                    }
-                    .foregroundColor(.red).padding(.bottom, 5)
-                }
-                .frame(maxWidth: .infinity, alignment: .center)
-                .padding()
-                
-                VStack(alignment: .center, spacing: 5) {
-                    Image("Piano").padding(.top, 5)
-                    Text("Piano").bold().padding(.top, 5)
-                    Button("**ESCOLHER**") {
-                        print("Begin 4")
-                    }
-                    .foregroundColor(.red).padding(.bottom, 5)
-                }
-                .frame(maxWidth: .infinity, alignment: .center)
-                .padding()
-                
-                VStack(alignment: .center, spacing: 5) {
-                    Image("Saxofone").padding(.top, 5)
-                    Text("Saxofone").bold().padding(.top, 5)
-                    Button("**ESCOLHER**") {
-                        print("Begin 5")
-                    }
-                    .foregroundColor(.red).padding(.bottom, 5)
-                }
-                .frame(maxWidth: .infinity, alignment: .center)
-                .padding()
-                
-                VStack(alignment: .center, spacing: 5) {
-                    Image("Violao").padding(.top, 5)
-                    Text("Violão").bold().padding(.top, 5)
-                    Button("**ESCOLHER**") {
-                        print("Begin 6")
-                    }
-                    .foregroundColor(.red).padding(.bottom, 5)
-                }
-                .frame(maxWidth: .infinity, alignment: .center)
-                .padding()
-                
             }
-            .listStyle(CarouselListStyle())
         }
-        .padding()
+        .navigationBarTitle(historyList[hvm.historyId].navTitle)
     }
 }
+
