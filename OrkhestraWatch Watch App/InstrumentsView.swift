@@ -7,14 +7,15 @@
 import SwiftUI
 
 struct InstrumentsView: View {
-    
+
     @ObservedObject var hvm: HistoryViewModel = HistoryViewModel.shared
+
     @State private var isShowingDetailView = false
     
     var body: some View {
-        NavigationView{
+        NavigationView {
             VStack {
-                List{
+                List {
                     ForEach(instrumentsList, id: \.self) { instrument in
                         VStack(alignment: .center, spacing: 5) {
                             Image(instrument.image)
@@ -41,10 +42,8 @@ struct InstrumentsView: View {
                         }
                         .frame(maxWidth: .infinity, maxHeight: 80, alignment: .center)
                         .padding()
-                        
                     }
                     .listStyle(CarouselListStyle())
-                    
                 }
                 .padding()
             }
@@ -52,4 +51,3 @@ struct InstrumentsView: View {
         .navigationBarTitle(historyList[hvm.historyId].navTitle)
     }
 }
-

@@ -11,6 +11,7 @@ import CoreMotion
 struct ChallengeWatchView: View {
     @State var progress: Double = 0
     @ObservedObject var hvm: HistoryViewModel = HistoryViewModel.shared
+
     @State var estado = false
     let motionManager = CMMotionManager()
     let queue = OperationQueue()
@@ -23,6 +24,7 @@ struct ChallengeWatchView: View {
         NavigationView {
             VStack {
                 Spacer()
+
                 ZStack {
                     CircularProgressView(progress: progress)
                     Image(instrumentsList[hvm.instrumentId].image)
@@ -30,12 +32,12 @@ struct ChallengeWatchView: View {
                         .frame(width: 55, height: 55)
                 }
                 .frame(width: 100, height: 100)
-                
+
                 Spacer()
-                
+
                 Text("Gire o Pulso")
                     .font(.system(size: 20))
-                
+
                 HStack {
                     Slider(value: $progress, in: 0...1)
                     Button("Reset") {

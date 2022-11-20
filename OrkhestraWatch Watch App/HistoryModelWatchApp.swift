@@ -30,4 +30,3 @@ let historyList: [HistoryModelWatchApp] = [
 
     HistoryModelWatchApp(id: 2, name: "Barata", title: "a Barata", navTitle: "a Barata")
 ]
-

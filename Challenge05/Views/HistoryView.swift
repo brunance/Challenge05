@@ -88,10 +88,9 @@ struct HistoryView: View {
                                         HStack {
                                             Image(systemName: "play.fill")
                                                 .padding(.init(top: 8, leading: 85.5, bottom: 8, trailing: 0))
-                                            Text("COMBINAR")
+                                            Text("**COMBINAR**")
                                                 .padding(.init(top: 8, leading: 0, bottom: 8, trailing: 85.5))
                                                 .font(.system(size: 16))
-                                                .bold()
                                         }
                                         .foregroundColor(Color("CombinarText"))
                                     })
