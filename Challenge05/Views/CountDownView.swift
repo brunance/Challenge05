@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CountDownView: View {
     @State private var isShowingDetailView = false
-    @State var countDownTimer = 5
+    @State var countDownTimer = 3
     @State var timerRunning = true
     @State var scale: CGFloat = 1
     @Binding var isGameView: Bool
