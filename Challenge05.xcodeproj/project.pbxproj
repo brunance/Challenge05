@@ -41,7 +41,7 @@
 		9C271CBD2927E84900EFB73F /* Pandeiro.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9C271CB72927E84900EFB73F /* Pandeiro.mp3 */; };
 		9C271CBE2927E84900EFB73F /* Chocalho.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9C271CB82927E84900EFB73F /* Chocalho.mp3 */; };
 		9C271CBF2927E84900EFB73F /* Flauta.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9C271CB92927E84900EFB73F /* Flauta.mp3 */; };
-		9C271CC02927E84900EFB73F /* Sax.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9C271CBA2927E84900EFB73F /* Sax.mp3 */; };
+		9C271CC02927E84900EFB73F /* Saxofone.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9C271CBA2927E84900EFB73F /* Saxofone.mp3 */; };
 		9C271CC12927E84900EFB73F /* Piano.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9C271CBB2927E84900EFB73F /* Piano.mp3 */; };
 		9C271CC22927E84900EFB73F /* Violão.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9C271CBC2927E84900EFB73F /* Violão.mp3 */; };
 		9C53490A291BE61500899721 /* RubikBubbles-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9C534909291BE61500899721 /* RubikBubbles-Regular.ttf */; };
@@ -86,7 +86,7 @@
 		9C271CB72927E84900EFB73F /* Pandeiro.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Pandeiro.mp3; path = Challenge05/Music/Sounds/Pandeiro.mp3; sourceTree = SOURCE_ROOT; };
 		9C271CB82927E84900EFB73F /* Chocalho.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Chocalho.mp3; path = Challenge05/Music/Sounds/Chocalho.mp3; sourceTree = SOURCE_ROOT; };
 		9C271CB92927E84900EFB73F /* Flauta.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Flauta.mp3; path = Challenge05/Music/Sounds/Flauta.mp3; sourceTree = SOURCE_ROOT; };
-		9C271CBA2927E84900EFB73F /* Sax.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Sax.mp3; path = Challenge05/Music/Sounds/Sax.mp3; sourceTree = SOURCE_ROOT; };
+		9C271CBA2927E84900EFB73F /* Saxofone.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Saxofone.mp3; path = Challenge05/Music/Sounds/Saxofone.mp3; sourceTree = SOURCE_ROOT; };
 		9C271CBB2927E84900EFB73F /* Piano.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Piano.mp3; path = Challenge05/Music/Sounds/Piano.mp3; sourceTree = SOURCE_ROOT; };
 		9C271CBC2927E84900EFB73F /* Violão.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Violão.mp3"; path = "Challenge05/Music/Sounds/Violão.mp3"; sourceTree = SOURCE_ROOT; };
 		9C534909291BE61500899721 /* RubikBubbles-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RubikBubbles-Regular.ttf"; sourceTree = "<group>"; };
@@ -250,7 +250,7 @@
 			children = (
 				9C271CB72927E84900EFB73F /* Pandeiro.mp3 */,
 				9C271CB92927E84900EFB73F /* Flauta.mp3 */,
-				9C271CBA2927E84900EFB73F /* Sax.mp3 */,
+				9C271CBA2927E84900EFB73F /* Saxofone.mp3 */,
 				9C271CBB2927E84900EFB73F /* Piano.mp3 */,
 				9C271CBC2927E84900EFB73F /* Violão.mp3 */,
 				9C271CB82927E84900EFB73F /* Chocalho.mp3 */,
@@ -361,7 +361,7 @@
 				9C271CBD2927E84900EFB73F /* Pandeiro.mp3 in Resources */,
 				4FDEB6C7292517E600324B24 /* Preview Assets.xcassets in Resources */,
 				9C271CBF2927E84900EFB73F /* Flauta.mp3 in Resources */,
-				9C271CC02927E84900EFB73F /* Sax.mp3 in Resources */,
+				9C271CC02927E84900EFB73F /* Saxofone.mp3 in Resources */,
 				4FDEB6C4292517E600324B24 /* Assets.xcassets in Resources */,
 				9C271CC12927E84900EFB73F /* Piano.mp3 in Resources */,
 				9C271CC22927E84900EFB73F /* Violão.mp3 in Resources */,

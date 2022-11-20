@@ -11,7 +11,6 @@ import CoreMotion
 struct ChallengeWatchView: View {
     @State var progress: Double = 0
     @ObservedObject var hvm: HistoryViewModel = HistoryViewModel.shared
-
     @State var estado = false
     let motionManager = CMMotionManager()
     let queue = OperationQueue()
@@ -39,7 +38,11 @@ struct ChallengeWatchView: View {
                     .font(.system(size: 20))
 
                 HStack {
-                    Slider(value: $progress, in: 0...1)
+                
+                    Button("Play"){
+                        playSound(sound: instrumentsList[hvm.instrumentId].name, type: "mp3")
+                        progress += 1/10
+                    }
                     Button("Reset") {
                         resetProgress()
                     }
@@ -60,6 +63,7 @@ struct ChallengeWatchView: View {
                     if (attitude.pitch >= 1 && estado == true && control == true) {
                         estado = false
                         playSound(sound: instrumentsList[hvm.instrumentId].name, type: "mp3")
+                        progress += 1/10
                         
                     }
                     
@@ -68,7 +72,6 @@ struct ChallengeWatchView: View {
                     print("roll: \(attitude.roll)")
                     
                     if (estado == false) {
-                        
                         DispatchQueue.main.async {
                             self.pitch = attitude.pitch
                             self.yaw = attitude.yaw
@@ -80,7 +83,6 @@ struct ChallengeWatchView: View {
             .onDisappear{
                 control = false
             }
-            
         }
         .navigationBarTitle(instrumentsList[hvm.instrumentId].name)
     }

@@ -29,6 +29,7 @@ struct InstrumentsView: View {
                             Button(action: {
                                 hvm.instrumentId = instrument.id
                                 print(instrument.name)
+                                print(hvm.instrumentId)
                                 isShowingDetailView = true
                             }, label: {})
                             NavigationLink(destination: ChallengeWatchView(), isActive: $isShowingDetailView){
