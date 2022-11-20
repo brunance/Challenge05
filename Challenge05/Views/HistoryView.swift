@@ -94,13 +94,14 @@ struct HistoryView: View {
                                     .ignoresSafeArea()
                                 }
                                 .padding(.init(top: 673, leading: 47, bottom: 131, trailing: 47))
-
-                                NavigationLink(destination: CountDownView(isGameView: $isGameView).navigationBarBackButtonHidden(true), isActive: $showingCountDown) {}
                             }
                         }
                     }
                     .tabViewStyle(.page(indexDisplayMode: .always))
                     .ignoresSafeArea()
+
+                    // swiftlint:disable:next line_length
+                    NavigationLink(destination: CountDownView(isGameView: $isGameView).navigationBarBackButtonHidden(true), isActive: $showingCountDown) {}
                 }
             }
         }

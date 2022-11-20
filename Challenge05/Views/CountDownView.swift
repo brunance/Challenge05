@@ -57,9 +57,11 @@ struct CountDownView: View {
                             .clipShape(Circle())
 
                         if isGameView {
+                            // swiftlint:disable:next line_length
                             NavigationLink(destination: GameView().navigationBarBackButtonHidden(true), isActive: $isShowingDetailView) {}
                                 .isDetailLink(false)
                         } else {
+                            // swiftlint:disable:next line_length
                             NavigationLink(destination: OrchestraView().navigationBarBackButtonHidden(true), isActive: $isShowingDetailView) {}
                                 .isDetailLink(false)
                         }
