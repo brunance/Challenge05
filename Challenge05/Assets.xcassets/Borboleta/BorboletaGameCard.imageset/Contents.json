@@ -1,7 +1,7 @@
 {
   "images" : [
     {
-      "filename" : "MemóriaBorboletaCardDarkMode.svg",
+      "filename" : "MemóriaBorboletaCard 1.svg",
       "idiom" : "universal"
     },
     {
@@ -11,7 +11,7 @@
           "value" : "dark"
         }
       ],
-      "filename" : "MemóriaBorboletaCard 1.svg",
+      "filename" : "MemóriaBorboletaCardDarkMode 1.svg",
       "idiom" : "universal"
     }
   ],

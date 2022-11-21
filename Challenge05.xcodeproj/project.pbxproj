@@ -15,6 +15,7 @@
 		4F92C5E429192DDD002FA763 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F92C5E329192DDD002FA763 /* HistoryView.swift */; };
 		4F92C5E629192DDE002FA763 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F92C5E529192DDE002FA763 /* Assets.xcassets */; };
 		4F92C5E929192DDE002FA763 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F92C5E829192DDE002FA763 /* Preview Assets.xcassets */; };
+		4FA7A87F292AE6BD0018B8A7 /* PlayOrkhestraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA7A87E292AE6BD0018B8A7 /* PlayOrkhestraView.swift */; };
 		4FDEB6B3292513EA00324B24 /* Piano.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4FDEB6AD292513EA00324B24 /* Piano.mp3 */; };
 		4FDEB6B4292513EA00324B24 /* Pandeiro.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4FDEB6AE292513EA00324B24 /* Pandeiro.mp3 */; };
 		4FDEB6B5292513EA00324B24 /* Chocalho.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4FDEB6AF292513EA00324B24 /* Chocalho.mp3 */; };
@@ -39,6 +40,19 @@
 		8BC1609B291A9DA700A73AD6 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC1609A291A9DA700A73AD6 /* CardView.swift */; };
 		8BC1609D291AA44C00A73AD6 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC1609C291AA44C00A73AD6 /* GameView.swift */; };
 		8BD111B5291BF9A000F77DEA /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD111B4291BF9A000F77DEA /* AudioManager.swift */; };
+		8BEBCAD1292B02F300F53786 /* Pandeiro.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8BEBCACB292B02F300F53786 /* Pandeiro.mp3 */; };
+		8BEBCAD2292B02F300F53786 /* Sax.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8BEBCACC292B02F300F53786 /* Sax.mp3 */; };
+		8BEBCAD3292B02F300F53786 /* Piano.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8BEBCACD292B02F300F53786 /* Piano.mp3 */; };
+		8BEBCAD4292B02F300F53786 /* Chocalho.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8BEBCACE292B02F300F53786 /* Chocalho.mp3 */; };
+		8BEBCAD5292B02F300F53786 /* Flauta.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8BEBCACF292B02F300F53786 /* Flauta.mp3 */; };
+		8BEBCAD6292B02F300F53786 /* Violão.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8BEBCAD0292B02F300F53786 /* Violão.mp3 */; };
+		9C271CB52927E80800EFB73F /* AudioModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C271CB42927E80800EFB73F /* AudioModel.swift */; };
+		9C271CBD2927E84900EFB73F /* Pandeiro.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9C271CB72927E84900EFB73F /* Pandeiro.mp3 */; };
+		9C271CBE2927E84900EFB73F /* Chocalho.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9C271CB82927E84900EFB73F /* Chocalho.mp3 */; };
+		9C271CBF2927E84900EFB73F /* Flauta.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9C271CB92927E84900EFB73F /* Flauta.mp3 */; };
+		9C271CC02927E84900EFB73F /* Saxofone.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9C271CBA2927E84900EFB73F /* Saxofone.mp3 */; };
+		9C271CC12927E84900EFB73F /* Piano.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9C271CBB2927E84900EFB73F /* Piano.mp3 */; };
+		9C271CC22927E84900EFB73F /* Violão.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9C271CBC2927E84900EFB73F /* Violão.mp3 */; };
 		9C53490A291BE61500899721 /* RubikBubbles-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9C534909291BE61500899721 /* RubikBubbles-Regular.ttf */; };
 		9CA52FE7291A1DD60030C96B /* SheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA52FE6291A1DD60030C96B /* SheetView.swift */; };
 		9CDB40BD291B4B940077D0EF /* HistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CDB40BC291B4B940077D0EF /* HistoryViewModel.swift */; };
@@ -54,6 +68,7 @@
 		4F92C5E329192DDD002FA763 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
 		4F92C5E529192DDE002FA763 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4F92C5E829192DDE002FA763 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4FA7A87E292AE6BD0018B8A7 /* PlayOrkhestraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayOrkhestraView.swift; sourceTree = "<group>"; };
 		4FDEB6AD292513EA00324B24 /* Piano.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Piano.mp3; sourceTree = "<group>"; };
 		4FDEB6AE292513EA00324B24 /* Pandeiro.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Pandeiro.mp3; sourceTree = "<group>"; };
 		4FDEB6AF292513EA00324B24 /* Chocalho.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Chocalho.mp3; sourceTree = "<group>"; };
@@ -79,6 +94,19 @@
 		8BC1609A291A9DA700A73AD6 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		8BC1609C291AA44C00A73AD6 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 		8BD111B4291BF9A000F77DEA /* AudioManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AudioManager.swift; path = Challenge05/Views/AudioManager.swift; sourceTree = SOURCE_ROOT; };
+		8BEBCACB292B02F300F53786 /* Pandeiro.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Pandeiro.mp3; sourceTree = "<group>"; };
+		8BEBCACC292B02F300F53786 /* Sax.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Sax.mp3; sourceTree = "<group>"; };
+		8BEBCACD292B02F300F53786 /* Piano.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Piano.mp3; sourceTree = "<group>"; };
+		8BEBCACE292B02F300F53786 /* Chocalho.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Chocalho.mp3; sourceTree = "<group>"; };
+		8BEBCACF292B02F300F53786 /* Flauta.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Flauta.mp3; sourceTree = "<group>"; };
+		8BEBCAD0292B02F300F53786 /* Violão.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Violão.mp3"; sourceTree = "<group>"; };
+		9C271CB42927E80800EFB73F /* AudioModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioModel.swift; sourceTree = "<group>"; };
+		9C271CB72927E84900EFB73F /* Pandeiro.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Pandeiro.mp3; path = Challenge05/Music/Sounds/Pandeiro.mp3; sourceTree = SOURCE_ROOT; };
+		9C271CB82927E84900EFB73F /* Chocalho.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Chocalho.mp3; path = Challenge05/Music/Sounds/Chocalho.mp3; sourceTree = SOURCE_ROOT; };
+		9C271CB92927E84900EFB73F /* Flauta.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Flauta.mp3; path = Challenge05/Music/Sounds/Flauta.mp3; sourceTree = SOURCE_ROOT; };
+		9C271CBA2927E84900EFB73F /* Saxofone.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Saxofone.mp3; path = Challenge05/Music/Sounds/Saxofone.mp3; sourceTree = SOURCE_ROOT; };
+		9C271CBB2927E84900EFB73F /* Piano.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Piano.mp3; path = Challenge05/Music/Sounds/Piano.mp3; sourceTree = SOURCE_ROOT; };
+		9C271CBC2927E84900EFB73F /* Violão.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Violão.mp3"; path = "Challenge05/Music/Sounds/Violão.mp3"; sourceTree = SOURCE_ROOT; };
 		9C534909291BE61500899721 /* RubikBubbles-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RubikBubbles-Regular.ttf"; sourceTree = "<group>"; };
 		9C53490D291BE96A00899721 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		9CA52FE6291A1DD60030C96B /* SheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetView.swift; sourceTree = "<group>"; };
@@ -134,10 +162,10 @@
 		4F92C5E029192DDD002FA763 /* Challenge05 */ = {
 			isa = PBXGroup;
 			children = (
+				8BEBCACA292B02F300F53786 /* Sounds */,
 				9C53490D291BE96A00899721 /* Info.plist */,
 				9C534907291BE4C500899721 /* Fonts */,
 				4F4D8E0A292675580081403E /* Music */,
-				8BD111A5291BF48000F77DEA /* Sounds */,
 				9C41385D2919416200AB8F60 /* Models */,
 				9C41385C2919414C00AB8F60 /* Views */,
 				9C41385B2919413B00AB8F60 /* ViewModels */,
@@ -160,14 +188,17 @@
 		4FDEB6BE292517E500324B24 /* OrkhestraWatch Watch App */ = {
 			isa = PBXGroup;
 			children = (
+				9CEEDCBB292A7E670052646D /* Sounds */,
 				8BA409B32929D2B3000FF0F0 /* InstrumentModel.swift */,
 				8BA409AE2927FCDC000FF0F0 /* HistoryModelWatchApp.swift */,
 				4FDEB6BF292517E500324B24 /* OrkhestraWatchApp.swift */,
 				4FDEB6C1292517E500324B24 /* MenuViewWatchApp.swift */,
 				8BA409B12928047D000FF0F0 /* HistoryViewModel.swift */,
 				4FDEB6CB2925277A00324B24 /* InstrumentsView.swift */,
+				9C271CB42927E80800EFB73F /* AudioModel.swift */,
 				4FE7AABA2927BD8C007CFC0E /* CircularProgressView.swift */,
 				4F270A312927B254006F0EC7 /* ChallengeWatchView.swift */,
+				4FA7A87E292AE6BD0018B8A7 /* PlayOrkhestraView.swift */,
 				4FDEB6C3292517E600324B24 /* Assets.xcassets */,
 				4FDEB6C5292517E600324B24 /* Preview Content */,
 			);
@@ -182,15 +213,15 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		8BD111A5291BF48000F77DEA /* Sounds */ = {
+		8BEBCACA292B02F300F53786 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
-				4FDEB6AF292513EA00324B24 /* Chocalho.mp3 */,
-				4FDEB6B0292513EA00324B24 /* Flauta.mp3 */,
-				4FDEB6AE292513EA00324B24 /* Pandeiro.mp3 */,
-				4FDEB6AD292513EA00324B24 /* Piano.mp3 */,
-				4FDEB6B1292513EA00324B24 /* Sax.mp3 */,
-				4FDEB6B2292513EA00324B24 /* Violão.mp3 */,
+				8BEBCACB292B02F300F53786 /* Pandeiro.mp3 */,
+				8BEBCACC292B02F300F53786 /* Sax.mp3 */,
+				8BEBCACD292B02F300F53786 /* Piano.mp3 */,
+				8BEBCACE292B02F300F53786 /* Chocalho.mp3 */,
+				8BEBCACF292B02F300F53786 /* Flauta.mp3 */,
+				8BEBCAD0292B02F300F53786 /* Violão.mp3 */,
 			);
 			path = Sounds;
 			sourceTree = "<group>";
@@ -233,6 +264,20 @@
 				9C534909291BE61500899721 /* RubikBubbles-Regular.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		9CEEDCBB292A7E670052646D /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				9C271CB72927E84900EFB73F /* Pandeiro.mp3 */,
+				9C271CB92927E84900EFB73F /* Flauta.mp3 */,
+				9C271CBA2927E84900EFB73F /* Saxofone.mp3 */,
+				9C271CBB2927E84900EFB73F /* Piano.mp3 */,
+				9C271CBC2927E84900EFB73F /* Violão.mp3 */,
+				9C271CB82927E84900EFB73F /* Chocalho.mp3 */,
+			);
+			name = Sounds;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -316,16 +361,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F92C5E929192DDE002FA763 /* Preview Assets.xcassets in Resources */,
+				8BEBCAD4292B02F300F53786 /* Chocalho.mp3 in Resources */,
+				8BEBCAD2292B02F300F53786 /* Sax.mp3 in Resources */,
 				4F4D8E07292675500081403E /* Aranha.mp3 in Resources */,
-				4FDEB6B7292513EA00324B24 /* Sax.mp3 in Resources */,
-				4FDEB6B5292513EA00324B24 /* Chocalho.mp3 in Resources */,
+				8BEBCAD5292B02F300F53786 /* Flauta.mp3 in Resources */,
+				8BEBCAD3292B02F300F53786 /* Piano.mp3 in Resources */,
+				8BEBCAD1292B02F300F53786 /* Pandeiro.mp3 in Resources */,
 				9C53490A291BE61500899721 /* RubikBubbles-Regular.ttf in Resources */,
-				4FDEB6B8292513EA00324B24 /* Violão.mp3 in Resources */,
 				4F4D8E09292675500081403E /* Barata.mp3 in Resources */,
-				4FDEB6B6292513EA00324B24 /* Flauta.mp3 in Resources */,
-				4FDEB6B4292513EA00324B24 /* Pandeiro.mp3 in Resources */,
-				4FDEB6B3292513EA00324B24 /* Piano.mp3 in Resources */,
 				4F92C5E629192DDE002FA763 /* Assets.xcassets in Resources */,
+				8BEBCAD6292B02F300F53786 /* Violão.mp3 in Resources */,
 				4F4D8E08292675500081403E /* Borboleta.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -334,8 +379,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C271CBD2927E84900EFB73F /* Pandeiro.mp3 in Resources */,
 				4FDEB6C7292517E600324B24 /* Preview Assets.xcassets in Resources */,
+				9C271CBF2927E84900EFB73F /* Flauta.mp3 in Resources */,
+				9C271CC02927E84900EFB73F /* Saxofone.mp3 in Resources */,
 				4FDEB6C4292517E600324B24 /* Assets.xcassets in Resources */,
+				9C271CC12927E84900EFB73F /* Piano.mp3 in Resources */,
+				9C271CC22927E84900EFB73F /* Violão.mp3 in Resources */,
+				9C271CBE2927E84900EFB73F /* Chocalho.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -391,8 +442,10 @@
 				8BA409AF2927FCDC000FF0F0 /* HistoryModelWatchApp.swift in Sources */,
 				4FDEB6CC2925277A00324B24 /* InstrumentsView.swift in Sources */,
 				4FE7AABB2927BD8C007CFC0E /* CircularProgressView.swift in Sources */,
+				9C271CB52927E80800EFB73F /* AudioModel.swift in Sources */,
 				4FDEB6C0292517E500324B24 /* OrkhestraWatchApp.swift in Sources */,
 				8BA409B42929D2B3000FF0F0 /* InstrumentModel.swift in Sources */,
+				4FA7A87F292AE6BD0018B8A7 /* PlayOrkhestraView.swift in Sources */,
 				8BA409B22928047D000FF0F0 /* HistoryViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -522,7 +575,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Challenge05/Preview Content\"";
-				DEVELOPMENT_TEAM = YP9Q3ST2DG;
+				DEVELOPMENT_TEAM = YFB3KM7U74;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Challenge05/Info.plist;
@@ -554,7 +607,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Challenge05/Preview Content\"";
-				DEVELOPMENT_TEAM = YP9Q3ST2DG;
+				DEVELOPMENT_TEAM = YFB3KM7U74;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Challenge05/Info.plist;
@@ -586,7 +639,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"orkhestraWatch Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = YP9Q3ST2DG;
+				DEVELOPMENT_TEAM = YFB3KM7U74;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = orkhestraWatch;
@@ -597,7 +650,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = .watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = .com.ruan.developer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -616,7 +669,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"orkhestraWatch Watch App/Preview Content\"";
-				DEVELOPMENT_TEAM = YP9Q3ST2DG;
+				DEVELOPMENT_TEAM = YFB3KM7U74;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = orkhestraWatch;
@@ -627,7 +680,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = .watchkitapp;
+				PRODUCT_BUNDLE_IDENTIFIER = .com.ruan.developer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
