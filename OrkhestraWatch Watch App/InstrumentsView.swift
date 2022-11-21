@@ -10,8 +10,6 @@ struct InstrumentsView: View {
 
     @ObservedObject var hvm: HistoryViewModel = HistoryViewModel.shared
 
-    @State private var isShowingDetailView = false
-
     var body: some View {
         NavigationView {
             VStack {
@@ -28,11 +26,8 @@ struct InstrumentsView: View {
                                 .font(.system(size: 12))
                             Button(action: {
                                 hvm.instrumentId = instrument.id
-                                print(instrument.name)
-                                print(hvm.instrumentId)
-                                isShowingDetailView = true
                             }, label: {})
-                            NavigationLink(destination: ChallengeWatchView(), isActive: $isShowingDetailView) {
+                            NavigationLink(destination: ChallengeWatchView()) {
                                 Text("**ESCOLHER**")
                                     .font(.system(size: 14))
 
@@ -42,8 +37,8 @@ struct InstrumentsView: View {
                         .frame(maxWidth: .infinity, maxHeight: 80, alignment: .center)
                         .padding()
                     }
-                    .listStyle(CarouselListStyle())
                 }
+                .listStyle(CarouselListStyle())
                 .padding()
             }
         }
