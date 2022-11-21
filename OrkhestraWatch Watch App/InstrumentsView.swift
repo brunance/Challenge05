@@ -24,20 +24,21 @@ struct InstrumentsView: View {
                                 .bold()
                                 .padding(.top, 5)
                                 .font(.system(size: 12))
+                            Button(action: {
+                                hvm.instrumentId = instrument.id
+                            }, label: {})
                             NavigationLink(destination: ChallengeWatchView()) {
                                 Text("**ESCOLHER**")
                                     .font(.system(size: 14))
+
                             }
                             .foregroundColor(.red).padding(.bottom, 5)
-                            .onTapGesture {
-                                hvm.instrumentId = instrument.id
-                            }
                         }
                         .frame(maxWidth: .infinity, maxHeight: 80, alignment: .center)
                         .padding()
                     }
-                    .listStyle(CarouselListStyle())
                 }
+                .listStyle(CarouselListStyle())
                 .padding()
             }
         }
