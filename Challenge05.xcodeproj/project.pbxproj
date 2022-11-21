@@ -15,6 +15,13 @@
 		4F92C5E429192DDD002FA763 /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F92C5E329192DDD002FA763 /* HistoryView.swift */; };
 		4F92C5E629192DDE002FA763 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F92C5E529192DDE002FA763 /* Assets.xcassets */; };
 		4F92C5E929192DDE002FA763 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F92C5E829192DDE002FA763 /* Preview Assets.xcassets */; };
+		4FA7A87F292AE6BD0018B8A7 /* PlayOrkhestraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FA7A87E292AE6BD0018B8A7 /* PlayOrkhestraView.swift */; };
+		4FDEB6B3292513EA00324B24 /* Piano.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4FDEB6AD292513EA00324B24 /* Piano.mp3 */; };
+		4FDEB6B4292513EA00324B24 /* Pandeiro.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4FDEB6AE292513EA00324B24 /* Pandeiro.mp3 */; };
+		4FDEB6B5292513EA00324B24 /* Chocalho.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4FDEB6AF292513EA00324B24 /* Chocalho.mp3 */; };
+		4FDEB6B6292513EA00324B24 /* Flauta.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4FDEB6B0292513EA00324B24 /* Flauta.mp3 */; };
+		4FDEB6B7292513EA00324B24 /* Sax.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4FDEB6B1292513EA00324B24 /* Sax.mp3 */; };
+		4FDEB6B8292513EA00324B24 /* Violão.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4FDEB6B2292513EA00324B24 /* Violão.mp3 */; };
 		4FDEB6C0292517E500324B24 /* OrkhestraWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FDEB6BF292517E500324B24 /* OrkhestraWatchApp.swift */; };
 		4FDEB6C2292517E500324B24 /* MenuViewWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FDEB6C1292517E500324B24 /* MenuViewWatchApp.swift */; };
 		4FDEB6C4292517E600324B24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FDEB6C3292517E600324B24 /* Assets.xcassets */; };
@@ -60,6 +67,13 @@
 		4F92C5E329192DDD002FA763 /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
 		4F92C5E529192DDE002FA763 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4F92C5E829192DDE002FA763 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4FA7A87E292AE6BD0018B8A7 /* PlayOrkhestraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayOrkhestraView.swift; sourceTree = "<group>"; };
+		4FDEB6AD292513EA00324B24 /* Piano.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Piano.mp3; sourceTree = "<group>"; };
+		4FDEB6AE292513EA00324B24 /* Pandeiro.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Pandeiro.mp3; sourceTree = "<group>"; };
+		4FDEB6AF292513EA00324B24 /* Chocalho.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Chocalho.mp3; sourceTree = "<group>"; };
+		4FDEB6B0292513EA00324B24 /* Flauta.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Flauta.mp3; sourceTree = "<group>"; };
+		4FDEB6B1292513EA00324B24 /* Sax.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Sax.mp3; sourceTree = "<group>"; };
+		4FDEB6B2292513EA00324B24 /* Violão.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Violão.mp3"; sourceTree = "<group>"; };
 		4FDEB6BD292517E500324B24 /* orkhestraWatch Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "orkhestraWatch Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FDEB6BF292517E500324B24 /* OrkhestraWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrkhestraWatchApp.swift; sourceTree = "<group>"; };
 		4FDEB6C1292517E500324B24 /* MenuViewWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewWatchApp.swift; sourceTree = "<group>"; };
@@ -182,6 +196,7 @@
 				9C271CB42927E80800EFB73F /* AudioModel.swift */,
 				4FE7AABA2927BD8C007CFC0E /* CircularProgressView.swift */,
 				4F270A312927B254006F0EC7 /* ChallengeWatchView.swift */,
+				4FA7A87E292AE6BD0018B8A7 /* PlayOrkhestraView.swift */,
 				4FDEB6C3292517E600324B24 /* Assets.xcassets */,
 				4FDEB6C5292517E600324B24 /* Preview Content */,
 			);
@@ -426,6 +441,7 @@
 				9C271CB52927E80800EFB73F /* AudioModel.swift in Sources */,
 				4FDEB6C0292517E500324B24 /* OrkhestraWatchApp.swift in Sources */,
 				8BA409B42929D2B3000FF0F0 /* InstrumentModel.swift in Sources */,
+				4FA7A87F292AE6BD0018B8A7 /* PlayOrkhestraView.swift in Sources */,
 				8BA409B22928047D000FF0F0 /* HistoryViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
