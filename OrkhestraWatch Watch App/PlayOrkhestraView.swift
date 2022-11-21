@@ -9,8 +9,8 @@ import SwiftUI
 
 struct PlayOrkhestraView: View {
     var body: some View {
-        VStack{
-            ZStack{
+        VStack {
+            ZStack {
                 Circle()
                     .frame(width: 74, height: 74)
                 Image("Pandeiro")
@@ -19,15 +19,15 @@ struct PlayOrkhestraView: View {
                 .font(.system(size: 15))
             Text("Pandeiro Instrumental")
                 .font(.system(size: 10))
-            HStack{
-                Button(action: {}){
+            HStack {
+                Button(action: {}) {
                     Image(systemName: "backward.end.fill")
                 }
                 .buttonStyle(PlainButtonStyle())
                 .frame(width: 50)
 
-                Button(action: {}){
-                    ZStack{
+                Button(action: {}) {
+                    ZStack {
                         Circle()
                             .frame(width: 56, height: 56)
                             .foregroundColor(Color("Destaque1"))
@@ -38,7 +38,7 @@ struct PlayOrkhestraView: View {
                 .buttonStyle(PlainButtonStyle())
                 .frame(width: 50)
 
-                Button(action: {}){
+                Button(action: {}) {
                     Image(systemName: "forward.end.fill")
                 }
                 .buttonStyle(PlainButtonStyle())
