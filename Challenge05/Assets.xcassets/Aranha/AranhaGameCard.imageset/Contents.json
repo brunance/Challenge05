@@ -1,7 +1,7 @@
 {
   "images" : [
     {
-      "filename" : "MemóriaAranhaCardDarkMode.svg",
+      "filename" : "MemóriaAranhaCard 1.svg",
       "idiom" : "universal"
     },
     {
@@ -11,7 +11,7 @@
           "value" : "dark"
         }
       ],
-      "filename" : "MemóriaAranhaCard 1.svg",
+      "filename" : "MemóriaAranhaCardDarkMode 1.svg",
       "idiom" : "universal"
     }
   ],
