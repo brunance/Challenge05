@@ -30,7 +30,7 @@ struct GameView: View {
 
     let width: Int = 50
     let height: Int = 50
-    
+
     var instrumentsList = ["Pandeiro", "Chocalho", "Saxofone", "Violao", "Piano", "Flauta"]
 
     var body: some View {
