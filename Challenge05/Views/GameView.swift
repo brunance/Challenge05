@@ -80,7 +80,8 @@ struct GameView: View {
                                         .foregroundColor(Color("TitleHistory"))
                                 }
                             }
-                        }.padding(.init(top: 0, leading: 0, bottom: 10, trailing: 0))
+                        }
+                        .padding(.init(top: 0, leading: 0, bottom: 10, trailing: 0))
 
                         Text("Combine os sons para desbloquear uma melodia")
                             .font(.system(size: 16))
@@ -88,10 +89,16 @@ struct GameView: View {
                             .foregroundColor(Color("TitleHistory"))
                             .multilineTextAlignment(.center)
 
-                        Text("\(matchedCards.count/2)/\(cardValues.count)")
-                            .frame(maxWidth: .infinity, alignment: .trailing)
-                            .font(.system(size: 16))
-                            .foregroundColor(Color("TitleHistory"))
+                        HStack {
+                            if matchedCards.count > 0 {
+                                Text(matchedCards[matchedCards.count-1].text)
+                                Spacer()
+                            }
+                            Text("\(matchedCards.count/2)/\(cardValues.count)")
+                                .frame(maxWidth: .infinity, alignment: .trailing)
+                                .font(.system(size: 16))
+                                .foregroundColor(Color("TitleHistory"))
+                        }
 
                         VStack {
                             ZStack {
@@ -150,7 +157,7 @@ struct GameView: View {
                             }
                         }
                     }
-                    .padding()
+                    .padding(20)
                     // swiftlint:disable:next line_length
                     NavigationLink(destination: HistoryView().navigationBarBackButtonHidden(true), isActive: $showingHistoryView) {}
                 }
