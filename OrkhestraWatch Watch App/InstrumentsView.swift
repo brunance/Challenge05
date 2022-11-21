@@ -11,7 +11,7 @@ struct InstrumentsView: View {
     @ObservedObject var hvm: HistoryViewModel = HistoryViewModel.shared
 
     @State private var isShowingDetailView = false
-    
+
     var body: some View {
         NavigationView {
             VStack {
@@ -32,14 +32,12 @@ struct InstrumentsView: View {
                                 print(hvm.instrumentId)
                                 isShowingDetailView = true
                             }, label: {})
-                            NavigationLink(destination: ChallengeWatchView(), isActive: $isShowingDetailView){
+                            NavigationLink(destination: ChallengeWatchView(), isActive: $isShowingDetailView) {
                                 Text("**ESCOLHER**")
                                     .font(.system(size: 14))
-                               
+
                             }
                             .foregroundColor(.red).padding(.bottom, 5)
-                            
-                            
                         }
                         .frame(maxWidth: .infinity, maxHeight: 80, alignment: .center)
                         .padding()

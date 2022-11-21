@@ -18,7 +18,7 @@ struct ChallengeWatchView: View {
     @State private var pitch = Double.zero
     @State private var yaw = Double.zero
     @State private var roll = Double.zero
-    
+
     var body: some View {
         NavigationView {
             VStack {
@@ -38,8 +38,7 @@ struct ChallengeWatchView: View {
                     .font(.system(size: 20))
 
                 HStack {
-                
-                    Button("Play"){
+                    Button("Play") {
                         playSound(sound: instrumentsList[hvm.instrumentId].name, type: "mp3")
                         progress += 1/10
                     }
@@ -55,23 +54,23 @@ struct ChallengeWatchView: View {
                         return
                     }
                     let attitude: CMAttitude = data.attitude
-                    
-                    if(attitude.pitch >= 0 && attitude.pitch <= 0.2){
+
+                    if attitude.pitch >= 0 && attitude.pitch <= 0.2 {
                         estado = true
                     }
-                    
-                    if (attitude.pitch >= 1 && estado == true && control == true) {
+
+                    if attitude.pitch >= 1 && estado == true && control == true {
                         estado = false
                         playSound(sound: instrumentsList[hvm.instrumentId].name, type: "mp3")
                         progress += 1/10
-                        
+
                     }
-                    
+
                     print("pitch: \(attitude.pitch)")
                     print("yaw: \(attitude.yaw)")
                     print("roll: \(attitude.roll)")
-                    
-                    if (estado == false) {
+
+                    if !estado {
                         DispatchQueue.main.async {
                             self.pitch = attitude.pitch
                             self.yaw = attitude.yaw
@@ -80,7 +79,7 @@ struct ChallengeWatchView: View {
                     }
                 }
             }
-            .onDisappear{
+            .onDisappear {
                 control = false
             }
         }
