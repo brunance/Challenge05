@@ -123,8 +123,7 @@ struct HistoryView: View {
                     
                     if (attitude.pitch >= 1 && estado == true && control == true) {
                         estado = false
-                        playSound(sound: "Piano", type: "mp3")
-                        
+                        playSound(sound: "Piano")
                     }
                     
                     print("pitch: \(attitude.pitch)")
