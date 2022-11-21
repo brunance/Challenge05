@@ -30,6 +30,8 @@ struct GameView: View {
 
     let width: Int = 50
     let height: Int = 50
+    
+    var instrumentsList = ["Pandeiro", "Chocalho", "Saxofone", "Violao", "Piano", "Flauta"]
 
     var body: some View {
 
@@ -106,41 +108,22 @@ struct GameView: View {
                                     .foregroundColor(Color("TitleHistory"))
                                     .frame(width: 350, height: 60)
                                 HStack {
-                                    VStack {
-                                        Image("Pandeiro")
-                                            .resizable()
-                                            .frame(width: CGFloat(width), height: CGFloat(height))
-                                            .foregroundColor(.red)
-                                    }
-                                    VStack {
-                                        Image("Chocalho")
-                                            .resizable()
-                                            .frame(width: CGFloat(width), height: CGFloat(height))
-                                            .foregroundColor(.white)
-                                    }
-                                    VStack {
-                                        Image("Saxofone")
-                                            .resizable()
-                                            .frame(width: CGFloat(width), height: CGFloat(height))
-                                            .foregroundColor(.white)
-                                    }
-                                    VStack {
-                                        Image("Violao")
-                                            .resizable()
-                                            .frame(width: CGFloat(width), height: CGFloat(height))
-                                            .foregroundColor(.white)
-                                    }
-                                    VStack {
-                                        Image("Piano")
-                                            .resizable()
-                                            .frame(width: CGFloat(width), height: CGFloat(height))
-                                            .foregroundColor(.white)
-                                    }
-                                    VStack {
-                                        Image("Flauta")
-                                            .resizable()
-                                            .frame(width: CGFloat(width), height: CGFloat(height))
-                                            .foregroundColor(.white)
+                                    ForEach(instrumentsList, id: \.self) { instrument in
+                                        if matchedCards.contains(where: {$0.text == instrument}) {
+                                            VStack {
+                                                Image(instrument)
+                                                    .resizable()
+                                                    .frame(width: CGFloat(width), height: CGFloat(height))
+                                                    .foregroundColor(.red)
+                                            }
+                                        } else {
+                                            VStack {
+                                                Image("\(instrument)Silhueta")
+                                                    .resizable()
+                                                    .frame(width: CGFloat(width), height: CGFloat(height))
+                                                    .foregroundColor(.red)
+                                            }
+                                        }
                                     }
                                 }
                             }
