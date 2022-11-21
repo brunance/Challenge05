@@ -10,6 +10,7 @@ import CoreMotion
 
 struct ChallengeWatchView: View {
     @State var progress: Double = 0
+    @State var victory = false
     @ObservedObject var hvm: HistoryViewModel = HistoryViewModel.shared
     @State var estado = false
     let motionManager = CMMotionManager()
@@ -21,10 +22,12 @@ struct ChallengeWatchView: View {
 
     var body: some View {
         NavigationView {
+            
             VStack {
                 Spacer()
 
                 ZStack {
+                    NavigationLink(destination: PlayOrkhestraView(),isActive: $victory) {}
                     CircularProgressView(progress: progress)
                     Image(instrumentsList[hvm.instrumentId].image)
                         .resizable()
@@ -37,17 +40,9 @@ struct ChallengeWatchView: View {
                 Text("Gire o Pulso")
                     .font(.system(size: 20))
 
-                HStack {
-                    Button("Play") {
-                        playSound(sound: instrumentsList[hvm.instrumentId].name, type: "mp3")
-                        progress += 1/10
-                    }
-                    Button("Reset") {
-                        resetProgress()
-                    }
-                    .buttonStyle(.borderedProminent)
-                }
-            }.onAppear {
+              
+            }
+            .onAppear {
                 self.motionManager.startDeviceMotionUpdates(to: self.queue) { (data: CMDeviceMotion?, error: Error?) in
                     guard let data = data else {
                         print("Error: \(error!)")
@@ -59,13 +54,20 @@ struct ChallengeWatchView: View {
                         estado = true
                     }
 
-                    if attitude.pitch >= 1 && estado == true && control == true {
+                    if attitude.pitch <= -1 && estado == true && control == true {
                         estado = false
                         playSound(sound: instrumentsList[hvm.instrumentId].name, type: "mp3")
                         progress += 1/10
 
                     }
-
+                    
+                    if(progress >= 0.9){
+                        print("AAAAAA")
+                        victory = true
+                        control = false
+//                        print(victory)
+                    }
+                    
                     print("pitch: \(attitude.pitch)")
                     print("yaw: \(attitude.yaw)")
                     print("roll: \(attitude.roll)")
@@ -84,7 +86,11 @@ struct ChallengeWatchView: View {
             }
         }
         .navigationBarTitle(instrumentsList[hvm.instrumentId].name)
+        
+        
     }
+    
+    
 
     func resetProgress() {
         progress = 0
