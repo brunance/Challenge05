@@ -16,25 +16,29 @@ struct InstrumentsView: View {
                 List {
                     ForEach(instrumentsList, id: \.self) { instrument in
                         VStack(alignment: .center, spacing: 5) {
+                            Text("Escolha!")
+//                                .padding(.top, 5)
+//                                .multilineTextAlignment(.center)
+//                                .lineLimit(nil)
+                                .font(.system(size: 12))
+//                                .frame(maxWidth: .infinity, maxHeight: 90, alignment: .center)
+                            
                             Image(instrument.image)
                                 .resizable()
                                 .frame(width: 35, height: 35)
                                 .padding(.top, 5)
-                            Text(instrument.name)
-                                .bold()
-                                .padding(.top, 5)
-                                .font(.system(size: 12))
                             Button(action: {
                                 hvm.instrumentId = instrument.id
                             }, label: {})
                             NavigationLink(destination: ChallengeWatchView()) {
-                                Text("**ESCOLHER**")
+                                Text(instrument.name)
                                     .font(.system(size: 14))
-
+                                    .bold()
                             }
-                            .foregroundColor(.red).padding(.bottom, 5)
+                            .foregroundColor(Color("Destaque1"))
+//                            .padding(.bottom, 5)
                         }
-                        .frame(maxWidth: .infinity, maxHeight: 80, alignment: .center)
+                        .frame(maxWidth: .infinity, maxHeight: 85, alignment: .center)
                         .padding()
                     }
                 }
