@@ -12,6 +12,11 @@ struct PlayOrkhestraView: View {
     @State var progress: Double = 0
     @EnvironmentObject var audioManager: AudioManagerWatch
     @State var isPlaying: Bool = true
+
+    let timer = Timer
+        .publish(every: 0.5, on: .main, in: .common)
+        .autoconnect()
+
     var body: some View {
 //        let currentInstrument = historyList[hvm.historyId]
 //                                    .lisfOfInstruments
@@ -63,6 +68,14 @@ struct PlayOrkhestraView: View {
             }
             .onDisappear {
                 audioManager.stopSound()
+            }
+            .onReceive(timer) { _ in
+                guard let player = audioManager.player else { return }
+                progress = player.currentTime / player.duration
+
+                if progress == 0.0 {
+                    isPlaying = false
+                }
             }
         }
         .navigationBarTitle(currentInstrument.name)

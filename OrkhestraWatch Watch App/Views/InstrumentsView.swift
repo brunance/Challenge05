@@ -33,7 +33,7 @@ struct InstrumentsView: View {
                                 hvm.instrumentId = instrument.id
                             }, label: {})
 
-                            NavigationLink(destination: PlayOrkhestraView()) { // trocar depois de testes
+                            NavigationLink(destination: ChallengeWatchView()) {
                                 Text(instrument.name)
                                     .font(.system(size: 14))
                                     .bold()
