@@ -31,6 +31,8 @@ struct GameView: View {
     let width: Int = 50
     let height: Int = 50
 
+    var instrumentsList = ["Pandeiro", "Chocalho", "Saxofone", "Violao", "Piano", "Flauta"]
+
     var body: some View {
 
         let currentHistory = historyList[hvm.historyId]
@@ -80,7 +82,8 @@ struct GameView: View {
                                         .foregroundColor(Color("TitleHistory"))
                                 }
                             }
-                        }.padding(.init(top: 0, leading: 0, bottom: 10, trailing: 0))
+                        }
+                        .padding(.init(top: 0, leading: 0, bottom: 10, trailing: 0))
 
                         Text("Combine os sons para desbloquear uma melodia")
                             .font(.system(size: 16))
@@ -88,10 +91,16 @@ struct GameView: View {
                             .foregroundColor(Color("TitleHistory"))
                             .multilineTextAlignment(.center)
 
-                        Text("\(matchedCards.count/2)/\(cardValues.count)")
-                            .frame(maxWidth: .infinity, alignment: .trailing)
-                            .font(.system(size: 16))
-                            .foregroundColor(Color("TitleHistory"))
+                        HStack {
+                            if matchedCards.count > 0 {
+                                Text(matchedCards[matchedCards.count-1].text)
+                                Spacer()
+                            }
+                            Text("\(matchedCards.count/2)/\(cardValues.count)")
+                                .frame(maxWidth: .infinity, alignment: .trailing)
+                                .font(.system(size: 16))
+                                .foregroundColor(Color("TitleHistory"))
+                        }
 
                         VStack {
                             ZStack {
@@ -99,41 +108,22 @@ struct GameView: View {
                                     .foregroundColor(Color("TitleHistory"))
                                     .frame(width: 350, height: 60)
                                 HStack {
-                                    VStack {
-                                        Image("Pandeiro")
-                                            .resizable()
-                                            .frame(width: CGFloat(width), height: CGFloat(height))
-                                            .foregroundColor(.red)
-                                    }
-                                    VStack {
-                                        Image("Chocalho")
-                                            .resizable()
-                                            .frame(width: CGFloat(width), height: CGFloat(height))
-                                            .foregroundColor(.white)
-                                    }
-                                    VStack {
-                                        Image("Saxofone")
-                                            .resizable()
-                                            .frame(width: CGFloat(width), height: CGFloat(height))
-                                            .foregroundColor(.white)
-                                    }
-                                    VStack {
-                                        Image("Violao")
-                                            .resizable()
-                                            .frame(width: CGFloat(width), height: CGFloat(height))
-                                            .foregroundColor(.white)
-                                    }
-                                    VStack {
-                                        Image("Piano")
-                                            .resizable()
-                                            .frame(width: CGFloat(width), height: CGFloat(height))
-                                            .foregroundColor(.white)
-                                    }
-                                    VStack {
-                                        Image("Flauta")
-                                            .resizable()
-                                            .frame(width: CGFloat(width), height: CGFloat(height))
-                                            .foregroundColor(.white)
+                                    ForEach(instrumentsList, id: \.self) { instrument in
+                                        if matchedCards.contains(where: {$0.text == instrument}) {
+                                            VStack {
+                                                Image(instrument)
+                                                    .resizable()
+                                                    .frame(width: CGFloat(width), height: CGFloat(height))
+                                                    .foregroundColor(.red)
+                                            }
+                                        } else {
+                                            VStack {
+                                                Image("\(instrument)Silhueta")
+                                                    .resizable()
+                                                    .frame(width: CGFloat(width), height: CGFloat(height))
+                                                    .foregroundColor(.red)
+                                            }
+                                        }
                                     }
                                 }
                             }
@@ -150,7 +140,7 @@ struct GameView: View {
                             }
                         }
                     }
-                    .padding()
+                    .padding(20)
                     // swiftlint:disable:next line_length
                     NavigationLink(destination: HistoryView().navigationBarBackButtonHidden(true), isActive: $showingHistoryView) {}
                 }
