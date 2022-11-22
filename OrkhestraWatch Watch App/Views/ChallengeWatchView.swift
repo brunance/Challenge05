@@ -19,6 +19,7 @@ struct ChallengeWatchView: View {
     @State private var pitch = Double.zero
     @State private var yaw = Double.zero
     @State private var roll = Double.zero
+    @EnvironmentObject var audioManager: AudioManagerWatch
 
     var body: some View {
 //        let currentInstrument = historyList[hvm.historyId]
@@ -35,7 +36,9 @@ struct ChallengeWatchView: View {
 
                 ZStack {
                     NavigationLink(destination: PlayOrkhestraView(), isActive: $victory) {}
-                    CircularProgressView(progress: progress)
+
+                    CircularProgressView(progress: progress, strokeLine: 7)
+
                     Image(currentInstrument.image)
                         .resizable()
                         .frame(width: 55, height: 55)
@@ -63,7 +66,7 @@ struct ChallengeWatchView: View {
 
                     if attitude.pitch <= -1 && estado == true && control == true {
                         estado = false
-                        playSound(sound: currentInstrument.name, type: "mp3")
+                        audioManager.playSound(sound: currentInstrument.name)
                         progress += 1/10
 
                     }

@@ -28,10 +28,12 @@ struct InstrumentsView: View {
                                 .resizable()
                                 .frame(width: 35, height: 35)
                                 .padding(.top, 5)
+
                             Button(action: {
                                 hvm.instrumentId = instrument.id
                             }, label: {})
-                            NavigationLink(destination: ChallengeWatchView()) {
+
+                            NavigationLink(destination: PlayOrkhestraView()) { // trocar depois de testes
                                 Text(instrument.name)
                                     .font(.system(size: 14))
                                     .bold()
