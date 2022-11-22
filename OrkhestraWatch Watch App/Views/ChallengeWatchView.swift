@@ -27,7 +27,7 @@ struct ChallengeWatchView: View {
                 Spacer()
 
                 ZStack {
-                    NavigationLink(destination: PlayOrkhestraView(),isActive: $victory) {}
+                    NavigationLink(destination: PlayOrkhestraView(), isActive: $victory) {}
                     CircularProgressView(progress: progress)
                     Image(instrumentsList[hvm.instrumentId].image)
                         .resizable()

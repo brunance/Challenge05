@@ -12,7 +12,8 @@ struct PlayOrkhestraView: View {
     
 
     var body: some View {
-        var currentInstrument = instrumentsList[hvm.instrumentId]
+        let currentInstrument = instrumentsList[hvm.instrumentId]
+
         VStack {
             ZStack {
                 Circle()
