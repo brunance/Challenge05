@@ -23,6 +23,7 @@
 		8B326BD5292BB5AB002E7BDF /* Borboleta.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8B326BD2292BB5AB002E7BDF /* Borboleta.mp3 */; };
 		8B326BD6292BB5AB002E7BDF /* Barata.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8B326BD3292BB5AB002E7BDF /* Barata.mp3 */; };
 		8B90C807292274E400AC0F11 /* HistoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B90C806292274E400AC0F11 /* HistoryModel.swift */; };
+		8BA2F8D3292C621D00ABFFDC /* countdown.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8BA2F8D2292C621D00ABFFDC /* countdown.mp3 */; };
 		8BA409AF2927FCDC000FF0F0 /* HistoryModelWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA409AE2927FCDC000FF0F0 /* HistoryModelWatchApp.swift */; };
 		8BA409B22928047D000FF0F0 /* HistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA409B12928047D000FF0F0 /* HistoryViewModel.swift */; };
 		8BA409B42929D2B3000FF0F0 /* InstrumentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA409B32929D2B3000FF0F0 /* InstrumentModel.swift */; };
@@ -71,6 +72,7 @@
 		8B326BD2292BB5AB002E7BDF /* Borboleta.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Borboleta.mp3; sourceTree = "<group>"; };
 		8B326BD3292BB5AB002E7BDF /* Barata.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Barata.mp3; sourceTree = "<group>"; };
 		8B90C806292274E400AC0F11 /* HistoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HistoryModel.swift; path = Challenge05/Views/HistoryModel.swift; sourceTree = SOURCE_ROOT; };
+		8BA2F8D2292C621D00ABFFDC /* countdown.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = countdown.mp3; sourceTree = "<group>"; };
 		8BA409AE2927FCDC000FF0F0 /* HistoryModelWatchApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryModelWatchApp.swift; sourceTree = "<group>"; };
 		8BA409B12928047D000FF0F0 /* HistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewModel.swift; sourceTree = "<group>"; };
 		8BA409B32929D2B3000FF0F0 /* InstrumentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstrumentModel.swift; sourceTree = "<group>"; };
@@ -204,6 +206,7 @@
 		8BEBCACA292B02F300F53786 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				8BA2F8D2292C621D00ABFFDC /* countdown.mp3 */,
 				8BEBCACB292B02F300F53786 /* Pandeiro.mp3 */,
 				8BEBCACC292B02F300F53786 /* Sax.mp3 */,
 				8BEBCACD292B02F300F53786 /* Piano.mp3 */,
@@ -354,6 +357,7 @@
 				8BEBCAD4292B02F300F53786 /* Chocalho.mp3 in Resources */,
 				8BEBCAD2292B02F300F53786 /* Sax.mp3 in Resources */,
 				8BEBCAD5292B02F300F53786 /* Flauta.mp3 in Resources */,
+				8BA2F8D3292C621D00ABFFDC /* countdown.mp3 in Resources */,
 				8BEBCAD3292B02F300F53786 /* Piano.mp3 in Resources */,
 				8BEBCAD1292B02F300F53786 /* Pandeiro.mp3 in Resources */,
 				9C53490A291BE61500899721 /* RubikBubbles-Regular.ttf in Resources */,
@@ -563,7 +567,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Challenge05/Preview Content\"";
-				DEVELOPMENT_TEAM = YFB3KM7U74;
+				DEVELOPMENT_TEAM = FJ6C8YTY7V;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Challenge05/Info.plist;
@@ -595,7 +599,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Challenge05/Preview Content\"";
-				DEVELOPMENT_TEAM = YFB3KM7U74;
+				DEVELOPMENT_TEAM = FJ6C8YTY7V;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Challenge05/Info.plist;
