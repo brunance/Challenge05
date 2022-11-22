@@ -12,7 +12,8 @@ struct HistoryView: View {
     @State private var showingCountDown = false
     @State var isGameView = true
     @ObservedObject var hvm: HistoryViewModel = HistoryViewModel.shared
-
+    @StateObject var counter = Counter()
+  
     let columns = [
         GridItem(.flexible())
     ]
@@ -26,6 +27,7 @@ struct HistoryView: View {
                     TabView {
                         ForEach(historyList, id: \.self) { item in
                             ZStack {
+                                
                                 Color("Primaria1")
                                 Image("\(item.name)Padrao")
                                     .resizable()
@@ -39,6 +41,7 @@ struct HistoryView: View {
                                     Button(action: {
                                         showingSheet.toggle()
                                         hvm.historyId = item.id
+                                        print(counter.count)
                                     }, label: {
 
                                         ZStack {
@@ -69,7 +72,7 @@ struct HistoryView: View {
                                 }
                                 .padding(.init(top: 440, leading: 30, bottom: 200, trailing: 30))
                                 VStack {
-                                    Text("30s | Música, Instrumental")
+                                    Text("\(counter.count)")
                                         .font(.system(size: 12))
                                         .foregroundColor(Color("TitleHistory"))
                                 }

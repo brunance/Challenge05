@@ -11,6 +11,7 @@ import SwiftUI
 struct SheetView: View {
     @Environment(\.dismiss) var dismiss
     @ObservedObject var hvm: HistoryViewModel = HistoryViewModel.shared
+    @StateObject var counter = Counter()
 
     let width: Int = 35
     let height: Int = 10
@@ -20,6 +21,7 @@ struct SheetView: View {
 
         ZStack {
             Color("BackSheet").ignoresSafeArea()
+            
             VStack {
                 VStack {
                     Image("\(currentHistory.name)Modal")
@@ -120,6 +122,7 @@ struct SheetView: View {
                 }
                 .padding(.init(top: 0, leading: 16, bottom: 70, trailing: 16))
             }
+            
         }
         .ignoresSafeArea()
     }

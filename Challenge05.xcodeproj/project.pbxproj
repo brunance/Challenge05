@@ -41,6 +41,10 @@
 		8BEBCAD4292B02F300F53786 /* Chocalho.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8BEBCACE292B02F300F53786 /* Chocalho.mp3 */; };
 		8BEBCAD5292B02F300F53786 /* Flauta.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8BEBCACF292B02F300F53786 /* Flauta.mp3 */; };
 		8BEBCAD6292B02F300F53786 /* Violão.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8BEBCAD0292B02F300F53786 /* Violão.mp3 */; };
+		9C26B26C292CF6F7008DFEB7 /* WatchConnectivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C26B26B292CF6F7008DFEB7 /* WatchConnectivity.swift */; };
+		9C26B26D292CF6F7008DFEB7 /* WatchConnectivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C26B26B292CF6F7008DFEB7 /* WatchConnectivity.swift */; };
+		9C26B26F292CF7BC008DFEB7 /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C26B26E292CF7BC008DFEB7 /* Counter.swift */; };
+		9C26B270292CF7BC008DFEB7 /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C26B26E292CF7BC008DFEB7 /* Counter.swift */; };
 		9C271CB52927E80800EFB73F /* AudioModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C271CB42927E80800EFB73F /* AudioModel.swift */; };
 		9C271CBD2927E84900EFB73F /* Pandeiro.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9C271CB72927E84900EFB73F /* Pandeiro.mp3 */; };
 		9C271CBE2927E84900EFB73F /* Chocalho.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9C271CB82927E84900EFB73F /* Chocalho.mp3 */; };
@@ -90,6 +94,8 @@
 		8BEBCACE292B02F300F53786 /* Chocalho.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Chocalho.mp3; sourceTree = "<group>"; };
 		8BEBCACF292B02F300F53786 /* Flauta.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Flauta.mp3; sourceTree = "<group>"; };
 		8BEBCAD0292B02F300F53786 /* Violão.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Violão.mp3"; sourceTree = "<group>"; };
+		9C26B26B292CF6F7008DFEB7 /* WatchConnectivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchConnectivity.swift; sourceTree = "<group>"; };
+		9C26B26E292CF7BC008DFEB7 /* Counter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Counter.swift; sourceTree = "<group>"; };
 		9C271CB42927E80800EFB73F /* AudioModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioModel.swift; sourceTree = "<group>"; };
 		9C271CB72927E84900EFB73F /* Pandeiro.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Pandeiro.mp3; path = Challenge05/Music/Sounds/Pandeiro.mp3; sourceTree = SOURCE_ROOT; };
 		9C271CB82927E84900EFB73F /* Chocalho.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Chocalho.mp3; path = Challenge05/Music/Sounds/Chocalho.mp3; sourceTree = SOURCE_ROOT; };
@@ -152,6 +158,7 @@
 		4F92C5E029192DDD002FA763 /* Challenge05 */ = {
 			isa = PBXGroup;
 			children = (
+				9C26B271292CF822008DFEB7 /* Shared */,
 				8BEBCACA292B02F300F53786 /* Sounds */,
 				9C53490D291BE96A00899721 /* Info.plist */,
 				9C534907291BE4C500899721 /* Fonts */,
@@ -215,6 +222,15 @@
 				8BEBCAD0292B02F300F53786 /* Violão.mp3 */,
 			);
 			path = Sounds;
+			sourceTree = "<group>";
+		};
+		9C26B271292CF822008DFEB7 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				9C26B26E292CF7BC008DFEB7 /* Counter.swift */,
+				9C26B26B292CF6F7008DFEB7 /* WatchConnectivity.swift */,
+			);
+			path = Shared;
 			sourceTree = "<group>";
 		};
 		9C41385B2919413B00AB8F60 /* ViewModels */ = {
@@ -413,6 +429,8 @@
 				4F92C5E429192DDD002FA763 /* HistoryView.swift in Sources */,
 				9CA52FE7291A1DD60030C96B /* SheetView.swift in Sources */,
 				8BC16099291A9C0900A73AD6 /* CardModel.swift in Sources */,
+				9C26B26C292CF6F7008DFEB7 /* WatchConnectivity.swift in Sources */,
+				9C26B26F292CF7BC008DFEB7 /* Counter.swift in Sources */,
 				8BD111B5291BF9A000F77DEA /* AudioManager.swift in Sources */,
 				8B90C807292274E400AC0F11 /* HistoryModel.swift in Sources */,
 				8BBE5387292AEC0900063E77 /* GameViewModel.swift in Sources */,
@@ -430,12 +448,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F270A322927B254006F0EC7 /* ChallengeWatchView.swift in Sources */,
+				9C26B26D292CF6F7008DFEB7 /* WatchConnectivity.swift in Sources */,
 				4FDEB6C2292517E500324B24 /* MenuViewWatchApp.swift in Sources */,
 				8BA409AF2927FCDC000FF0F0 /* HistoryModelWatchApp.swift in Sources */,
 				4FDEB6CC2925277A00324B24 /* InstrumentsView.swift in Sources */,
 				4FE7AABB2927BD8C007CFC0E /* CircularProgressView.swift in Sources */,
 				9C271CB52927E80800EFB73F /* AudioModel.swift in Sources */,
 				4FDEB6C0292517E500324B24 /* OrkhestraWatchApp.swift in Sources */,
+				9C26B270292CF7BC008DFEB7 /* Counter.swift in Sources */,
 				8BA409B42929D2B3000FF0F0 /* InstrumentModel.swift in Sources */,
 				4FA7A87F292AE6BD0018B8A7 /* PlayOrkhestraView.swift in Sources */,
 				8BA409B22928047D000FF0F0 /* HistoryViewModel.swift in Sources */,
@@ -567,7 +587,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Challenge05/Preview Content\"";
-				DEVELOPMENT_TEAM = FJ6C8YTY7V;
+				DEVELOPMENT_TEAM = YFB3KM7U74;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Challenge05/Info.plist;
@@ -599,7 +619,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Challenge05/Preview Content\"";
-				DEVELOPMENT_TEAM = FJ6C8YTY7V;
+				DEVELOPMENT_TEAM = YFB3KM7U74;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Challenge05/Info.plist;
