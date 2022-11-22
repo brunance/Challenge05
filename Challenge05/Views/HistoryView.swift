@@ -59,13 +59,11 @@ struct HistoryView: View {
 
                                 VStack {
                                     ForEach(0...item.titleList.count - 1, id: \.self) { num in
-
                                         Text(item.titleList[num])
                                             // swiftlint:disable:next line_length
                                             .font(.custom("RubikBubbles-Regular", size: CGFloat(item.sizeTitleList[num])))
                                             .foregroundColor(Color("TitleHistory"))
                                     }
-
                                 }
                                 .padding(.init(top: 440, leading: 30, bottom: 200, trailing: 30))
                                 VStack {
