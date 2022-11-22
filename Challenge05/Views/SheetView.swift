@@ -42,11 +42,12 @@ struct SheetView: View {
                         .foregroundColor(Color("TitleHistory"))
                         .padding(.init(top: 0, leading: 103, bottom: 20, trailing: 101))
 
-                    Text(currentHistory.description)
+                    Text("**\(currentHistory.description)**")
                         .multilineTextAlignment(.leading)
                         .lineLimit(nil)
                         .font(.system(size: 16))
                         .foregroundColor(Color("TitleSheet"))
+                        .lineSpacing(1)
 
                     Text("INSTRUMENTOS DISPONÍVEIS")
                         .font(.custom("RubikBubbles-Regular", size: 16))
