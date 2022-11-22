@@ -11,10 +11,11 @@ struct InstrumentsView: View {
     @ObservedObject var hvm: HistoryViewModel = HistoryViewModel.shared
 
     var body: some View {
+        let instruments = historyList[hvm.historyId].lisfOfInstruments
         NavigationView {
             VStack {
                 List {
-                    ForEach(instrumentsList, id: \.self) { instrument in
+                    ForEach(instruments, id: \.self) { instrument in
                         VStack(alignment: .center, spacing: 5) {
                             Text("Escolha!")
 //                                .padding(.top, 5)

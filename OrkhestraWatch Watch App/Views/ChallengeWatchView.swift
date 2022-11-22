@@ -21,15 +21,22 @@ struct ChallengeWatchView: View {
     @State private var roll = Double.zero
 
     var body: some View {
+//        let currentInstrument = historyList[hvm.historyId]
+//                                    .lisfOfInstruments
+//                                    .first(where: {
+//                                        $0.id == hvm.instrumentId
+//                                    })
+        let currentInstrument = historyList[hvm.historyId]
+            .lisfOfInstruments[hvm.instrumentId]
+
         NavigationView {
-            
             VStack {
                 Spacer()
 
                 ZStack {
                     NavigationLink(destination: PlayOrkhestraView(), isActive: $victory) {}
                     CircularProgressView(progress: progress)
-                    Image(instrumentsList[hvm.instrumentId].image)
+                    Image(currentInstrument.image)
                         .resizable()
                         .frame(width: 55, height: 55)
                 }
@@ -37,7 +44,7 @@ struct ChallengeWatchView: View {
 
                 Spacer()
 
-                Text("Gire o Pulso")
+                Text(currentInstrument.challenge)
                     .font(.system(size: 20))
 
               
@@ -56,16 +63,14 @@ struct ChallengeWatchView: View {
 
                     if attitude.pitch <= -1 && estado == true && control == true {
                         estado = false
-                        playSound(sound: instrumentsList[hvm.instrumentId].name, type: "mp3")
+                        playSound(sound: currentInstrument.name, type: "mp3")
                         progress += 1/10
 
                     }
                     
                     if(progress >= 0.9){
-                        print("AAAAAA")
                         victory = true
                         control = false
-//                        print(victory)
                     }
                     
                     print("pitch: \(attitude.pitch)")
@@ -85,9 +90,7 @@ struct ChallengeWatchView: View {
                 control = false
             }
         }
-        .navigationBarTitle(instrumentsList[hvm.instrumentId].name)
-        
-        
+        .navigationBarTitle(currentInstrument.name)
     }
     
     

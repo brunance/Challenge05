@@ -12,7 +12,13 @@ struct PlayOrkhestraView: View {
     
 
     var body: some View {
-        let currentInstrument = instrumentsList[hvm.instrumentId]
+//        let currentInstrument = historyList[hvm.historyId]
+//                                    .lisfOfInstruments
+//                                    .first(where: {
+//                                        $0.id == hvm.instrumentId
+//                                    })
+        let currentInstrument = historyList[hvm.historyId]
+            .lisfOfInstruments[hvm.instrumentId]
 
         VStack {
             ZStack {
