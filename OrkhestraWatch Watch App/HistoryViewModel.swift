@@ -14,3 +14,4 @@ class HistoryViewModel: ObservableObject {
     @Published var historyId: Int = 0
     @Published var instrumentId: Int = 0
 }
+

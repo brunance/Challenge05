@@ -8,24 +8,23 @@
 import SwiftUI
 
 struct PlayOrkhestraView: View {
+    @ObservedObject var hvm: HistoryViewModel = HistoryViewModel.shared
+    
+
     var body: some View {
+        var currentInstrument = instrumentsList[hvm.instrumentId]
         VStack {
             ZStack {
                 Circle()
                     .frame(width: 74, height: 74)
-                Image("Pandeiro")
+                Image(currentInstrument.image)
             }
-            Text("A barata diz que tem")
+            Text(historyList[hvm.historyId].title)
                 .font(.system(size: 15))
-            Text("Pandeiro Instrumental")
+            Text("\(currentInstrument.name) Instrumental")
                 .font(.system(size: 10))
             HStack {
-                Button(action: {}) {
-                    Image(systemName: "backward.end.fill")
-                }
-                .buttonStyle(PlainButtonStyle())
-                .frame(width: 50)
-
+          
                 Button(action: {}) {
                     ZStack {
                         Circle()
@@ -37,12 +36,8 @@ struct PlayOrkhestraView: View {
                 }
                 .buttonStyle(PlainButtonStyle())
                 .frame(width: 50)
+                .padding()
 
-                Button(action: {}) {
-                    Image(systemName: "forward.end.fill")
-                }
-                .buttonStyle(PlainButtonStyle())
-                .frame(width: 50)
             }
         }
     }
