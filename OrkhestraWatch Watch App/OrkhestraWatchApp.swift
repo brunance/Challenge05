@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct OrkhestraWatchApp: App {
+    @StateObject var audioManager = AudioManagerWatch()
     var body: some Scene {
         WindowGroup {
             MenuViewWatchApp()
+                .environmentObject(audioManager)
         }
     }
 }
